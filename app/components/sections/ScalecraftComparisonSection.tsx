@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import CheckIcon from "@/app/components/ui/CheckIcon";
+import XIcon from "@/app/components/ui/XIcon";
 
 const imgGeminiGeneratedImageOulitpoulitpouli1 = "/assets/images/comparison/comparison-agenturen-1.png";
 const imgGeminiGeneratedImageX6Eihmx6Eihmx6Ei4 = "/assets/images/comparison/comparison-agenturen-2.png";
@@ -50,18 +52,18 @@ export default function ScalecraftComparisonSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#f0f0f0] py-20 max-md:py-12">
-      <div className="mx-auto max-w-[1440px] px-8 max-md:px-4">
+    <section className="relative w-full bg-[#f0f0f0] py-12 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-6 lg:px-8">
         {/* Heading */}
         <motion.h2 
-          className="mb-16 text-center text-[44px] font-normal leading-[1.25] tracking-[-1.92px] text-[#252525] max-md:mb-8 max-md:text-[28px] max-md:leading-[1.3]"
+          className="mb-8 text-center text-[28px] font-normal leading-[1.3] tracking-[-1.12px] text-[#252525] md:mb-12 md:text-[36px] md:tracking-[-1.5px] lg:mb-16 lg:text-[44px] lg:leading-[1.25] lg:tracking-[-1.92px]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          Strategie, Design und Branding für{" "}
-          <br />
+          <span className="max-md:block">Strategie, Design und Branding für{" "}</span>
+          <br className="hidden md:block" />
           <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
             nachhaltigen Erfolg
           </span>
@@ -69,7 +71,7 @@ export default function ScalecraftComparisonSection() {
 
         {/* Toggle Button */}
         <motion.div 
-          className="relative mx-auto mb-12 flex h-16 w-full max-w-[525px] items-center justify-center gap-2 rounded-[13px] border border-white p-2 backdrop-blur-[4.875px] max-md:h-[46.568px] max-md:max-w-none max-md:gap-1"
+          className="relative mx-auto mb-8 flex h-[46.568px] w-full max-w-none items-center justify-center gap-1 rounded-[13px] border border-white p-2 backdrop-blur-[4.875px] md:mb-10 md:h-14 md:max-w-[480px] md:gap-1.5 lg:mb-12 lg:h-16 lg:max-w-[525px] lg:gap-2"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -81,7 +83,7 @@ export default function ScalecraftComparisonSection() {
           {/* Buttons */}
           <button
             onClick={() => setActiveTab("mit")}
-            className={`relative z-10 rounded-[10px] px-6 py-3 text-[20px] leading-[28px] tracking-[0.15px] transition-all duration-300 max-md:flex-1 max-md:px-4 max-md:py-2 max-md:text-[14px] ${
+            className={`relative z-10 flex-1 rounded-[10px] px-4 py-2 text-[14px] leading-[20px] tracking-[0.15px] transition-all duration-300 md:px-5 md:py-2.5 md:text-[16px] lg:flex-none lg:px-6 lg:py-3 lg:text-[20px] lg:leading-[28px] ${
               activeTab === "mit" ? "bg-[#404040] text-white" : "text-[#1d1d1d] hover:bg-white/10"
             }`}
           >
@@ -89,7 +91,7 @@ export default function ScalecraftComparisonSection() {
           </button>
           <button
             onClick={() => setActiveTab("ohne")}
-            className={`relative z-10 rounded-[10px] px-6 py-3 text-[20px] leading-[28px] tracking-[0.15px] transition-all duration-300 max-md:flex-1 max-md:px-4 max-md:py-2 max-md:text-[14px] ${
+            className={`relative z-10 flex-1 rounded-[10px] px-4 py-2 text-[14px] leading-[20px] tracking-[0.15px] transition-all duration-300 md:px-5 md:py-2.5 md:text-[16px] lg:flex-none lg:px-6 lg:py-3 lg:text-[20px] lg:leading-[28px] ${
               activeTab === "ohne" ? "bg-[#404040] text-white" : "text-[#1d1d1d] hover:bg-white/10"
             }`}
           >
@@ -101,7 +103,7 @@ export default function ScalecraftComparisonSection() {
         {activeTab === "mit" && (
         <>
         <motion.div 
-          className="grid grid-cols-1 gap-8 lg:grid-cols-2"
+          className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -117,7 +119,7 @@ export default function ScalecraftComparisonSection() {
         >
           {/* Card 1: Agenturen */}
           <motion.div 
-            className="relative flex flex-col overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
+            className="relative flex h-full flex-col overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
             variants={{
               hidden: { opacity: 0, y: 30, scale: 0.95 },
               visible: { opacity: 1, y: 0, scale: 1 }
@@ -126,8 +128,9 @@ export default function ScalecraftComparisonSection() {
                  backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
                  boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
                }}>
+            <div className="flex flex-1 flex-col">
             {/* Image Container */}
-            <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[15px] max-md:h-[195px]">
+            <div className="relative mx-4 mt-4 h-[195px] overflow-hidden rounded-[15px] md:h-[240px] lg:h-[290px]">
               <Image
                 src={imgGeminiGeneratedImageOulitpoulitpouli1}
                 alt="Agenturen"
@@ -149,14 +152,14 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Badge */}
-            <div className="mx-11 mt-6 flex justify-center">
-              <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[8.75px] py-[7.5px]">
-                <span className="text-[16px] font-medium leading-[24.99px] text-white">AGENTUREN</span>
+            <div className="mx-6 mt-4 flex justify-center md:mx-8 md:mt-5 lg:mx-11 lg:mt-6">
+              <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[7px] py-[6px] md:px-[8px] md:py-[6.5px] lg:px-[8.75px] lg:py-[7.5px]">
+                <span className="text-[14px] font-medium leading-[20px] text-white md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24.99px]">AGENTUREN</span>
               </div>
             </div>
 
             {/* Features List */}
-            <div className="mx-11 mt-6 flex-1 space-y-2 max-md:mx-6 max-md:space-y-1">
+            <div className="mx-6 mt-4 flex-1 space-y-1.5 min-h-[200px] md:mx-8 md:mt-5 md:space-y-2 lg:mx-11 lg:mt-6">
               {[
                 "Dediziertes Performance-Designteam nach deutscher Qualitätsnorm",
                 "Strukturierter Workflow mit fester Priorisierung",
@@ -164,26 +167,23 @@ export default function ScalecraftComparisonSection() {
                 "Klare Ansprechpartner & Reporting (Effektive Zeit) Nur das wird abgerechnet",
                 "up to date"
               ].map((feature, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-[13.714px] bg-[#27c840]">
-                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
-                      <path d="M1 4.5L5 8.5L12 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[14px] max-md:leading-[22px]">{feature}</p>
+                <div key={index} className="flex items-start gap-3 md:gap-3.5 lg:gap-4">
+                  <CheckIcon />
+                  <p className="text-[12px] font-light leading-[18px] text-[#546989] md:text-[14px] md:leading-[20px] lg:text-[16px] lg:leading-[24px]">{feature}</p>
                 </div>
               ))}
             </div>
+            </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
+            <p className="mx-6 mb-6 mt-4 text-[12px] leading-[18px] text-[#546989] md:mx-8 md:mb-8 md:text-[14px] md:leading-[20px] lg:mx-11 lg:mb-11 lg:text-[16px] lg:leading-[24px]">
               <span className="font-semibold">Ergebnis:</span> Stabile Qualität, planbarer Output, zufriedene Kunden.
             </p>
           </motion.div>
 
           {/* Card 2: Mitarbeiter */}
           <motion.div 
-            className="relative flex flex-col overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
+            className="relative flex h-full flex-col overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
             variants={{
               hidden: { opacity: 0, y: 30, scale: 0.95 },
               visible: { opacity: 1, y: 0, scale: 1 }
@@ -192,8 +192,9 @@ export default function ScalecraftComparisonSection() {
                  backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
                  boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
                }}>
+            <div className="flex flex-1 flex-col">
             {/* Image Container */}
-            <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[15px] max-md:h-[195px]">
+            <div className="relative mx-4 mt-4 h-[195px] overflow-hidden rounded-[15px] md:h-[240px] lg:h-[290px]">
               <Image
                 src={imgGeminiGeneratedImage2M1Knj2M1Knj2M1K1}
                 alt="Mitarbeiter"
@@ -209,40 +210,37 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Badge */}
-            <div className="mx-11 mt-6 flex justify-center">
-              <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[10px] py-[7px]">
-                <span className="text-[16px] font-medium leading-[25px] text-white">MITARBEITER</span>
+            <div className="mx-6 mt-4 flex justify-center md:mx-8 md:mt-5 lg:mx-11 lg:mt-6">
+              <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[7px] py-[6px] md:px-[8.5px] md:py-[6.5px] lg:px-[10px] lg:py-[7px]">
+                <span className="text-[14px] font-medium leading-[20px] text-white md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px]">MITARBEITER</span>
               </div>
             </div>
 
             {/* Features List */}
-            <div className="mx-11 mt-6 flex-1 space-y-2 max-md:mx-6 max-md:space-y-1">
+            <div className="mx-6 mt-4 flex-1 space-y-1.5 min-h-[200px] md:mx-8 md:mt-5 md:space-y-2 lg:mx-11 lg:mt-6">
               {[
                 "Externe Entlastung durch skalierbares Designteam",
                 "Performance-orientierte Trainings & Guidelines | UP TO DATE",
                 "Klare Rollenverteilung & Prozessverantwortung",
                 "Mehr Raum fürs interne Team, um zu wachsen"
               ].map((feature, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-[13.714px] bg-[#27c840]">
-                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
-                      <path d="M1 4.5L5 8.5L12 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[14px] max-md:leading-[22px]">{feature}</p>
+                <div key={index} className="flex items-start gap-3 md:gap-3.5 lg:gap-4">
+                  <CheckIcon />
+                  <p className="text-[12px] font-light leading-[18px] text-[#546989] md:text-[14px] md:leading-[20px] lg:text-[16px] lg:leading-[24px]">{feature}</p>
                 </div>
               ))}
             </div>
+            </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
+            <p className="mx-6 mb-6 mt-4 text-[12px] leading-[18px] text-[#546989] md:mx-8 md:mb-8 md:text-[14px] md:leading-[20px] lg:mx-11 lg:mb-11 lg:text-[16px] lg:leading-[24px]">
               <span className="font-semibold">Ergebnis:</span> Dein Team bleibt fokussiert und arbeitet strategisch – nicht operativ im Chaos.
             </p>
           </motion.div>
         </motion.div>
 
-        {/* Card 3: Systeme (Full Width) - Mit Scalecraft */}
-        <div className="relative mt-8 overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
+          {/* Card 3: Systeme (Full Width) - Mit Scalecraft */}
+          <div className="relative mt-8 overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
              style={{
                backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
                boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
@@ -262,27 +260,23 @@ export default function ScalecraftComparisonSection() {
             {/* Left Side */}
             <div>
               {/* Badge */}
-              <div className="mb-6 flex justify-start">
-                <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[21px] py-[7.145px]">
-                  <span className="text-[16px] font-medium leading-[25px] text-white">SYSTEME</span>
+              <div className="mb-6 flex justify-start max-md:mb-4">
+                <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[21px] py-[7.145px] max-md:px-[7px] max-md:py-[6px]">
+                  <span className="text-[16px] font-medium leading-[25px] text-white max-md:text-[14px] max-md:leading-[20px]">SYSTEME</span>
                 </div>
               </div>
 
               {/* Features List */}
-              <div className="space-y-2">
+              <div className="space-y-2 max-md:space-y-1.5">
                 {[
                   "Klare Systeme für Briefing, Freigabe & Feedback",
                   "Einheitliche Brand Guidelines & File-Struktur",
                   "Data-Tracking & Performance-Optimierung",
                   "Kontinuierliche Verbesserung durch BAT-Methode"
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-[13.714px] bg-[#27c840]">
-                      <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
-                        <path d="M1 4.5L5 8.5L12 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[14px] max-md:leading-[22px]">{feature}</p>
+                  <div key={index} className="flex items-start gap-4 max-md:gap-3">
+                    <CheckIcon />
+                    <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">{feature}</p>
                   </div>
                 ))}
               </div>
@@ -290,7 +284,7 @@ export default function ScalecraftComparisonSection() {
 
             {/* Right Side - Result */}
             <div className="flex items-start lg:items-center lg:justify-end">
-              <p className="text-[16px] leading-[24px] text-[#546989]">
+              <p className="text-[16px] leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">
                 <span className="font-semibold">Ergebnis:</span> Dein Designprozess wird messbar, skalierbar und profitabel.
               </p>
             </div>
@@ -303,7 +297,7 @@ export default function ScalecraftComparisonSection() {
         {activeTab === "ohne" && (
         <>
         <motion.div 
-          className="grid grid-cols-1 gap-8 lg:grid-cols-2"
+          className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -323,11 +317,12 @@ export default function ScalecraftComparisonSection() {
               hidden: { opacity: 0, y: 30, scale: 0.95 },
               visible: { opacity: 1, y: 0, scale: 1 }
             }}
-            className="relative flex flex-col overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
+            className="relative flex h-full flex-col overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
                style={{
                  backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
                  boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
                }}>
+            <div className="flex flex-1 flex-col">
             {/* Image Container */}
             <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[16px] bg-neutral-700">
               <Image
@@ -351,29 +346,25 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Badge */}
-            <div className="mx-11 mt-6 flex justify-center">
-              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2">
-                <span className="text-[16px] font-medium uppercase text-white">{ohneScalecraftData.agenturen.title}</span>
+            <div className="mx-11 mt-6 flex justify-center max-md:mx-6 max-md:mt-4">
+              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2 max-md:px-[7px] max-md:py-[6px]">
+                <span className="text-[16px] font-medium uppercase text-white max-md:text-[14px] max-md:leading-[20px]">{ohneScalecraftData.agenturen.title}</span>
               </div>
             </div>
 
             {/* Issues List */}
-            <div className="mx-11 mt-6 flex-1 space-y-1">
+            <div className="mx-11 mt-6 flex-1 space-y-1 min-h-[200px] max-md:mx-6 max-md:mt-4 max-md:space-y-1.5">
               {ohneScalecraftData.agenturen.issues.map((issue, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="12" fill="#FF5F57"/>
-                      <path d="M7 12h10M12 7v10" stroke="white" strokeWidth="2" strokeLinecap="round" transform="rotate(45 12 12)"/>
-                    </svg>
-                  </div>
-                  <p className="text-[16px] font-light leading-[24px] text-[#546989]">{issue}</p>
+                <div key={index} className="flex items-start gap-4 max-md:gap-3">
+                  <XIcon />
+                  <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">{issue}</p>
                 </div>
               ))}
             </div>
+            </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
+            <p className="mx-11 mb-11 mt-auto text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
               <span className="font-semibold">Ergebnis:</span> {ohneScalecraftData.agenturen.result}
             </p>
           </motion.div>
@@ -384,11 +375,12 @@ export default function ScalecraftComparisonSection() {
               hidden: { opacity: 0, y: 30, scale: 0.95 },
               visible: { opacity: 1, y: 0, scale: 1 }
             }}
-            className="relative flex flex-col overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
+            className="relative flex h-full flex-col overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
                style={{
                  backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
                  boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
                }}>
+            <div className="flex flex-1 flex-col">
             {/* Image Container */}
             <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[16px] bg-[#404040]">
               <Image
@@ -406,29 +398,25 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Badge */}
-            <div className="mx-11 mt-6 flex justify-center">
-              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2">
-                <span className="text-[16px] font-medium uppercase text-white">{ohneScalecraftData.mitarbeiter.title}</span>
+            <div className="mx-11 mt-6 flex justify-center max-md:mx-6 max-md:mt-4">
+              <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2 max-md:px-[7px] max-md:py-[6px]">
+                <span className="text-[16px] font-medium uppercase text-white max-md:text-[14px] max-md:leading-[20px]">{ohneScalecraftData.mitarbeiter.title}</span>
               </div>
             </div>
 
             {/* Issues List */}
-            <div className="mx-11 mt-6 flex-1 space-y-1">
+            <div className="mx-11 mt-6 flex-1 space-y-1 min-h-[200px] max-md:mx-6 max-md:mt-4 max-md:space-y-1.5">
               {ohneScalecraftData.mitarbeiter.issues.map((issue, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="12" fill="#FF5F57"/>
-                      <path d="M7 12h10M12 7v10" stroke="white" strokeWidth="2" strokeLinecap="round" transform="rotate(45 12 12)"/>
-                    </svg>
-                  </div>
-                  <p className="text-[16px] font-light leading-[24px] text-[#546989]">{issue}</p>
+                <div key={index} className="flex items-start gap-4 max-md:gap-3">
+                  <XIcon />
+                  <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">{issue}</p>
                 </div>
               ))}
             </div>
+            </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
+            <p className="mx-11 mb-11 mt-auto text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
               <span className="font-semibold">Ergebnis:</span> {ohneScalecraftData.mitarbeiter.result}
             </p>
           </motion.div>
@@ -455,23 +443,18 @@ export default function ScalecraftComparisonSection() {
             {/* Left Side */}
             <div>
               {/* Badge */}
-              <div className="mb-6 flex justify-start">
-                <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2">
-                  <span className="text-[16px] font-medium uppercase text-white">{ohneScalecraftData.systeme.title}</span>
+              <div className="mb-6 flex justify-start max-md:mb-4">
+                <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2 max-md:px-[7px] max-md:py-[6px]">
+                  <span className="text-[16px] font-medium uppercase text-white max-md:text-[14px] max-md:leading-[20px]">{ohneScalecraftData.systeme.title}</span>
                 </div>
               </div>
 
               {/* Issues List */}
-              <div className="space-y-1">
+              <div className="space-y-1 max-md:space-y-1.5">
                 {ohneScalecraftData.systeme.issues.map((issue, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="12" fill="#FF5F57"/>
-                        <path d="M7 12h10M12 7v10" stroke="white" strokeWidth="2" strokeLinecap="round" transform="rotate(45 12 12)"/>
-                      </svg>
-                    </div>
-                    <p className="text-[16px] font-light leading-[24px] text-[#546989]">{issue}</p>
+                  <div key={index} className="flex items-start gap-4 max-md:gap-3">
+                    <XIcon />
+                    <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">{issue}</p>
                   </div>
                 ))}
               </div>
@@ -479,7 +462,7 @@ export default function ScalecraftComparisonSection() {
 
             {/* Right Side - Result */}
             <div className="flex items-end">
-              <p className="text-[16px] leading-[24px] text-[#546989]">
+              <p className="text-[16px] leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">
                 <span className="font-semibold">Ergebnis:</span> {ohneScalecraftData.systeme.result}
               </p>
             </div>
@@ -489,8 +472,8 @@ export default function ScalecraftComparisonSection() {
         )}
 
         {/* CTA Button */}
-        <div className="mt-16 flex justify-center">
-          <button className="rounded-full border border-black border-solid bg-[#252525] px-8 py-3 text-[16px] text-white transition-colors hover:bg-[#404040] max-md:w-full max-md:max-w-md">
+        <div className="mt-16 flex justify-center max-md:mt-12">
+          <button className="rounded-full border border-black border-solid bg-[#252525] px-8 py-3 text-[16px] text-white transition-colors hover:bg-[#404040] max-md:w-full max-md:max-w-md max-md:text-[14px]">
             Projekt starten →
           </button>
         </div>

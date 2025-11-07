@@ -11,8 +11,28 @@ export default function GlassCard({ children, pointRight = false, height = 'larg
   const cardHeight = height === 'small' ? 256 : 278;
   const cardWidth = height === 'small' ? 474 : 497;
   
+  // Mobile dimensions from Figma: 384px x 240px (w-96 h-60)
+  const mobileHeight = 240;
+  
   return (
-    <div className="relative" style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}>
+    <div 
+      className="relative w-full max-w-[384px] lg:max-w-none" 
+      style={{ 
+        height: `${mobileHeight}px`
+      }}
+    >
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @media (min-width: 1024px) {
+            .glass-card-${cardId} {
+              width: ${cardWidth}px !important;
+              height: ${cardHeight}px !important;
+              max-width: none !important;
+            }
+          }
+        `
+      }} />
+      <div className={`glass-card-${cardId} relative h-full w-full`}>
       <svg 
         className="absolute inset-0 h-full w-full" 
         viewBox={`0 0 ${cardWidth} ${cardHeight}`} 
@@ -83,6 +103,7 @@ export default function GlassCard({ children, pointRight = false, height = 'larg
       </svg>
       <div className="relative p-8">
         {children}
+      </div>
       </div>
     </div>
   );

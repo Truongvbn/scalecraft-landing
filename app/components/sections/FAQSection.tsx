@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, staggerItem, viewport } from "@/app/lib/animations";
+import { fadeInUp } from "@/app/lib/animations";
 
 interface FAQItem {
   question: string;
@@ -53,11 +53,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-white py-24 px-8 lg:px-24">
-      <div className="mx-auto max-w-[1172px]">
+    <section className="w-full bg-white py-12 px-4 md:py-16 md:px-12 lg:py-24 lg:px-24">
+      <div className="mx-auto max-w-[382px] md:max-w-[720px] lg:max-w-[1172px]">
         {/* Heading */}
         <motion.h2 
-          className="mb-24 text-center text-[40px] font-normal leading-[56px] text-[#252525]"
+          className="mb-12 text-center text-[28px] font-normal leading-[40px] text-[#252525] md:mb-16 md:text-[34px] md:leading-[48px] lg:mb-24 lg:text-[40px] lg:leading-[56px]"
           variants={fadeInUp}
           initial="hidden"
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,9 +96,9 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="flex w-full items-center justify-between py-[50px] text-left transition-colors hover:bg-gray-50"
+                className="flex w-full items-center justify-between py-8 text-left transition-colors hover:bg-gray-50 md:py-10 lg:py-[50px]"
               >
-                <h3 className="text-[24px] font-normal leading-[28.68px] text-black pr-8">
+                <h3 className="text-[12px] font-normal leading-[14px] text-[#252525] pr-6 md:pr-8 md:text-[18px] md:leading-[22px] lg:text-[24px] lg:leading-[28.68px]">
                   {faq.question}
                 </h3>
                 
@@ -107,18 +107,18 @@ export default function FAQSection() {
                     <Image
                       src="/assets/images/faq/faq-collapse-icon.svg"
                       alt="Collapse"
-                      width={22.5}
-                      height={22.5}
-                      className="transition-transform"
+                      width={11.308}
+                      height={11.308}
+                      className="transition-transform lg:w-[22.5] lg:h-[22.5]"
                       quality={85}
                     />
                   ) : (
                     <Image
                       src="/assets/images/faq/faq-expand-icon.svg"
                       alt="Expand"
-                      width={22.5}
-                      height={22.5}
-                      className="transition-transform"
+                      width={11.308}
+                      height={11.308}
+                      className="transition-transform lg:w-[22.5] lg:h-[22.5]"
                       quality={85}
                     />
                   )}
@@ -127,8 +127,8 @@ export default function FAQSection() {
 
               {/* Answer - Expandable */}
               {openIndex === index && faq.answer && (
-                <div className="pb-8 pr-16 animate-in slide-in-from-top-2 duration-200">
-                  <p className="text-[18px] leading-[26px] text-gray-700">
+                <div className="pb-6 pr-12 animate-in slide-in-from-top-2 duration-200 md:pb-8 md:pr-16">
+                  <p className="text-[13px] leading-[19px] text-gray-700 md:text-[15px] md:leading-[22px] lg:text-[18px] lg:leading-[26px]">
                     {faq.answer}
                   </p>
                 </div>

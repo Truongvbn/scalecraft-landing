@@ -23,4 +23,48 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Case Study Swiper Custom Styles */
+.case-study-swiper {
+  padding: 40px 0 80px 0 !important;
+  overflow: visible !important;
+}
+
+.case-study-swiper .swiper-wrapper {
+  align-items: center;
+}
+
+.case-study-swiper .swiper-slide {
+  opacity: 0.4;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.85);
+}
+
+.case-study-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.case-study-swiper .swiper-pagination {
+  bottom: 20px !important;
+}
+
+.case-study-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #8c8c8c;
+  opacity: 0.2;
+  margin: 0 6px !important;
+}
+
+.case-study-swiper .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: #8c8c8c;
 }

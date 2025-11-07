@@ -2,132 +2,257 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-white w-full py-16 px-8 lg:px-24">
+    <footer className="bg-white w-full py-8 px-4 md:py-12 md:px-8 lg:py-16 lg:px-24">
       <div className="max-w-[1440px] mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Logo and Description Column */}
-          <div className="flex flex-col gap-6">
-            {/* Logo - Fixed with correct navbar logo files */}
+        <div className="flex flex-col gap-8 md:gap-10 mb-8 md:mb-12 lg:mb-16">
+          {/* Mobile: Logo and Description at top */}
+          <div className="flex flex-col gap-4 md:hidden">
+            {/* Logo */}
             <div className="flex items-center gap-2">
               <Image
                 src="/assets/images/hero/hero-nav-logo-1.svg"
                 alt="Scalecraft Logo"
-                width={45}
-                height={50}
+                width={31}
+                height={35}
                 className="object-contain"
               />
               <Image
                 src="/assets/images/hero/hero-nav-logo-2.svg"
                 alt="SCALECRAFT"
-                width={183}
-                height={20}
+                width={127}
+                height={14}
                 className="object-contain"
               />
             </div>
             
             {/* Description */}
-            <p className="text-black text-base leading-6 font-normal italic">
-              Seit 2020 bieten wir innovative Lösungen für mittelständische Unternehmen an.
-            </p>
-            
-            {/* LinkedIn Icon */}
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit"
-            >
-              <Image
-                src="/linkedin-icon.svg"
-                alt="LinkedIn"
-                width={34}
-                height={34}
-                className="hover:opacity-80 transition-opacity"
-              />
-            </a>
-          </div>
-
-          {/* Unternehmen Column */}
-          <div className="flex flex-col gap-4">
-            <h3 
-              className="text-xl font-medium mb-2 bg-gradient-to-t from-[#ea6035] via-[#ea6035] to-[#ef973e] bg-clip-text text-transparent"
-              style={{ 
-                backgroundImage: 'linear-gradient(180deg, #ef973e 30.832%, #ea6035 79.166%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              Unternehmen
-            </h3>
-            <nav className="flex flex-col gap-3">
-              <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
-                Impressum
-              </a>
-              <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
-                Datenschutz
-              </a>
-              <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
-                AGB
-              </a>
-            </nav>
-          </div>
-
-          {/* Rechtsdokumente Column */}
-          <div className="flex flex-col gap-4">
-            <h3 
-              className="text-xl font-medium mb-2 bg-gradient-to-t from-[#ea6035] via-[#ea6035] to-[#ef973e] bg-clip-text text-transparent"
-              style={{ 
-                backgroundImage: 'linear-gradient(180deg, #ef973e 30.832%, #ea6035 79.166%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              Rechtsdokumente
-            </h3>
-            <nav className="flex flex-col gap-3">
-              <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
-                Lorem
-              </a>
-              <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
-                Portfolio
-              </a>
-              <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
-                Careers
-              </a>
-              <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
-                Contact us
-              </a>
-            </nav>
-          </div>
-
-          {/* Kontakt Column */}
-          <div className="flex flex-col gap-4">
-            <h3 
-              className="text-xl font-medium mb-2 bg-gradient-to-t from-[#ea6035] via-[#ea6035] to-[#ef973e] bg-clip-text text-transparent"
-              style={{ 
-                backgroundImage: 'linear-gradient(180deg, #ef973e 30.832%, #ea6035 79.166%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              Kontakt
-            </h3>
-            <p className="text-black text-lg font-light leading-normal">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <p className="text-black text-lg font-light">
-              +908 89097 890
+            <p className="text-[#252525] text-[10px] leading-[18.63px] font-normal">
+            Seit 2020 bieten wir innovative Lösungen für<br />
+             mittelständische Unternehmen an.
             </p>
           </div>
+
+          {/* Desktop: 4 column grid */}
+          <div className="hidden md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-12">
+            {/* Logo and Description Column - Desktop */}
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/assets/images/hero/hero-nav-logo-1.svg"
+                  alt="Scalecraft Logo"
+                  width={45}
+                  height={50}
+                  className="object-contain"
+                />
+                <Image
+                  src="/assets/images/hero/hero-nav-logo-2.svg"
+                  alt="SCALECRAFT"
+                  width={183}
+                  height={20}
+                  className="object-contain"
+                />
+              </div>
+              
+              <p className="text-black text-sm leading-5 font-normal italic md:text-base md:leading-6">
+                Seit 2020 bieten wir innovative Lösungen für mittelständische Unternehmen an.
+              </p>
+              
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit"
+              >
+                <Image
+                  src="/linkedin-icon.svg"
+                  alt="LinkedIn"
+                  width={34}
+                  height={34}
+                  className="hover:opacity-80 transition-opacity"
+                />
+              </a>
+            </div>
+
+            {/* Unternehmen Column */}
+            <div className="flex flex-col gap-4">
+              <h3 
+                className="text-xl font-medium mb-2"
+                style={{ 
+                  backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Unternehmen
+              </h3>
+              <nav className="flex flex-col gap-3">
+                <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                  Impressum
+                </a>
+                <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                  Datenschutz
+                </a>
+                <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                  AGB
+                </a>
+              </nav>
+            </div>
+
+            {/* Rechtsdokumente Column */}
+            <div className="flex flex-col gap-4">
+              <h3 
+                className="text-xl font-medium mb-2"
+                style={{ 
+                  backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Rechtsdokumente
+              </h3>
+              <nav className="flex flex-col gap-3">
+                <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                  Lorem
+                </a>
+                <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                  Portfolio
+                </a>
+                <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                  Careers
+                </a>
+                <a href="#" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                  Contact us
+                </a>
+              </nav>
+            </div>
+
+            {/* Kontakt Column */}
+            <div className="flex flex-col gap-4">
+              <h3 
+                className="text-xl font-medium mb-2"
+                style={{ 
+                  backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Kontakt
+              </h3>
+              <p className="text-black text-base font-light leading-normal md:text-lg">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+              <p className="text-black text-base font-light md:text-lg">
+                +908 89097 890
+              </p>
+            </div>
+          </div>
+
+          {/* Mobile: 3 columns navigation */}
+          <div className="grid grid-cols-3 gap-4 md:hidden">
+            {/* Unternehmen Column */}
+            <div className="flex flex-col gap-2">
+              <h3 
+                className="text-[11px] font-medium mb-1"
+                style={{ 
+                  backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Unternehmen
+              </h3>
+              <nav className="flex flex-col gap-[6px]">
+                <a href="#" className="text-[#252525] text-[10px] leading-[18.63px] font-light hover:opacity-70 transition-opacity">
+                  Impressum
+                </a>
+                <a href="#" className="text-[#252525] text-[10px] leading-[18.63px] font-light hover:opacity-70 transition-opacity">
+                  Datenschutz
+                </a>
+                <a href="#" className="text-[#252525] text-[10px] leading-[18.63px] font-light hover:opacity-70 transition-opacity">
+                  AGB
+                </a>
+              </nav>
+            </div>
+
+            {/* Rechtsdokumente Column */}
+            <div className="flex flex-col gap-2">
+              <h3 
+                className="text-[11px] font-medium mb-1"
+                style={{ 
+                  backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Rechtsdokumente
+              </h3>
+              <nav className="flex flex-col gap-[6px]">
+                <a href="#" className="text-[#252525] text-[10px] leading-[18.63px] font-light hover:opacity-70 transition-opacity">
+                  Lorem
+                </a>
+                <a href="#" className="text-[#252525] text-[10px] leading-[18.63px] font-light hover:opacity-70 transition-opacity">
+                  Portfolio
+                </a>
+                <a href="#" className="text-[#252525] text-[10px] leading-[18.63px] font-light hover:opacity-70 transition-opacity">
+                  Careers
+                </a>
+                <a href="#" className="text-[#252525] text-[10px] leading-[18.63px] font-light hover:opacity-70 transition-opacity">
+                  Contact us
+                </a>
+              </nav>
+            </div>
+
+            {/* Kontakt Column */}
+            <div className="flex flex-col gap-2">
+              <h3 
+                className="text-[11px] font-medium mb-1"
+                style={{ 
+                  backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Kontakt
+              </h3>
+              <p className="text-[#252525] text-[10px] leading-[14px] font-light">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+              <p className="text-[#252525] text-[10px] leading-[18.2px] font-light">
+                +908 89097 890
+              </p>
+            </div>
+          </div>
+
+          {/* LinkedIn Icon - Mobile only */}
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-fit md:hidden"
+          >
+            <Image
+              src="/linkedin-icon.svg"
+              alt="LinkedIn"
+              width={18}
+              height={18}
+              className="object-contain hover:opacity-80 transition-opacity"
+            />
+          </a>
         </div>
 
         {/* Divider Line */}
-        <div className="border-t border-gray-300 mb-6"></div>
+        <div className="border-t border-[#b3b3b3] mb-4 md:mb-6"></div>
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="text-black text-[13px] font-normal">
+          <p className="text-[#252525] text-[9px] md:text-[13px] font-normal">
             Copyright ® 2021 Lorem All rights Reserved
           </p>
         </div>

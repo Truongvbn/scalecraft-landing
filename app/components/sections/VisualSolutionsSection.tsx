@@ -27,14 +27,14 @@ const imgImg1764 = "/assets/images/visual-solutions/avatar8.jpg";
 
 export default function VisualSolutionsSection() {
   return (
-    <section className="relative mx-auto mb-16 mt-0 w-full max-w-7xl overflow-hidden rounded-[60px] px-8 py-24 shadow-lg backdrop-blur-sm lg:px-16"
+    <section className="relative mx-auto mb-12 mt-0 w-full max-w-7xl overflow-hidden rounded-[14px] px-4 py-12 shadow-lg backdrop-blur-sm md:mb-14 md:rounded-[20px] md:px-6 md:py-16 lg:mb-16 lg:rounded-[60px] lg:px-16 lg:py-24"
       style={{
         backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
         boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4), 0px 1px 8.1px 0px rgba(0,0,0,0.1)'
       }}
     >
       {/* SVG Background */}
-      <div className="absolute inset-0 overflow-hidden rounded-[60px]">
+      <div className="absolute inset-0 overflow-hidden rounded-[16px] lg:rounded-[60px]">
         <svg className="absolute inset-0 h-full w-full" viewBox="0 0 1404 1168" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
           <defs>
             <filter id="filter1_f" x="527.663" y="-26.1162" width="955.875" height="870.298" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -88,10 +88,10 @@ export default function VisualSolutionsSection() {
         </svg>
       </div>
 
-      <div className="relative grid grid-cols-1 gap-16 lg:grid-cols-2">
+      <div className="relative grid grid-cols-1 gap-12 md:gap-16 lg:grid-cols-2">
         {/* Left Content */}
         <motion.div 
-          className="space-y-8"
+          className="space-y-6 md:space-y-8"
           variants={slideInLeft}
           initial="hidden"
           whileInView="visible"
@@ -99,7 +99,7 @@ export default function VisualSolutionsSection() {
         >
           {/* Main Heading */}
           <motion.div variants={fadeInUp}>
-            <h2 className="text-[40px] font-normal leading-[1.25] tracking-[-0.4px] text-[#252525]">
+            <h2 className="text-[28px] font-normal leading-[1.3] tracking-[-0.3px] text-[#252525] md:text-[34px] md:tracking-[-0.35px] lg:text-[40px] lg:leading-[1.25] lg:tracking-[-0.4px]">
               Wir gestalten visuelle Lösungen,
               <span 
                 className="bg-clip-text"
@@ -115,153 +115,153 @@ export default function VisualSolutionsSection() {
           </motion.div>
 
           {/* Description */}
-          <p className="text-[18px] font-light leading-[1.47] tracking-[0.54px] text-[#404040]">
+          <p className="text-[13px] font-light leading-[1.5] tracking-[0.4px] text-[#404040] md:text-[16px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[1.47] lg:tracking-[0.54px]">
             Ob Produktlaunch, Marketingkampagnen oder Rebranding deines Bestsellers – unser Kreativteam entwickelt performante Amazon-Visuals und Shop-Assets, die messbar konvertieren. Schnell, zuverlässig und mit einem klaren System.
           </p>
 
           {/* Was uns auszeichnet */}
-          <div className="space-y-6">
-            <h3 className="text-[20px] font-bold leading-[1.47] tracking-[0.6px] text-[#404040]">
+          <div className="space-y-4 md:space-y-6">
+            <h3 className="text-[13px] font-bold leading-[1.5] tracking-[0.4px] text-[#404040] md:text-[17px] md:tracking-[0.5px] lg:text-[20px] lg:leading-[1.47] lg:tracking-[0.6px]">
               Was uns auszeichnet
             </h3>
 
             {/* Feature 1 */}
-            <div className="flex items-start gap-[5.809px]">
-              <div className="mt-1 h-[19.751px] w-[19.751px] shrink-0">
+            <div className="flex items-start gap-[4.671px] md:gap-[5.809px]">
+              <div className="mt-1 h-[15.88px] w-[15.88px] md:h-[19.751px] md:w-[19.751px] shrink-0">
                 <CheckmarkIcon />
               </div>
-              <p className="text-[18px] font-light leading-[24px] tracking-[0.54px] text-[#404040]">
+              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] md:text-[16px] md:leading-[22px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
                 Hochqualifizierte Designer mit tiefem E-Commerce-Verständnis
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="flex items-start gap-[5.809px]">
-              <div className="mt-1 h-[19.751px] w-[19.751px] shrink-0">
+            <div className="flex items-start gap-[4.671px] md:gap-[5.809px]">
+              <div className="mt-1 h-[15.88px] w-[15.88px] md:h-[19.751px] md:w-[19.751px] shrink-0">
                 <CheckmarkIcon />
               </div>
-              <p className="text-[18px] font-light leading-[24px] tracking-[0.54px] text-[#404040]">
+              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] md:text-[16px] md:leading-[22px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
                 Strategie- & Conversion-orientierte Gestaltung
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="flex items-start gap-[5.809px]">
-              <div className="mt-1 h-[19.751px] w-[19.751px] shrink-0">
+            <div className="flex items-start gap-[4.671px] md:gap-[5.809px]">
+              <div className="mt-1 h-[15.88px] w-[15.88px] md:h-[19.751px] md:w-[19.751px] shrink-0">
                 <CheckmarkIcon />
               </div>
-              <p className="text-[18px] font-light leading-[24px] tracking-[0.54px] text-[#404040]">
+              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] md:text-[16px] md:leading-[22px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
                 Eingespielte Abläufe, die Qualität und Geschwindigkeit garantieren
               </p>
             </div>
           </div>
 
           {/* CTA */}
-          <p className="text-[18px] font-bold leading-[1.47] tracking-[0.54px] text-[#404040]">
+          <p className="text-[13px] font-bold leading-[1.5] tracking-[0.4px] text-[#404040] md:text-[16px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[1.47] lg:tracking-[0.54px]">
             → MEHR AGENTURPRODUKT mit den KUNDEN übertragbare Zufriedenheit
           </p>
         </motion.div>
 
         {/* Right - Bento Grid */}
-        <div className="relative h-[501px] w-full">
-          {/* Main large image */}
-          <div className="absolute left-[65px] top-[126px] h-[284px] w-[392px] overflow-hidden rounded-[20.608px] border-[1.288px] border-white">
+        <div className="relative h-[300px] w-full md:mx-auto md:h-[400px] md:max-w-[500px] lg:mx-0 lg:h-[501px] lg:max-w-none">
+          {/* Main large image - từ Figma: w-72 h-48 left-[45.67px] top-[88.52px] */}
+          <div className="absolute left-[45.67px] top-[88.52px] h-[192px] w-[288px] overflow-hidden rounded-2xl border border-white lg:absolute lg:left-[65px] lg:top-[126px] lg:h-[284px] lg:w-[392px] lg:rounded-[20.608px] lg:border-[1.288px]">
             <Image src={imgPhc082541} alt="" fill className="object-cover" style={{ objectPosition: '-6.04% 0' }} />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
-          {/* Small image - bottom left */}
-          <div className="absolute left-[-31px] top-[332px] h-[130px] w-[166px] overflow-hidden rounded-[10.304px] border-[0.902px] border-white/90">
+          {/* Small image - bottom left - từ Figma: w-24 h-20 left-[-13px] top-[229px] */}
+          <div className="absolute left-[-13px] top-[229px] h-[80px] w-[96px] overflow-hidden rounded-lg border-[0.63px] border-white/90 lg:absolute lg:left-[-31px] lg:top-[332px] lg:h-[130px] lg:w-[166px] lg:rounded-[10.304px] lg:border-[0.902px]">
             <Image src={imgPhc08175} alt="" fill className="object-cover" />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
-          {/* Small image - bottom right */}
-          <div className="absolute left-[363px] top-[329px] h-[154px] w-[181px] overflow-hidden rounded-[4.779px] border-[0.836px] border-white/90">
+          {/* Small image - bottom right - từ Figma: w-32 h-28 left-[232px] top-[227px] */}
+          <div className="absolute left-[232px] top-[227px] h-[112px] w-[128px] overflow-hidden rounded border-[0.59px] border-white/90 lg:absolute lg:left-[363px] lg:top-[329px] lg:h-[154px] lg:w-[181px] lg:rounded-[4.779px] lg:border-[0.836px]">
             <Image src={imgPhc08183} alt="" fill className="object-cover" />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
-          {/* Small image - top middle */}
-          <div className="absolute left-[148px] top-[33px] h-[109px] w-[97px] overflow-hidden rounded-[4.573px] border-[0.8px] border-white/90">
+          {/* Small image - top middle - từ Figma: w-16 h-20 left-[103.98px] top-[23.18px] */}
+          <div className="absolute left-[103.98px] top-[23.18px] h-[80px] w-[64px] overflow-hidden rounded border-[0.56px] border-white/90 lg:absolute lg:left-[148px] lg:top-[33px] lg:h-[109px] lg:w-[97px] lg:rounded-[4.573px] lg:border-[0.8px]">
             <Image src={imgPhc08179} alt="" fill className="object-cover" />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
-          {/* Small image - top left */}
-          <div className="absolute left-[11px] top-[50px] h-[141px] w-[145px] overflow-hidden rounded-[4.5px] border-[0.788px] border-white/90">
+          {/* Small image - top left - từ Figma: w-24 h-24 left-[7.73px] top-[35.13px] */}
+          <div className="absolute left-[7.73px] top-[35.13px] h-[96px] w-[96px] overflow-hidden rounded-[3.16px] border-[0.55px] border-white/90 lg:absolute lg:left-[11px] lg:top-[50px] lg:h-[141px] lg:w-[145px] lg:rounded-[4.5px] lg:border-[0.788px]">
             <Image src={imgPhc08206} alt="" fill className="object-cover" />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
-          {/* Small image - middle bottom */}
-          <div className="absolute left-[274px] top-[357px] h-[81px] w-[105px] overflow-hidden rounded-[3.761px] border-[0.658px] border-white/90">
+          {/* Small image - middle bottom - từ Figma: w-14 h-11 left-[44px] top-[276px] */}
+          <div className="absolute left-[44px] top-[276px] h-[44px] w-[56px] overflow-hidden rounded-sm border-[0.46px] border-white/90 lg:absolute lg:left-[274px] lg:top-[357px] lg:h-[81px] lg:w-[105px] lg:rounded-[3.761px] lg:border-[0.658px]">
             <Image src={imgPhc08256} alt="" fill className="object-cover" />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
-          {/* Team Members Card */}
-          <div className="absolute left-[288px] top-[39px] w-[216px] rounded-lg border-[0.884px] border-white/90 p-[14px] backdrop-blur-[5.145px]"
+          {/* Team Members Card - từ Figma: w-40 h-16 left-[183.16px] top-[29.67px] */}
+          <div className="absolute left-[183.16px] top-[29.67px] w-[160px] rounded-md border-[0.62px] border-white/90 px-2.5 py-3 backdrop-blur-sm lg:absolute lg:left-[288px] lg:top-[39px] lg:w-[216px] lg:border-[0.884px] lg:p-[14px] lg:backdrop-blur-[5.145px]"
             style={{
               backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
-              boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
+              boxShadow: '0px 0.74px 6px 0px rgba(0,0,0,0.10), inset 0px 1.2px 4.82px 0px rgba(255,255,255,0.40)'
             }}
           >
-            <p className="mb-2 text-center text-[16px] font-normal tracking-[0.48px] text-[#252525]">
+            <p className="mb-1.5 text-center text-xs font-normal tracking-tight text-[#252525] lg:mb-2 lg:text-[16px] lg:tracking-[0.48px]">
               Team Memembers
             </p>
-            <div className="flex items-center justify-center -space-x-1.5">
-              <div className="relative h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border border-white">
+            <div className="flex items-center justify-center">
+              <div className="relative -ml-0 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
                 <Image src={imgImg13751} alt="" fill className="object-cover" />
               </div>
-              <div className="relative h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border border-white">
+              <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
                 <Image src={imgImage15} alt="" fill className="object-cover" />
               </div>
-              <div className="relative h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border border-white">
+              <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
                 <Image src={imgImg1779} alt="" fill className="object-cover" />
               </div>
-              <div className="relative h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border border-white">
+              <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
                 <Image src={imgImg1770} alt="" fill className="object-cover" />
               </div>
-              <div className="relative h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border border-white">
+              <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
                 <Image src={imgImg1778} alt="" fill className="object-cover" />
               </div>
-              <div className="relative h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border border-white">
+              <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
                 <Image src={imgImg1781} alt="" fill className="object-cover" />
               </div>
-              <div className="relative h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border border-white">
+              <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
                 <Image src={imgImg1780} alt="" fill className="object-cover" />
               </div>
-              <div className="relative h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border border-white">
+              <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
                 <Image src={imgImg1764} alt="" fill className="object-cover" />
               </div>
             </div>
           </div>
 
-          {/* Quote Card */}
-          <div className="absolute left-[278px] top-[429px] w-[176px] rounded-lg border-[0.77px] border-white/90 p-[14px] backdrop-blur-sm"
+          {/* Quote Card - từ Figma: w-32 h-14 left-[190px] top-[292px] */}
+          <div className="absolute left-[190px] top-[292px] w-[128px] rounded-[5.18px] border-[0.54px] border-white/90 p-2.5 backdrop-blur-[3.16px] lg:absolute lg:left-[278px] lg:top-[429px] lg:w-[176px] lg:border-[0.77px] lg:p-[14px]"
             style={{
               backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%)',
-              boxShadow: 'inset 0px 1.5px 6px 0px rgba(255,255,255,0.4)'
+              boxShadow: '0px 0.65px 5.25px 0px rgba(0,0,0,0.10), inset 0px 1.05px 4.21px 0px rgba(255,255,255,0.40)'
             }}
           >
-            <p className="text-center text-[14px] font-normal tracking-wide text-[#252525]">
+            <p className="text-center text-[9.77px] font-normal leading-tight tracking-tight text-[#252525] lg:text-[14px]">
               Scalecraft liefert Resultate, auf die du dich verlassen kannst.
             </p>
           </div>
 
-          {/* 95+ Stat */}
-          <div className="absolute left-[-70px] top-[196px] flex flex-col items-center gap-2 rounded-2xl p-4">
-            <div className="text-center text-[36px] font-bold text-[#404040]">95+</div>
-            <div className="max-w-[100px] text-center text-[12px] font-normal leading-tight tracking-tight text-[#404040]">
+          {/* 95+ Stat - từ Figma: w-20 h-20 left-[-33.77px] top-[138.14px] */}
+          <div className="absolute left-[-33.77px] top-[138.14px] flex h-20 w-20 flex-col items-center justify-center gap-1.5 rounded-xl p-3 lg:left-[-70px] lg:top-[196px]">
+            <div className="text-center text-2xl font-bold text-[#404040] lg:text-[36px]">95+</div>
+            <div className="w-24 text-center text-[8.97px] font-normal tracking-tight text-[#404040] lg:max-w-[100px] lg:text-[12px]">
               erfolgreich abgeschlossene Projekte
             </div>
           </div>
 
-          {/* 10k+ Stat */}
-          <div className="absolute left-[143px] top-[406px] flex flex-col items-center gap-2 rounded-2xl p-4">
-            <div className="text-center text-[36px] font-bold text-[#404040]">10k+</div>
-            <div className="text-center text-[12px] font-normal tracking-tight text-[#404040]">
+          {/* 10k+ Stat - từ Figma: w-24 h-20 left-[99px] top-[281px] */}
+          <div className="absolute left-[99px] top-[281px] flex h-20 w-24 flex-col items-center justify-center gap-[5.17px] rounded-xl p-2.5 lg:left-[143px] lg:top-[406px]">
+            <div className="text-center text-2xl font-bold text-[#404040] lg:text-[36px]">10k+</div>
+            <div className="text-center text-[8.66px] font-normal tracking-tight text-[#404040] lg:text-[12px]">
               Designprozesse pro<br />Monat zeigen
             </div>
           </div>
@@ -269,20 +269,40 @@ export default function VisualSolutionsSection() {
       </div>
 
       {/* Timeline Section */}
-      <div className="mt-24 flex items-end justify-center gap-4">
-        <TimelineCard year="10/2021" title="Freelancer" fontSize="22px" />
-        <TimelineCard year="2022" title="22 - Ersten Agenturkunden, Workload - 4 MA " fontSize="20px" />
-        <TimelineCard 
-          year="2023" 
-          title={
-            <>
-              Weitere Agenturen,<br />- 10 MA
-            </>
-          } 
-          fontSize="20px" 
-        />
-        <TimelineCard year="2024" title="35  MA" fontSize="20px" />
-        <TimelineCard year="2025" title="Optimierung" fontSize="20px" />
+      <div className="mt-12 md:mt-16 lg:mt-24">
+        {/* Mobile: Horizontal scroll */}
+        <div className="flex gap-4 overflow-x-auto pb-4 lg:hidden">
+          <TimelineCard year="10/2021" title="Freelancer" fontSize="22px" />
+          <TimelineCard year="2022" title="22 - Ersten Agenturkunden, Workload - 4 MA " fontSize="20px" />
+          <TimelineCard 
+            year="2023" 
+            title={
+              <>
+                Weitere Agenturen,<br />- 10 MA
+              </>
+            } 
+            fontSize="20px" 
+          />
+          <TimelineCard year="2024" title="35  MA" fontSize="20px" />
+          <TimelineCard year="2025" title="Optimierung" fontSize="20px" />
+        </div>
+        
+        {/* Desktop: Centered flex */}
+        <div className="hidden lg:flex items-end justify-center gap-4">
+          <TimelineCard year="10/2021" title="Freelancer" fontSize="22px" />
+          <TimelineCard year="2022" title="22 - Ersten Agenturkunden, Workload - 4 MA " fontSize="20px" />
+          <TimelineCard 
+            year="2023" 
+            title={
+              <>
+                Weitere Agenturen,<br />- 10 MA
+              </>
+            } 
+            fontSize="20px" 
+          />
+          <TimelineCard year="2024" title="35  MA" fontSize="20px" />
+          <TimelineCard year="2025" title="Optimierung" fontSize="20px" />
+        </div>
       </div>
     </section>
   );

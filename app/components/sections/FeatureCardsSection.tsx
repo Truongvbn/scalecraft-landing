@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeInUp, gridContainer, gridItem, viewport, pulse } from "@/app/lib/animations";
+import { fadeInUp, viewport, pulse } from "@/app/lib/animations";
 import GlassCard from "../ui/GlassCard";
 import SettingsIcon from "../icons/SettingsIcon";
 import DownIcon from "../icons/DownIcon";
@@ -11,7 +11,7 @@ import UserInfoIcon from "../icons/UserInfoIcon";
 
 export default function FeatureCardsSection() {
   return (
-    <section className="relative w-full overflow-hidden px-8 pb-4 pt-24 lg:px-16">
+    <section className="relative w-full overflow-hidden px-4 pb-4 pt-16 md:px-8 md:pt-20 lg:px-16 lg:pt-24">
       {/* Background SVG Pattern */}
       <div className="absolute inset-0 bg-[#202020]">
         {/* Radial Gradients */}
@@ -35,7 +35,7 @@ export default function FeatureCardsSection() {
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Main Heading */}
         <motion.h1 
-          className="mb-16 text-center text-4xl font-normal leading-tight tracking-tight lg:text-5xl"
+          className="mb-12 text-center text-3xl font-normal leading-tight tracking-tight md:mb-14 md:text-4xl lg:mb-16 lg:text-5xl"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -48,9 +48,62 @@ export default function FeatureCardsSection() {
         </motion.h1>
 
         {/* Profile Section */}
-        <div className="mb-20 flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:justify-center">
-          {/* Profile Image */}
-          <div className="relative h-[200px] w-[200px] overflow-hidden rounded-full border border-white/90">
+        <div className="mb-12 flex flex-col gap-6 md:mb-16 lg:mb-20 lg:flex-row lg:items-start lg:justify-center lg:gap-8">
+          {/* Mobile: Image + Quote in same row */}
+          <div className="flex items-start gap-4 md:hidden">
+            {/* Profile Image + Name/Title */}
+            <div className="flex flex-col gap-2 flex-shrink-0">
+              <div className="relative h-[90px] w-[90px] overflow-hidden rounded-full border border-white/90 md:h-[120px] md:w-[120px]">
+                <Image
+                  src="/assets/images/features/feature-profile.png"
+                  alt="Nguyen Dac Hoa"
+                  fill
+                  className="object-cover"
+                  quality={85}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gray-500/20"></div>
+              </div>
+              
+              <div className="space-y-0.5">
+                <p className="text-sm font-medium text-white md:text-base">Nguyen Dac Hoa</p>
+                <p className="text-[9px] font-light uppercase tracking-wide text-white/80">GESCHÄFTSFÜHRER</p>
+              </div>
+            </div>
+
+            {/* Quote */}
+            <div className="flex-1 space-y-2">
+              <div className="flex items-start">
+                <Image
+                  src="/assets/images/features/feature-icon-1.svg"
+                  alt=""
+                  width={10}
+                  height={8}
+                  quality={85}
+                  loading="lazy"
+                />
+              </div>
+              
+              <p className="text-[9px] leading-[1.4] text-white md:text-[11px]">
+                Wir zeigen dir, wie du mit der BAT-Methode (Business Development – Account Management – Team Lead) deine Creative-Prozesse systematisch beschleunigst und gleichzeitig Kosten senkst, Qualität erhöhst und Kontrolle behältst.
+              </p>
+
+              <div className="flex items-end justify-end">
+                <Image
+                  src="/assets/images/features/feature-icon-2.svg"
+                  alt=""
+                  width={10}
+                  height={8}
+                  className="rotate-180"
+                  quality={85}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Profile Image only */}
+          <div className="relative hidden h-[160px] w-[160px] overflow-hidden rounded-full border border-white/90 md:block md:h-[180px] md:w-[180px] lg:h-[200px] lg:w-[200px]">
             <Image
               src="/assets/images/features/feature-profile.png"
               alt="Nguyen Dac Hoa"
@@ -62,24 +115,24 @@ export default function FeatureCardsSection() {
             <div className="absolute inset-0 bg-gray-500/20"></div>
           </div>
 
-          {/* Profile Info & Quote */}
-          <div className="max-w-2xl space-y-4 text-center lg:text-left">
-            <div className="flex items-center justify-center gap-4 lg:justify-start">
+          {/* Desktop: Quote & Info */}
+          <div className="hidden max-w-2xl space-y-3 text-left md:block md:space-y-4">
+            <div className="flex items-center gap-4">
               <Image
                 src="/assets/images/features/feature-icon-1.svg"
                 alt=""
                 width={26}
                 height={21}
                 quality={85}
-              loading="lazy"
+                loading="lazy"
               />
             </div>
             
-            <p className="text-lg leading-relaxed text-white">
+            <p className="text-base leading-relaxed text-white md:text-lg">
               Wir zeigen dir, wie du mit der BAT-Methode (Business Development – Account Management – Team Lead) deine Creative-Prozesse systematisch beschleunigst und gleichzeitig Kosten senkst, Qualität erhöhst und Kontrolle behältst.
             </p>
 
-            <div className="flex items-center justify-center gap-4 lg:justify-start">
+            <div className="flex items-center gap-4">
               <Image
                 src="/assets/images/features/feature-icon-2.svg"
                 alt=""
@@ -87,12 +140,12 @@ export default function FeatureCardsSection() {
                 height={21}
                 className="rotate-180"
                 quality={85}
-              loading="lazy"
+                loading="lazy"
               />
             </div>
 
             <div className="space-y-1">
-              <p className="text-xl font-medium text-white">Nguyen Dac Hoa</p>
+              <p className="text-lg font-medium text-white md:text-xl">Nguyen Dac Hoa</p>
               <p className="text-sm font-light text-white">GESCHÄFTSFÜHRER</p>
             </div>
           </div>
@@ -181,7 +234,7 @@ export default function FeatureCardsSection() {
           >
             {/* Card 1 - Left */}
             <motion.div 
-              className="flex justify-start lg:pr-[50%]"
+              className="flex justify-center lg:justify-start lg:pr-[50%]"
               variants={{
                 hidden: { opacity: 0, x: -50 },
                 visible: { opacity: 1, x: 0 }
@@ -189,10 +242,10 @@ export default function FeatureCardsSection() {
             >
               <div className="w-full max-w-[497px]">
                 <GlassCard>
-                  <div className="mb-4 h-[72px] w-[72px]">
+                  <div className="mb-4 h-[70px] w-[70px] lg:h-[72px] lg:w-[72px]">
                     <SettingsIcon />
                   </div>
-                  <p className="text-[17px] leading-[1.6] text-white">
+                  <p className="text-[14px] leading-[1.5] text-white lg:text-[17px] lg:leading-[1.6]">
                     <span className="font-semibold text-[#ff8d28]">Wie wir dein Design-System strukturieren</span>, damit du schneller hochwertige Creatives erhältst – ganz ohne Feedback-Chaos oder Bottlenecks.
                   </p>
                 </GlassCard>
@@ -201,7 +254,7 @@ export default function FeatureCardsSection() {
 
             {/* Card 2 - Right */}
             <motion.div 
-              className="flex justify-end lg:pl-[50%]"
+              className="flex justify-center lg:justify-end lg:pl-[50%]"
               variants={{
                 hidden: { opacity: 0, x: 50 },
                 visible: { opacity: 1, x: 0 }
@@ -209,10 +262,10 @@ export default function FeatureCardsSection() {
             >
               <div className="w-full max-w-[474px]">
                 <GlassCard pointRight height="small">
-                  <div className="mb-4 h-[72px] w-[72px]">
+                  <div className="mb-4 h-[70px] w-[70px] lg:h-[72px] lg:w-[72px]">
                     <DownIcon />
                   </div>
-                  <p className="text-[17px] leading-[1.6] text-white">
+                  <p className="text-[14px] leading-[1.5] text-white lg:text-[17px] lg:leading-[1.6]">
                     <span className="font-semibold text-[#ff8d28]">Wie du deine Produktionskosten um bis zu 50 % reduzierst</span>, während dein Creative-Output sich verdoppelt.
                   </p>
                 </GlassCard>
@@ -221,7 +274,7 @@ export default function FeatureCardsSection() {
 
             {/* Card 3 - Left */}
             <motion.div 
-              className="flex justify-start lg:pr-[50%]"
+              className="flex justify-center lg:justify-start lg:pr-[50%]"
               variants={{
                 hidden: { opacity: 0, x: -50 },
                 visible: { opacity: 1, x: 0 }
@@ -229,10 +282,10 @@ export default function FeatureCardsSection() {
             >
               <div className="w-full max-w-[497px]">
                 <GlassCard>
-                  <div className="mb-4 h-[72px] w-[72px]">
+                  <div className="mb-4 h-[70px] w-[70px] lg:h-[72px] lg:w-[72px]">
                     <CrystalIcon />
                   </div>
-                  <p className="text-[17px] leading-[1.6] text-white">
+                  <p className="text-[14px] leading-[1.5] text-white lg:text-[17px] lg:leading-[1.6]">
                     <span className="font-semibold text-[#ff8d28]">Wie die BAT-Methode</span> klare Verantwortlichkeiten schafft, Kommunikation vereinfacht und Prioritäten automatisch richtig setzt.
                   </p>
                 </GlassCard>
@@ -241,7 +294,7 @@ export default function FeatureCardsSection() {
 
             {/* Card 4 - Right */}
             <motion.div 
-              className="flex justify-end lg:pl-[50%]"
+              className="flex justify-center lg:justify-end lg:pl-[50%]"
               variants={{
                 hidden: { opacity: 0, x: 50 },
                 visible: { opacity: 1, x: 0 }
@@ -249,10 +302,10 @@ export default function FeatureCardsSection() {
             >
               <div className="w-full max-w-[474px]">
                 <GlassCard pointRight height="small">
-                  <div className="mb-3 h-[72px] w-[72px]">
+                  <div className="mb-3 h-[70px] w-[70px] lg:h-[72px] lg:w-[72px]">
                     <UserInfoIcon />
                   </div>
-                  <p className="text-[16px] leading-[1.5] text-white">
+                  <p className="text-[14px] leading-[1.5] text-white lg:text-[16px]">
                     <span className="font-semibold text-[#ff8d28]">Wie Scalecraft bereits über 30 Agenturen & Freelancern</span> geholfen hat, Workflows zu optimieren, ROAS zu steigern und Projekte planbarer zu machen und wie wir Zusammenarbeiten
                   </p>
                 </GlassCard>

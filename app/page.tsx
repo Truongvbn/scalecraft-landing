@@ -3,9 +3,9 @@ import dynamic from "next/dynamic";
 // Critical - Load immediately (above-the-fold)
 import HeroSection from "./components/sections/HeroSection";
 import StatsHeroSection from "./components/sections/StatsHeroSection";
-import CaseStudiesSlider from "./components/sections/CaseStudiesSlider";
 
 // Non-critical - Lazy load (below-the-fold)
+const CaseStudySection = dynamic(() => import("./components/sections/CaseStudySection"));
 const ScalecraftComparisonSection = dynamic(() => import("./components/sections/ScalecraftComparisonSection"));
 const StatsSection = dynamic(() => import("./components/sections/StatsSection"));
 const BenefitsSection = dynamic(() => import("./components/sections/BenefitsSection"));
@@ -20,7 +20,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-white font-sans">
       <HeroSection />
       <StatsHeroSection />
-      <CaseStudiesSlider />
+      <CaseStudySection />
       <ScalecraftComparisonSection />
       <StatsSection />
       <BenefitsSection />

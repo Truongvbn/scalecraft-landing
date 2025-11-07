@@ -30,17 +30,17 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="relative w-full bg-white px-8 py-24 lg:px-16">
+    <section className="relative w-full bg-white px-4 py-16 md:px-8 md:py-24 lg:px-16">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div 
-          className="mb-16 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-start"
+          className="mb-12 flex flex-col items-center justify-between gap-6 text-center lg:mb-16 lg:flex-row lg:items-start lg:gap-8 lg:text-left"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
         >
-          <h2 className="max-w-xl text-4xl font-normal leading-tight text-[#252525] lg:text-[44px]">
+          <h2 className="w-full max-w-xl text-[30px] font-normal leading-[1.2] text-[#252525] lg:text-[44px]">
             <span 
               className="bg-gradient-to-r from-[#ec6036] to-[#f1983f] bg-clip-text text-transparent"
               style={{
@@ -54,14 +54,14 @@ export default function BenefitsSection() {
             {" auf einen Blick"}
           </h2>
           
-          <p className="max-w-md text-lg leading-relaxed text-[#373A40]">
+          <p className="w-full max-w-md text-[14px] leading-[1.5] text-[#373A40] lg:text-lg lg:leading-relaxed">
             Unsere Kunden profitieren von einem klaren Vorteilspaket - speziell entwickelt für Agenturen, Marken und Marketing - Teams, die Effizienz und Qualität skalieren wollen.
           </p>
         </motion.div>
 
         {/* Benefits Grid */}
         <motion.div 
-          className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2"
+          className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:mb-16"
           variants={gridContainer}
           initial="hidden"
           whileInView="visible"
@@ -70,15 +70,15 @@ export default function BenefitsSection() {
           {benefits.map((benefit, index) => (
             <motion.div 
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transform-gpu will-change-transform"
+              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transform-gpu will-change-transform"
               variants={gridItem}
               whileHover={{ y: -8, scale: 1.02, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <div className="flex flex-col gap-6 sm:flex-row">
+              <div className="flex h-[172px] flex-row gap-4 p-0 md:h-auto md:flex-col md:gap-6 md:p-6 lg:h-[250px] lg:flex-row">
                 {/* Image */}
                 <motion.div 
-                  className="relative h-[219px] w-full flex-shrink-0 overflow-hidden rounded-2xl sm:w-[229px]"
+                  className="relative h-full w-[160px] flex-shrink-0 overflow-hidden rounded-l-2xl md:h-[219px] md:w-full md:rounded-2xl lg:h-[250px] lg:w-[229px] lg:rounded-2xl"
                   whileHover={{ scale: 1.05, rotate: 2 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -86,20 +86,20 @@ export default function BenefitsSection() {
                     src={benefit.image}
                     alt={benefit.title}
                     fill
-                    sizes="(max-width: 640px) 100vw, 229px"
+                    sizes="(max-width: 768px) 160px, (max-width: 1024px) 100vw, 229px"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     quality={85}
-                    loading="lazy"
+                    priority={index < 2}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </motion.div>
 
                 {/* Content */}
-                <div className="flex flex-1 flex-col justify-center">
-                  <h3 className="mb-4 text-2xl font-normal leading-tight text-[#404040]">
+                <div className="flex flex-1 flex-col justify-center py-4 pr-4 md:p-0">
+                  <h3 className="mb-3 text-[18px] font-normal leading-[1.17] text-[#404040] md:mb-4 md:text-2xl md:leading-tight">
                     {benefit.title}
                   </h3>
-                  <p className="text-sm font-light leading-relaxed text-[#8c8c8c] whitespace-pre-line">
+                  <p className="text-[11px] font-light leading-[16px] text-[#8c8c8c] whitespace-pre-line md:text-sm md:leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -117,7 +117,7 @@ export default function BenefitsSection() {
           viewport={viewport}
         >
           <MagneticButton 
-            className="rounded-full border border-black bg-[#252525] px-8 py-3 text-base font-normal text-white transition-colors hover:bg-black"
+            className="h-[42px] w-[184px] rounded-full border border-black bg-[#252525] text-[14px] font-normal text-white transition-colors hover:bg-black md:h-auto md:w-auto md:px-8 md:py-3 md:text-base"
             strength={0.3}
           >
             Erstgespräch buchen
