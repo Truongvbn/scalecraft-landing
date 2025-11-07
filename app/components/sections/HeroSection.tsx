@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 // Background and texture
 const imgTexture = "/assets/images/hero/hero-texture.svg";
@@ -358,26 +357,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* YouTube Video - Responsive - Overlays Stats Section */}
-      <motion.div 
-        className="absolute left-1/2 top-[860px] z-50 -translate-x-1/2 max-md:top-[750px]"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="relative h-[450px] w-[800px] overflow-hidden rounded-[20px] shadow-2xl max-md:h-[200px] max-md:w-[350px] max-md:rounded-[12px]">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID"
-            title="YouTube video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            loading="lazy"
-            className="absolute inset-0 h-full w-full"
-          />
-        </div>
-      </motion.div>
 
       <style dangerouslySetInnerHTML={{
         __html: `
