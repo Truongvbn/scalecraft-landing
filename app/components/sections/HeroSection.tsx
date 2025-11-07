@@ -40,7 +40,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="relative h-full w-full">
           <div className="absolute left-0 top-0 h-full w-full">
-            <Image src={imgFrame2} alt="" fill className="object-cover" priority quality={90} />
+            <Image src={imgFrame2} alt="" fill className="object-cover" priority quality={90} sizes="(max-width: 768px) 100vw, 1440px" />
           </div>
           
           {/* Texture Overlay */}
