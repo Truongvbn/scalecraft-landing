@@ -9,8 +9,9 @@ const nextConfig: NextConfig = {
   
   // Safe experimental features
   experimental: {
-    optimizePackageImports: ['framer-motion', 'swiper'],
+    optimizePackageImports: ['framer-motion', 'swiper', '@heroui/react'],
     optimizeCss: true,
+    webpackBuildWorker: true,
   },
   
   images: {

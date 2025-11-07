@@ -80,11 +80,8 @@ export default function HeroSection() {
       {/* Content Container */}
       <div className="relative mx-auto h-auto w-[414px] md:w-[768px] lg:w-[1440px] md:h-[900px] lg:h-[900px]">
         {/* Navigation Bar */}
-        <motion.div 
-          className="absolute left-[17px] md:left-[40px] lg:left-[134px] top-[23px] md:top-[24px] lg:top-[26px] h-[58px] md:h-[60px] lg:h-[77px] w-[380px] md:w-[688px] lg:w-[1172px] transform-gpu will-change-transform"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+        <div 
+          className="absolute left-[17px] md:left-[40px] lg:left-[134px] top-[23px] md:top-[24px] lg:top-[26px] h-[58px] md:h-[60px] lg:h-[77px] w-[380px] md:w-[688px] lg:w-[1172px]"
         >
           <div 
             className="absolute left-0 top-0 h-full w-full rounded-[20px] border border-white backdrop-blur-[4.875px] hidden md:block"
@@ -144,7 +141,7 @@ export default function HeroSection() {
               </svg>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Rating Badge */}
         <motion.div 
@@ -197,16 +194,13 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Main Heading */}
-        <motion.h1 
-          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[126px] md:top-[120px] lg:top-[256px] w-[380px] md:w-[680px] lg:w-[1026px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 text-left md:text-center lg:text-center text-[30px] md:text-[34px] lg:text-[55.664px] font-normal leading-[33px] md:leading-[40px] lg:leading-[62.7px] tracking-[-0.57px] md:tracking-[-0.68px] lg:tracking-[-1.11px] text-black will-change-transform"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        <h1 
+          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[126px] md:top-[120px] lg:top-[256px] w-[380px] md:w-[680px] lg:w-[1026px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 text-left md:text-center lg:text-center text-[30px] md:text-[34px] lg:text-[55.664px] font-normal leading-[33px] md:leading-[40px] lg:leading-[62.7px] tracking-[-0.57px] md:tracking-[-0.68px] lg:tracking-[-1.11px] text-black"
         >
           Performance Design Outsourcing für
           <br />
           E-Commerce Agenturen (& DTC Brands)
-        </motion.h1>
+        </h1>
 
         {/* Subheading */}
         <motion.div 
@@ -382,6 +376,7 @@ export default function HeroSection() {
             title="YouTube video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            loading="lazy"
             className="absolute inset-0 h-full w-full"
           />
         </div>
