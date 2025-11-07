@@ -105,7 +105,7 @@ export default function FAQSection() {
                 <div className="flex-shrink-0">
                   {openIndex === index ? (
                     <Image
-                      src="/assets/images/faq-collapse-icon.svg"
+                      src="/assets/images/faq/faq-collapse-icon.svg"
                       alt="Collapse"
                       width={22.5}
                       height={22.5}
@@ -114,7 +114,7 @@ export default function FAQSection() {
                     />
                   ) : (
                     <Image
-                      src="/assets/images/faq-expand-icon.svg"
+                      src="/assets/images/faq/faq-expand-icon.svg"
                       alt="Expand"
                       width={22.5}
                       height={22.5}

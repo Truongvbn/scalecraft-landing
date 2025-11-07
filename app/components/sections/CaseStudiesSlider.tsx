@@ -6,28 +6,28 @@ import { motion } from "framer-motion";
 import { fadeInUp, viewport } from "@/app/lib/animations";
 
 // Card 1 - Amazon Agentur (Outsourcing)
-const imgDarkGray1 = "/assets/images/case-slider-1-dark.png";
-const imgTexture1 = "/assets/images/case-slider-1-texture.png";
-const imgFrame1 = "/assets/images/case-slider-1-frame.png";
-const imgImage3_1 = "/assets/images/case-slider-1-img3.png";
-const imgImage4_1 = "/assets/images/case-slider-1-img4.png";
-const imgImage13_1 = "/assets/images/case-slider-1-img13.png";
-const imgGroup344_1 = "/assets/images/case-slider-1-group344.png";
-const imgGroup343_1 = "/assets/images/case-slider-1-group343.png";
-const imgCheck1 = "/assets/images/case-slider-1-check1.svg";
-const imgCheck2 = "/assets/images/case-slider-1-check2.svg";
+const imgDarkGray1 = "/assets/images/case-study/case-slider-1-dark.png";
+const imgTexture1 = "/assets/images/case-study/case-slider-1-texture.png";
+const imgFrame1 = "/assets/images/case-study/case-slider-1-frame.png";
+const imgImage3_1 = "/assets/images/case-study/case-slider-1-img3.png";
+const imgImage4_1 = "/assets/images/case-study/case-slider-1-img4.png";
+const imgImage13_1 = "/assets/images/case-study/case-slider-1-img13.png";
+const imgGroup344_1 = "/assets/images/case-study/case-slider-1-group344.png";
+const imgGroup343_1 = "/assets/images/case-study/case-slider-1-group343.png";
+const imgCheck1 = "/assets/images/case-study/case-slider-1-check1.svg";
+const imgCheck2 = "/assets/images/case-study/case-slider-1-check2.svg";
 
 // Card 2 - Freelancer (Umsatzsteigerung)  
-const imgDarkGray2 = "/assets/images/case-slider-2-dark.png";
-const imgTexture2 = "/assets/images/case-slider-2-texture.png";
-const imgFrame2 = "/assets/images/case-slider-2-frame.png";
-const imgImage3_2 = "/assets/images/case-slider-2-img3.png";
-const imgImage4_2 = "/assets/images/case-slider-2-img4.png";
-const imgImage13_2 = "/assets/images/case-slider-2-img13.png";
-const imgGroup344_2 = "/assets/images/case-slider-2-group344.png";
-const imgGroup343_2 = "/assets/images/case-slider-2-group343.png";
-const imgCheck3 = "/assets/images/case-slider-2-check3.svg";
-const imgCheck4 = "/assets/images/case-slider-2-check4.svg";
+const imgDarkGray2 = "/assets/images/case-study/case-slider-2-dark.png";
+const imgTexture2 = "/assets/images/case-study/case-slider-2-texture.png";
+const imgFrame2 = "/assets/images/case-study/case-slider-2-frame.png";
+const imgImage3_2 = "/assets/images/case-study/case-slider-2-img3.png";
+const imgImage4_2 = "/assets/images/case-study/case-slider-2-img4.png";
+const imgImage13_2 = "/assets/images/case-study/case-slider-2-img13.png";
+const imgGroup344_2 = "/assets/images/case-study/case-slider-2-group344.png";
+const imgGroup343_2 = "/assets/images/case-study/case-slider-2-group343.png";
+const imgCheck3 = "/assets/images/case-study/case-slider-2-check3.svg";
+const imgCheck4 = "/assets/images/case-study/case-slider-2-check4.svg";
 
 const Card1 = () => (
     <div className="backdrop-blur-[4.875px] bg-[rgba(251,251,255,0.7)] border-[1.5px] border-solid border-white rounded-[17.407px] overflow-hidden"

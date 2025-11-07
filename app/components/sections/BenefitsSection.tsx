@@ -8,22 +8,22 @@ import MagneticButton from "@/app/components/ui/MagneticButton";
 export default function BenefitsSection() {
   const benefits = [
     {
-      image: "/assets/images/benefit-1.png",
+      image: "/assets/images/benefits/benefit-1.png",
       title: "Fester Ansprechpartner statt Ticketsystem",
       description: "Du bekommst einen persönlichen Kontakt, der dich und deine Prozesse kennt – für reibungslose Kommunikation und schnelle Umsetzung, ohne anonyme Support-Schleifen."
     },
     {
-      image: "/assets/images/benefit-2.png",
+      image: "/assets/images/benefits/benefit-2.png",
       title: "Erfahrung aus über 30 Agenturprojekten",
       description: "Profitiere vom Know-how aus der Zusammenarbeit mit führenden Amazon- und E-Commerce-Agenturen.\nWir kennen die Best Practices, Strukturen und Abläufe, die wirklich Ergebnisse liefern."
     },
     {
-      image: "/assets/images/benefit-3.png",
+      image: "/assets/images/benefits/benefit-3.png",
       title: "Done-for-You Umsetzung",
       description: "Du gibst das Briefing – wir übernehmen alles. Vom ersten Entwurf bis zum finalen Creative: 100 % Umsetzung wie ein internes Team – nur effizienter, strukturierter und kostengünstiger."
     },
     {
-      image: "/assets/images/benefit-4.png",
+      image: "/assets/images/benefits/benefit-4.png",
       title: "Flexible Nutzung & Skalierung",
       description: "Nutze unsere Kapazitäten flexibel – von 80 bis 640 Stunden im Monat.\nTransparent getrackt, wöchentlich abgerechnet, ohne langfristige Bindung."
     }

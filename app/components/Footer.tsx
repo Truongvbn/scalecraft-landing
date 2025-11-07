@@ -11,14 +11,14 @@ export default function Footer() {
             {/* Logo - Fixed with correct navbar logo files */}
             <div className="flex items-center gap-2">
               <Image
-                src="/assets/images/hero-nav-logo-1.svg"
+                src="/assets/images/hero/hero-nav-logo-1.svg"
                 alt="Scalecraft Logo"
                 width={45}
                 height={50}
                 className="object-contain"
               />
               <Image
-                src="/assets/images/hero-nav-logo-2.svg"
+                src="/assets/images/hero/hero-nav-logo-2.svg"
                 alt="SCALECRAFT"
                 width={183}
                 height={20}

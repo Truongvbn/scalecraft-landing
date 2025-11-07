@@ -11,20 +11,25 @@ import UserInfoIcon from "../icons/UserInfoIcon";
 
 export default function FeatureCardsSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-8 pb-4 pt-24 lg:px-16">
-      {/* Background Texture */}
-      <div 
-        className="absolute inset-0 opacity-40 mix-blend-overlay"
-        style={{
-          backgroundImage: 'url("/assets/images/feature-texture.png")',
-          backgroundSize: '120px 120px',
-        }}
-      />
-
-      {/* Background Gradient Overlays */}
-      <div className="absolute inset-0 opacity-80">
-        <div className="absolute left-[-50%] top-[30%] h-[800px] w-[1200px] rounded-full bg-orange-500/20 blur-3xl"></div>
-        <div className="absolute right-[-30%] top-[20%] h-[800px] w-[1200px] rounded-full bg-pink-500/20 blur-3xl"></div>
+    <section className="relative w-full overflow-hidden px-8 pb-4 pt-24 lg:px-16">
+      {/* Background SVG Pattern */}
+      <div className="absolute inset-0 bg-[#202020]">
+        {/* Radial Gradients */}
+        <div className="absolute inset-0">
+          <div className="absolute left-[2.94%] top-[31.53%] h-[58.85%] w-[64.78%] rounded-full bg-[#FA935C]/28 opacity-80" style={{ filter: 'blur(120px)' }} />
+          <div className="absolute left-[35.23%] top-[25.6%] h-[58.85%] w-[64.78%] rounded-full bg-[#FAB875]/28 opacity-70" style={{ filter: 'blur(120px)' }} />
+          <div className="absolute left-0 top-0 h-[58.85%] w-[64.78%] rounded-full bg-[#F7A989]/28 opacity-90" style={{ filter: 'blur(120px)' }} />
+        </div>
+        
+        {/* Texture Pattern Overlay */}
+        <div 
+          className="absolute inset-0 opacity-40 mix-blend-overlay"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='220' height='220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E")`,
+            backgroundSize: '120px 120px',
+            backgroundRepeat: 'repeat'
+          }}
+        />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl">
@@ -47,7 +52,7 @@ export default function FeatureCardsSection() {
           {/* Profile Image */}
           <div className="relative h-[200px] w-[200px] overflow-hidden rounded-full border border-white/90">
             <Image
-              src="/assets/images/feature-profile.png"
+              src="/assets/images/features/feature-profile.png"
               alt="Nguyen Dac Hoa"
               fill
               className="object-cover"
@@ -61,7 +66,7 @@ export default function FeatureCardsSection() {
           <div className="max-w-2xl space-y-4 text-center lg:text-left">
             <div className="flex items-center justify-center gap-4 lg:justify-start">
               <Image
-                src="/assets/images/feature-icon-1.svg"
+                src="/assets/images/features/feature-icon-1.svg"
                 alt=""
                 width={26}
                 height={21}
@@ -76,7 +81,7 @@ export default function FeatureCardsSection() {
 
             <div className="flex items-center justify-center gap-4 lg:justify-start">
               <Image
-                src="/assets/images/feature-icon-2.svg"
+                src="/assets/images/features/feature-icon-2.svg"
                 alt=""
                 width={25}
                 height={21}
@@ -99,13 +104,13 @@ export default function FeatureCardsSection() {
           <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gray-600 lg:block">
             {/* Timeline Dots */}
             <motion.div 
-              className="absolute left-1/2 top-[95px] h-[26px] w-[26px] -translate-x-1/2"
+              className="absolute left-1/2 top-[85px] h-[26px] w-[26px] -translate-x-1/2"
               variants={pulse}
               initial="initial"
               animate="animate"
             >
               <Image
-                src="/assets/images/feature-timeline-dot-1.svg"
+                src="/assets/images/features/feature-timeline-dot-1.svg"
                 alt=""
                 width={26}
                 height={26}
@@ -114,13 +119,13 @@ export default function FeatureCardsSection() {
               />
             </motion.div>
             <motion.div 
-              className="absolute left-1/2 top-[318px] h-[26px] w-[26px] -translate-x-1/2"
+              className="absolute left-1/2 top-[411px] h-[26px] w-[26px] -translate-x-1/2"
               variants={pulse}
               initial="initial"
               animate="animate"
             >
               <Image
-                src="/assets/images/feature-timeline-dot-2.svg"
+                src="/assets/images/features/feature-timeline-dot-2.svg"
                 alt=""
                 width={26}
                 height={26}
@@ -129,13 +134,13 @@ export default function FeatureCardsSection() {
               />
             </motion.div>
             <motion.div 
-              className="absolute left-1/2 top-[560px] h-[26px] w-[26px] -translate-x-1/2"
+              className="absolute left-1/2 top-[715px] h-[26px] w-[26px] -translate-x-1/2"
               variants={pulse}
               initial="initial"
               animate="animate"
             >
               <Image
-                src="/assets/images/feature-timeline-dot-3.svg"
+                src="/assets/images/features/feature-timeline-dot-3.svg"
                 alt=""
                 width={26}
                 height={26}
@@ -144,13 +149,13 @@ export default function FeatureCardsSection() {
               />
             </motion.div>
             <motion.div 
-              className="absolute left-1/2 top-[810px] h-[26px] w-[26px] -translate-x-1/2"
+              className="absolute left-1/2 top-[1041px] h-[26px] w-[26px] -translate-x-1/2"
               variants={pulse}
               initial="initial"
               animate="animate"
             >
               <Image
-                src="/assets/images/feature-timeline-dot-4.svg"
+                src="/assets/images/features/feature-timeline-dot-4.svg"
                 alt=""
                 width={26}
                 height={26}
@@ -184,10 +189,10 @@ export default function FeatureCardsSection() {
             >
               <div className="w-full max-w-[497px]">
                 <GlassCard>
-                  <div className="mb-6 h-[97px] w-[97px]">
+                  <div className="mb-4 h-[72px] w-[72px]">
                     <SettingsIcon />
                   </div>
-                  <p className="text-lg leading-relaxed text-white">
+                  <p className="text-[17px] leading-[1.6] text-white">
                     <span className="font-semibold text-[#ff8d28]">Wie wir dein Design-System strukturieren</span>, damit du schneller hochwertige Creatives erhältst – ganz ohne Feedback-Chaos oder Bottlenecks.
                   </p>
                 </GlassCard>
@@ -203,11 +208,11 @@ export default function FeatureCardsSection() {
               }}
             >
               <div className="w-full max-w-[474px]">
-                <GlassCard pointRight>
-                  <div className="mb-6 h-[97px] w-[97px]">
+                <GlassCard pointRight height="small">
+                  <div className="mb-4 h-[72px] w-[72px]">
                     <DownIcon />
                   </div>
-                  <p className="text-lg leading-relaxed text-white">
+                  <p className="text-[17px] leading-[1.6] text-white">
                     <span className="font-semibold text-[#ff8d28]">Wie du deine Produktionskosten um bis zu 50 % reduzierst</span>, während dein Creative-Output sich verdoppelt.
                   </p>
                 </GlassCard>
@@ -224,10 +229,10 @@ export default function FeatureCardsSection() {
             >
               <div className="w-full max-w-[497px]">
                 <GlassCard>
-                  <div className="mb-6 h-[97px] w-[97px]">
+                  <div className="mb-4 h-[72px] w-[72px]">
                     <CrystalIcon />
                   </div>
-                  <p className="text-lg leading-relaxed text-white">
+                  <p className="text-[17px] leading-[1.6] text-white">
                     <span className="font-semibold text-[#ff8d28]">Wie die BAT-Methode</span> klare Verantwortlichkeiten schafft, Kommunikation vereinfacht und Prioritäten automatisch richtig setzt.
                   </p>
                 </GlassCard>
@@ -243,11 +248,11 @@ export default function FeatureCardsSection() {
               }}
             >
               <div className="w-full max-w-[474px]">
-                <GlassCard pointRight>
-                  <div className="mb-6 h-[92px] w-[92px]">
+                <GlassCard pointRight height="small">
+                  <div className="mb-3 h-[72px] w-[72px]">
                     <UserInfoIcon />
                   </div>
-                  <p className="text-lg leading-relaxed text-white">
+                  <p className="text-[16px] leading-[1.5] text-white">
                     <span className="font-semibold text-[#ff8d28]">Wie Scalecraft bereits über 30 Agenturen & Freelancern</span> geholfen hat, Workflows zu optimieren, ROAS zu steigern und Projekte planbarer zu machen und wie wir Zusammenarbeiten
                   </p>
                 </GlassCard>
@@ -260,7 +265,7 @@ export default function FeatureCardsSection() {
         <div className="mt-12 text-center">
           <div className="inline-block">
             <Image
-              src="/assets/images/feature-scalecraft-text.svg"
+              src="/assets/images/features/feature-scalecraft-text.svg"
               alt="SCALECRAFT"
               width={1430}
               height={165}

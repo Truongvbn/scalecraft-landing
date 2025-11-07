@@ -1,11 +1,11 @@
 export default function DownIcon() {
   return (
-    <svg width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g filter="url(#filter0_d_down)">
-        <g filter="url(#filter1_d_down)">
+    <svg width="72" height="72" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <g>
           <path d="M84.875 42.4375C84.875 59.1786 71.3036 72.75 54.5625 72.75C37.8214 72.75 24.25 59.1786 24.25 42.4375C24.25 25.6964 37.8214 12.125 54.5625 12.125C71.3036 12.125 84.875 25.6964 84.875 42.4375Z" fill="url(#paint0_linear_down)"/>
         </g>
-        <g filter="url(#filter2_dd_down)">
+        <g>
           <path fillRule="evenodd" clipRule="evenodd" d="M44.7187 71.7147C43.511 73.0949 41.3639 73.0949 40.1563 71.7147L25.6176 55.0992C23.9027 53.1392 25.2946 50.0718 27.8989 50.0718H33.3438V25.6377C21.0457 29.5003 12.125 40.9896 12.125 54.5625C12.125 71.3036 25.6964 84.875 42.4375 84.875C59.1786 84.875 72.75 71.3036 72.75 54.5625C72.75 40.9896 63.8293 29.5003 51.5312 25.6377V50.0718H56.9761C59.5804 50.0718 60.9723 53.1392 59.2573 55.0992L44.7187 71.7147Z" fill="white" fillOpacity="0.4"/>
         </g>
       </g>

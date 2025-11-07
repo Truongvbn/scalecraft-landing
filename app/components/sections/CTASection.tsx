@@ -88,7 +88,7 @@ export default function CTASection() {
           {/* Avatar 1 */}
           <div className="relative -mr-2 h-11 w-11 overflow-hidden rounded-full border-[0.595px] border-white/90">
             <Image
-              src="/assets/images/cta-avatar-1.png"
+              src="/assets/images/cta/cta-avatar-1.png"
               alt="Client"
               fill
               className="object-cover"
@@ -101,7 +101,7 @@ export default function CTASection() {
           {/* Avatar 2 */}
           <div className="relative -mr-2 h-11 w-11 overflow-hidden rounded-full border-[1.189px] border-white/90">
             <Image
-              src="/assets/images/cta-avatar-2.png"
+              src="/assets/images/cta/cta-avatar-2.png"
               alt="Client"
               fill
               className="object-cover"
@@ -114,7 +114,7 @@ export default function CTASection() {
           {/* Avatar 3 */}
           <div className="relative -mr-2 h-11 w-11 overflow-hidden rounded-full border-[0.595px] border-white/90">
             <Image
-              src="/assets/images/cta-avatar-3.png"
+              src="/assets/images/cta/cta-avatar-3.png"
               alt="Client"
               fill
               className="object-cover"
@@ -127,7 +127,7 @@ export default function CTASection() {
           {/* Avatar 4 */}
           <div className="relative -mr-2 h-11 w-11 overflow-hidden rounded-full border-[0.595px] border-white/90">
             <Image
-              src="/assets/images/cta-avatar-4.png"
+              src="/assets/images/cta/cta-avatar-4.png"
               alt="Client"
               fill
               className="object-cover"
@@ -140,7 +140,7 @@ export default function CTASection() {
           {/* Avatar 5 */}
           <div className="relative -mr-2 h-11 w-11 overflow-hidden rounded-full border-[0.595px] border-white/90">
             <Image
-              src="/assets/images/cta-avatar-5.png"
+              src="/assets/images/cta/cta-avatar-5.png"
               alt="Client"
               fill
               className="object-cover"
@@ -153,7 +153,7 @@ export default function CTASection() {
           {/* Avatar 6 */}
           <div className="relative -mr-2 h-11 w-11 overflow-hidden rounded-full border-[0.595px] border-white/90">
             <Image
-              src="/assets/images/cta-avatar-6.png"
+              src="/assets/images/cta/cta-avatar-6.png"
               alt="Client"
               fill
               className="object-cover"

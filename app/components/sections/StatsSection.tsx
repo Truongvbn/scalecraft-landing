@@ -10,25 +10,26 @@ export default function StatsSection() {
     {
       title: "Best Practices im E-Commerce (Amazon + Shop Assets)",
       description: "Unsere Erfahrung aus hunderten Projekten fließt direkt in jedes Design ein.\nOb Amazon-Visuals, Shop-Assets oder Ad Creatives – wir setzen auf datenbasierte Best Practices, die Marken skalierbar machen und Conversions steigern.\n\n💡 Ergebnis: Markenauftritte, die nicht nur gut aussehen, sondern messbar performen.",
-      image: "/assets/images/stats-illustration.png",
+      image: "/assets/images/stats/Container-1.png",
       imageRight: true,
-      useIllustration: true
+      useIllustration: false,
+      useGradientBg: false
     },
     {
       title: "Performance Design, das verkauft",
       description: "Unsere Designs entstehen nicht zufällig – sie folgen klaren Prinzipien aus Storytelling, Verkaufspsychologie und Conversion-Optimierung.\nSo wird jedes Creative zu einem Werkzeug, das Emotion, Vertrauen und Kaufimpuls verbindet.\n\n💡 Ergebnis: Design, das verkauft – mit nachweislich besseren KPIs und längerer Customer Retention.",
-      image: "/assets/Frame 1686552967.png",
+      image: "/assets/images/stats/wow-image → Picture → A progress screen for building a subscription tracker app shows all setup tasks completed with green check mark and an orange arrow button on a pastel blue-orange gradient background..png",
       imageRight: false,
       useIllustration: false,
-      useGradientBg: true
+      useGradientBg: false
     },
     {
       title: "KPI-Tracking & effiziente Asset-Gestaltung",
       description: "Wir kombinieren Kreativität mit System: Automatisierte Workflows, strukturierte Template-Libraries und einheitliche Guidelines sorgen für maximale Effizienz.\nJedes Asset wird gemessen, analysiert und weiter optimiert – für stetig wachsende Performance.\n\n💡 Ergebnis: Schnellere Produktion, geringere Kosten, konsistente Markenqualität.",
-      image: "/assets/Group 1000015032.png",
+      image: "/assets/images/stats/Container.png",
       imageRight: true,
       useIllustration: false,
-      useGradientBg: true
+      useGradientBg: false
     }
   ];
 
@@ -96,7 +97,7 @@ export default function StatsSection() {
                       {/* Background Gradient Image */}
                       <div className="absolute inset-0">
                         <Image
-                          src="/assets/images/stats-gradient-bg.png"
+                          src="/assets/images/stats/stats-gradient-bg.png"
                           alt=""
                           fill
                           className="object-cover"
@@ -113,7 +114,7 @@ export default function StatsSection() {
                       <div 
                         className="absolute inset-0 z-10 opacity-30 mix-blend-overlay pointer-events-none"
                         style={{
-                          backgroundImage: 'url("/assets/images/stats-texture.png")',
+                          backgroundImage: 'url("/assets/images/stats/stats-texture.png")',
                           backgroundSize: '120px 120px',
                           backgroundRepeat: 'repeat'
                         }}
@@ -124,7 +125,7 @@ export default function StatsSection() {
                       {/* Background Gradient Image */}
                       <div className="absolute inset-0">
                         <Image
-                          src="/assets/images/stats-gradient-bg.png"
+                          src="/assets/images/stats/stats-gradient-bg.png"
                           alt=""
                           fill
                           className="object-cover"
@@ -151,7 +152,7 @@ export default function StatsSection() {
                       <div 
                         className="absolute inset-0 z-10 opacity-30 mix-blend-overlay pointer-events-none"
                         style={{
-                          backgroundImage: 'url("/assets/images/stats-texture.png")',
+                          backgroundImage: 'url("/assets/images/stats/stats-texture.png")',
                           backgroundSize: '120px 120px',
                           backgroundRepeat: 'repeat'
                         }}
@@ -163,7 +164,7 @@ export default function StatsSection() {
                       <div 
                         className="absolute inset-0 z-10 opacity-30 mix-blend-overlay"
                         style={{
-                          backgroundImage: 'url("/assets/images/stats-texture.png")',
+                          backgroundImage: 'url("/assets/images/stats/stats-texture.png")',
                           backgroundSize: '120px 120px',
                           backgroundRepeat: 'repeat'
                         }}

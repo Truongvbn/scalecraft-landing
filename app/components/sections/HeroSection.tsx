@@ -5,36 +5,34 @@ import Image from "next/image";
 import { fadeInUp, viewport } from "@/app/lib/animations";
 
 // Background and texture
-const imgTexture = "/assets/images/hero-texture.svg";
-const imgFrame2 = "/assets/images/hero-frame2.svg";
-const imgGroup = "/assets/images/hero-group.svg";
-const imgGroup1 = "/assets/images/hero-group1.svg";
+const imgTexture = "/assets/images/hero/hero-texture.svg";
+const imgFrame2 = "/assets/images/hero/hero-frame2.svg";
+const imgGroup = "/assets/images/hero/hero-group.svg";
+const imgGroup1 = "/assets/images/hero/hero-group1.svg";
 
-// Logo marquee images
-const imgImage6 = "/assets/images/hero-logo-1.png";
-const imgImage5 = "/assets/images/hero-logo-2.png";
-const imgImage4 = "/assets/images/hero-logo-3.png";
-const imgGroup344 = "/assets/images/hero-logo-4.png";
-const imgGroup343 = "/assets/images/hero-logo-5.png";
-const imgImage7 = "/assets/images/hero-logo-6.png";
-const imgImage11 = "/assets/images/hero-logo-7.png";
-const imgImage13 = "/assets/images/hero-logo-8.png";
-const imgImage14 = "/assets/images/hero-logo-9.png";
+// Logo marquee images - NEW IMAGES
+const imgImage4 = "/assets/images/hero/image 4.png";
+const imgImage5 = "/assets/images/hero/image 5.png";
+const imgImage6 = "/assets/images/hero/image 6.png";
+const imgImage7 = "/assets/images/hero/image 7.png";
+const imgImage11 = "/assets/images/hero/image 11.png";
+const imgImage13 = "/assets/images/hero/image 13.png";
+const imgImage14 = "/assets/images/hero/image 14.png";
 
 // Icons and badges
-const imgIcon = "/assets/images/hero-icon.svg";
-const imgImage28 = "/assets/images/hero-image28.png";
-const imgIntersect = "/assets/images/hero-intersect.svg";
-const imgImage25 = "/assets/images/hero-image25.png";
-const imgImage27 = "/assets/images/hero-image27.png";
-const imgImage24 = "/assets/images/hero-image24.png";
-const imgImage291 = "/assets/images/hero-image291.png";
-const imgGroup13681 = "/assets/images/hero-group13681.svg";
+const imgIcon = "/assets/images/hero/hero-icon.svg";
+const imgImage28 = "/assets/images/hero/hero-image28.png";
+const imgIntersect = "/assets/images/hero/hero-intersect.svg";
+const imgImage25 = "/assets/images/hero/hero-image25.png";
+const imgImage27 = "/assets/images/hero/hero-image27.png";
+const imgImage24 = "/assets/images/hero/hero-image24.png";
+const imgImage291 = "/assets/images/hero/hero-image291.png";
+const imgGroup13681 = "/assets/images/hero/hero-group13681.svg";
 
 // Nav logo
-const imgGroup2 = "/assets/images/hero-nav-logo-1.svg";
-const imgGroup3 = "/assets/images/hero-nav-logo-2.svg";
-const imgFrame = "/assets/images/hero-nav-frame.svg";
+const imgGroup2 = "/assets/images/hero/hero-nav-logo-1.svg";
+const imgGroup3 = "/assets/images/hero/hero-nav-logo-2.svg";
+const imgFrame = "/assets/images/hero/hero-nav-frame.svg";
 
 export default function HeroSection() {
   return (
@@ -279,72 +277,56 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Logo Marquee */}
+        {/* Logo Marquee - Updated with new logos */}
         <div className="absolute left-[136px] top-[748px] h-[78px] w-[1104px] overflow-hidden">
           <div className="animate-marquee flex h-[78px] w-[3020px] grayscale">
             {/* First set of logos */}
-            <div className="flex h-[78px] min-w-[1510px] items-center">
-              <div className="relative h-[20px] w-[101px]">
-                <img src={imgImage6} alt="" className="h-full w-full object-cover" />
+            <div className="flex h-[78px] min-w-[1510px] items-center gap-[80px]">
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage4} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[111px] h-[36px] w-[101px]">
-                <img src={imgImage5} alt="" className="h-full w-full object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage5} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[61px] h-[35px] w-[130px]">
-                <img src={imgImage4} alt="" className="h-full w-full object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage6} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[67px] h-[46.799px] w-[138.827px]">
-                <div className="absolute left-[37.3%] right-[36.83%] top-0 bottom-[48.78%]">
-                  <img src={imgGroup344} alt="" className="h-full w-full object-contain" />
-                </div>
-                <div className="absolute left-0 right-0 top-[65.17%] bottom-0">
-                  <img src={imgGroup343} alt="" className="h-full w-full object-contain" />
-                </div>
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage7} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[52px] h-[38px] w-[172px]">
-                <img src={imgImage7} alt="" className="h-full w-full object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage11} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[19px] h-[78px] w-[108px]">
-                <img src={imgImage11} alt="" className="h-full w-full object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage13} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[52px] h-[31px] w-[124.657px]">
-                <img src={imgImage13} alt="" className="h-full w-full object-cover" />
-              </div>
-              <div className="relative ml-[58px] h-[66px] w-[194px] overflow-hidden">
-                <img src={imgImage14} alt="" className="absolute left-[-43.11%] top-0 h-full w-[147.35%] object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage14} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
             </div>
 
             {/* Duplicate set for seamless loop */}
-            <div className="flex h-[78px] min-w-[1510px] items-center">
-              <div className="relative h-[20px] w-[101px]">
-                <img src={imgImage6} alt="" className="h-full w-full object-cover" />
+            <div className="flex h-[78px] min-w-[1510px] items-center gap-[80px]">
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage4} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[111px] h-[36px] w-[101px]">
-                <img src={imgImage5} alt="" className="h-full w-full object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage5} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[61px] h-[35px] w-[130px]">
-                <img src={imgImage4} alt="" className="h-full w-full object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage6} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[67px] h-[46.799px] w-[138.827px]">
-                <div className="absolute left-[37.3%] right-[36.83%] top-0 bottom-[48.78%]">
-                  <img src={imgGroup344} alt="" className="h-full w-full object-contain" />
-                </div>
-                <div className="absolute left-0 right-0 top-[65.17%] bottom-0">
-                  <img src={imgGroup343} alt="" className="h-full w-full object-contain" />
-                </div>
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage7} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[52px] h-[38px] w-[172px]">
-                <img src={imgImage7} alt="" className="h-full w-full object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage11} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[19px] h-[78px] w-[108px]">
-                <img src={imgImage11} alt="" className="h-full w-full object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage13} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
-              <div className="relative ml-[52px] h-[31px] w-[124.657px]">
-                <img src={imgImage13} alt="" className="h-full w-full object-cover" />
-              </div>
-              <div className="relative ml-[58px] h-[66px] w-[194px] overflow-hidden">
-                <img src={imgImage14} alt="" className="absolute left-[-43.11%] top-0 h-full w-[147.35%] object-cover" />
+              <div className="relative h-[60px] w-[120px]">
+                <img src={imgImage14} alt="Partner logo" className="h-full w-full object-contain" />
               </div>
             </div>
           </div>

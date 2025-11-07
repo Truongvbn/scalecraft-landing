@@ -3,16 +3,19 @@ import React from "react";
 interface GlassCardProps {
   children: React.ReactNode;
   pointRight?: boolean;
+  height?: 'small' | 'large';
 }
 
-export default function GlassCard({ children, pointRight = false }: GlassCardProps) {
+export default function GlassCard({ children, pointRight = false, height = 'large' }: GlassCardProps) {
   const cardId = React.useId();
+  const cardHeight = height === 'small' ? 256 : 278;
+  const cardWidth = height === 'small' ? 474 : 497;
   
   return (
-    <div className="relative w-full">
+    <div className="relative" style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}>
       <svg 
         className="absolute inset-0 h-full w-full" 
-        viewBox="0 0 497 278" 
+        viewBox={`0 0 ${cardWidth} ${cardHeight}`} 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg" 
         preserveAspectRatio="none"
@@ -54,16 +57,24 @@ export default function GlassCard({ children, pointRight = false }: GlassCardPro
         <g filter={`url(#filter_${cardId})`} style={{ backdropFilter: 'blur(4.88px)' }}>
           <path 
             d={pointRight 
-              ? "M39 0C30.163 0 23 7.16345 23 16V73.9092L0 85.5381L23 97.166V262C23 270.837 30.163 278 39 278H481C489.837 278 497 270.837 497 262V16C497 7.16344 489.837 0 481 0H39Z"
-              : "M458 0C466.837 0 474 7.16345 474 16V73.9092L497 85.5381L474 97.166V262C474 270.837 466.837 278 458 278H16C7.16345 278 0 270.837 0 262V16C0 7.16344 7.16344 0 16 0H458Z"
+              ? height === 'small'
+                ? "M39 0C30.163 0 23 7.16345 23 16V73.9092L0 85.5381L23 97.166V240C23 248.837 30.163 256 39 256H435C443.837 256 451 248.837 451 240V16C451 7.16344 443.837 0 435 0H39Z"
+                : "M39 0C30.163 0 23 7.16345 23 16V73.9092L0 85.5381L23 97.166V262C23 270.837 30.163 278 39 278H481C489.837 278 497 270.837 497 262V16C497 7.16344 489.837 0 481 0H39Z"
+              : height === 'small'
+                ? "M435 0C443.837 0 451 7.16345 451 16V73.9092L474 85.5381L451 97.166V240C451 248.837 443.837 256 435 256H16C7.16345 256 0 248.837 0 240V16C0 7.16344 7.16344 0 16 0H435Z"
+                : "M458 0C466.837 0 474 7.16345 474 16V73.9092L497 85.5381L474 97.166V262C474 270.837 466.837 278 458 278H16C7.16345 278 0 270.837 0 262V16C0 7.16344 7.16344 0 16 0H458Z"
             }
             fill="white" 
             fillOpacity="0.15"
           />
           <path 
             d={pointRight 
-              ? "M39 0C30.163 0 23 7.16345 23 16V73.9092L0 85.5381L23 97.166V262C23 270.837 30.163 278 39 278H481C489.837 278 497 270.837 497 262V16C497 7.16344 489.837 0 481 0H39Z"
-              : "M458 0C466.837 0 474 7.16345 474 16V73.9092L497 85.5381L474 97.166V262C474 270.837 466.837 278 458 278H16C7.16345 278 0 270.837 0 262V16C0 7.16344 7.16344 0 16 0H458Z"
+              ? height === 'small'
+                ? "M39 0C30.163 0 23 7.16345 23 16V73.9092L0 85.5381L23 97.166V240C23 248.837 30.163 256 39 256H435C443.837 256 451 248.837 451 240V16C451 7.16344 443.837 0 435 0H39Z"
+                : "M39 0C30.163 0 23 7.16345 23 16V73.9092L0 85.5381L23 97.166V262C23 270.837 30.163 278 39 278H481C489.837 278 497 270.837 497 262V16C497 7.16344 489.837 0 481 0H39Z"
+              : height === 'small'
+                ? "M435 0C443.837 0 451 7.16345 451 16V73.9092L474 85.5381L451 97.166V240C451 248.837 443.837 256 435 256H16C7.16345 256 0 248.837 0 240V16C0 7.16344 7.16344 0 16 0H435Z"
+                : "M458 0C466.837 0 474 7.16345 474 16V73.9092L497 85.5381L474 97.166V262C474 270.837 466.837 278 458 278H16C7.16345 278 0 270.837 0 262V16C0 7.16344 7.16344 0 16 0H458Z"
             }
             fill={`url(#gradient_${cardId})`}
             fillOpacity="0.1"

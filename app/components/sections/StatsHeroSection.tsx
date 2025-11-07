@@ -5,13 +5,13 @@ import { fadeInUp, fastStagger, staggerItem, viewport } from "@/app/lib/animatio
 
 // Figma assets are SVGs, using img tags instead of Next Image
 
-const imgTexture = "/assets/images/stats-hero-texture.svg";
-const imgGradient = "/assets/images/stats-hero-gradient.svg";
-const imgGradient1 = "/assets/images/stats-hero-gradient1.svg";
-const imgIcon3 = "/assets/images/stats-hero-icon3.svg";
-const imgIcon1 = "/assets/images/stats-hero-icon1.svg";
-const imgIcon4 = "/assets/images/stats-hero-icon4.svg";
-const imgIcon2 = "/assets/images/stats-hero-icon2.svg";
+const imgTexture = "/assets/images/stats-hero/stats-hero-texture.svg";
+const imgGradient = "/assets/images/stats-hero/stats-hero-gradient.svg";
+const imgGradient1 = "/assets/images/stats-hero/stats-hero-gradient1.svg";
+const imgIcon3 = "/assets/images/stats-hero/stats-hero-icon3.svg";
+const imgIcon1 = "/assets/images/stats-hero/stats-hero-icon1.svg";
+const imgIcon4 = "/assets/images/stats-hero/stats-hero-icon4.svg";
+const imgIcon2 = "/assets/images/stats-hero/stats-hero-icon2.svg";
 
 export default function StatsHeroSection() {
   return (
