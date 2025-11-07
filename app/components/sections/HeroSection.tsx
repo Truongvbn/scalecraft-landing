@@ -144,11 +144,8 @@ export default function HeroSection() {
         </div>
 
         {/* Rating Badge */}
-        <motion.div 
-          className="absolute left-[88.34px] md:left-1/2 lg:left-1/2 top-[84px] md:top-[95px] lg:top-[145px] h-[32px] md:h-[45px] lg:h-[71px] w-[239.324px] md:w-[350px] lg:w-[531px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 will-change-transform"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+        <div 
+          className="absolute left-[88.34px] md:left-1/2 lg:left-1/2 top-[84px] md:top-[95px] lg:top-[145px] h-[32px] md:h-[45px] lg:h-[71px] w-[239.324px] md:w-[350px] lg:w-[531px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2"
         >
           <div 
             className="absolute left-0 top-0 h-full w-full rounded-[9.915px] md:rounded-[16px] lg:rounded-[22px] border-[0.451px] md:border-[0.7px] lg:border border-[rgba(255,255,255,0.9)]"
@@ -191,7 +188,7 @@ export default function HeroSection() {
           <div className="absolute left-[93.3px] md:left-[148px] lg:left-[207px] top-[18.48px] md:top-[28px] lg:top-[41px] h-[5.73px] md:h-[9px] lg:h-[12.714px] w-[40.113px] md:w-[63px] lg:w-[89px]">
             <Image src={imgGroup13681} alt="" fill className="object-contain" sizes="89px" loading="lazy" />
           </div>
-        </motion.div>
+        </div>
 
         {/* Main Heading */}
         <h1 
@@ -203,25 +200,19 @@ export default function HeroSection() {
         </h1>
 
         {/* Subheading */}
-        <motion.div 
-          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[263px] md:top-[230px] lg:top-[396px] w-[380px] md:w-[680px] lg:w-[1026px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 whitespace-pre-wrap text-left md:text-center lg:text-center text-[14px] md:text-[13.5px] lg:text-[16.5px] font-light leading-[20px] md:leading-[19px] lg:leading-[23.1px] text-black will-change-transform"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        <div 
+          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[263px] md:top-[230px] lg:top-[396px] w-[380px] md:w-[680px] lg:w-[1026px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 whitespace-pre-wrap text-left md:text-center lg:text-center text-[14px] md:text-[13.5px] lg:text-[16.5px] font-light leading-[20px] md:leading-[19px] lg:leading-[23.1px] text-black"
         >
           <p className="mb-0 leading-[20px] md:leading-[21px] lg:leading-[23.1px]">Scalecraft liefert dir ein eingespieltes Performance-Designteam – optimiert für Amazon / E-Commerce Agenturen und Freelancer</p>
           <p className="leading-[20px] md:leading-[21px] lg:leading-[23.1px]">
             <span className="font-semibold"> Ergebnis:</span>
             <span className="font-light"> Mehr Umsatz, weniger Aufwand, konstante Qualität.</span>
           </p>
-        </motion.div>
+        </div>
 
         {/* Stats Badges */}
-        <motion.div 
-          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[420px] md:top-[330px] lg:top-[495px] flex translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 items-start md:items-center lg:items-center gap-[24px] md:gap-2 lg:gap-6 flex-col md:flex-row lg:flex-row will-change-transform"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8, ease: [0.25, 0.1, 0.25, 1], staggerChildren: 0.1 }}
+        <div 
+          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[420px] md:top-[330px] lg:top-[495px] flex translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 items-start md:items-center lg:items-center gap-[24px] md:gap-2 lg:gap-6 flex-col md:flex-row lg:flex-row"
         >
           <div className="flex items-center gap-[8px] md:gap-[6px] lg:gap-[11px]">
             <div className="relative h-[20px] w-[20px] md:h-[20px] md:w-[20px] lg:h-[30px] lg:w-[30px] flex-shrink-0">
@@ -251,14 +242,11 @@ export default function HeroSection() {
               <span className="text-[14px] md:text-[11px] lg:text-[18px]">Umsatzsteigerung & Kostenreduktion</span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Buttons */}
-        <motion.div 
-          className="absolute left-1/2 top-[570px] md:top-[420px] lg:top-[613px] flex -translate-x-1/2 items-center gap-[10.4px] md:gap-[12px] lg:gap-[18px] flex-col md:flex-row lg:flex-row mb-8 md:mb-0 lg:mb-0 will-change-transform"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1, ease: [0.25, 0.1, 0.25, 1] }}
+        <div 
+          className="absolute left-1/2 top-[570px] md:top-[420px] lg:top-[613px] flex -translate-x-1/2 items-center gap-[10.4px] md:gap-[12px] lg:gap-[18px] flex-col md:flex-row lg:flex-row mb-8 md:mb-0 lg:mb-0"
         >
           <div className="relative h-[41.6px] md:h-[45px] lg:h-[48px] w-[206.267px] md:w-[220px] lg:w-[238px] rounded-[260px] md:rounded-[280px] lg:rounded-[300px] border-[0.867px] md:border lg:border border-black bg-[#252525] cursor-pointer hover:bg-[#404040] transition-colors">
             <p className="absolute left-1/2 top-1/2 w-[157.733px] md:w-[170px] lg:w-[182px] -translate-x-1/2 -translate-y-1/2 whitespace-pre-wrap text-center text-[14px] md:text-[15px] lg:text-[16px] text-white">
@@ -277,7 +265,7 @@ export default function HeroSection() {
               Unsere Ergebnisse ansehen
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Logo Marquee - Tablet & Desktop */}
         <div className="absolute left-[40px] md:left-[80px] lg:left-[136px] top-[748px] md:top-[520px] lg:top-[748px] h-[60px] md:h-[65px] lg:h-[78px] w-[688px] md:w-[608px] lg:w-[1104px] overflow-hidden max-md:hidden">
