@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
   compress: true,
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
@@ -34,7 +32,7 @@ const nextConfig: NextConfig = {
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: false,
-    qualities: [75, 80, 85, 90], // Support multiple quality levels
+    qualities: [75, 80, 85, 90],
   },
   
   // Turbopack config (Next.js 16+)

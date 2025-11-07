@@ -372,7 +372,7 @@ export default function HeroSection() {
       >
         <div className="relative h-[450px] w-[800px] overflow-hidden rounded-[20px] shadow-2xl max-md:h-[200px] max-md:w-[350px] max-md:rounded-[12px]">
           <iframe
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID"
             title="YouTube video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
