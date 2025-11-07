@@ -15,8 +15,8 @@ const imgIcon2 = "/assets/images/stats-hero/stats-hero-icon2.svg";
 
 export default function StatsHeroSection() {
   return (
-    <section className="relative w-full bg-[#f0f0f0] py-20">
-      <div className="mx-auto max-w-[1440px] px-[135px]">
+    <section className="relative w-full bg-[#f0f0f0] py-20 max-md:py-12">
+      <div className="mx-auto max-w-[1440px] px-[135px] max-md:px-4">
         {/* Heading */}
         <motion.div 
           className="mb-12 text-center"
@@ -25,7 +25,7 @@ export default function StatsHeroSection() {
           whileInView="visible"
           viewport={viewport}
         >
-          <h2 className="text-[44px] font-normal leading-[1.25] tracking-[-1.92px] text-[#020202]">
+          <h2 className="text-[44px] font-normal leading-[1.25] tracking-[-1.92px] text-[#020202] max-md:text-[30px] max-md:tracking-[-1.515px]">
             Warum wir das können?
             <br />
             <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
@@ -40,7 +40,7 @@ export default function StatsHeroSection() {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="relative h-[236px] w-full overflow-hidden rounded-[20px] border-2 border-white transform-gpu"
+          className="relative h-[236px] w-full overflow-hidden rounded-[20px] border-2 border-white transform-gpu max-md:h-auto max-md:min-h-[320px] max-md:w-[382px] max-md:mx-auto max-md:rounded-[12.511px] max-md:border-[1.251px]"
           style={{
             backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%)'
           }}
@@ -67,7 +67,7 @@ export default function StatsHeroSection() {
 
           {/* Stats Grid */}
           <motion.div 
-            className="relative z-10 flex h-full items-center justify-center gap-[50px] px-8"
+            className="relative z-10 flex h-full items-center justify-center gap-[50px] px-8 max-md:grid max-md:grid-cols-2 max-md:gap-x-[38px] max-md:gap-y-[30px] max-md:px-4 max-md:py-6"
             variants={fastStagger}
             initial="hidden"
             whileInView="visible"
@@ -75,19 +75,19 @@ export default function StatsHeroSection() {
           >
             {/* Stat 1 */}
             <motion.div 
-              className="flex flex-col items-center gap-2 text-center"
+              className="flex flex-col items-center gap-2 text-center max-md:gap-[16.265px]"
               variants={{
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: { opacity: 1, scale: 1 }
               }}
             >
-              <div className="mb-2 h-12 w-12">
+              <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px]">
                 <img src={imgIcon1} alt="" className="h-full w-full object-contain" />
               </div>
-              <p className="text-[40px] font-medium leading-[1.3] text-black">
+              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px]">
                 +100
               </p>
-              <p className="text-[20px] leading-[20px] text-[#404040]">
+              <p className="text-[20px] leading-[20px] text-[#404040] max-md:text-[12px] max-md:leading-[12.638px]">
                 Projekte{" "}
                 <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
                   abgeschlossen
@@ -103,13 +103,13 @@ export default function StatsHeroSection() {
                 visible: { opacity: 1, scale: 1 }
               }}
             >
-              <div className="mb-2 h-12 w-12">
+              <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px]">
                 <img src={imgIcon2} alt="" className="h-full w-full object-contain" />
               </div>
-              <p className="text-[40px] font-medium leading-[1.3] text-black">
+              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px]">
                 +50
               </p>
-              <p className="text-[20px] leading-[20px] text-[#404040]">
+              <p className="text-[20px] leading-[20px] text-[#404040] max-md:text-[12px] max-md:leading-[12.638px]">
                 <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
                   zufriedene
                 </span>
@@ -125,13 +125,13 @@ export default function StatsHeroSection() {
                 visible: { opacity: 1, scale: 1 }
               }}
             >
-              <div className="mb-2 h-12 w-12">
+              <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px]">
                 <img src={imgIcon3} alt="" className="h-full w-full object-contain" />
               </div>
-              <p className="text-[40px] font-medium leading-[1.3] text-black">
+              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px]">
                 +20 Mio. €
               </p>
-              <p className="text-[20px] leading-[24px]">
+              <p className="text-[20px] leading-[24px] max-md:text-[12px] max-md:leading-[15.013px]">
                 <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
                   Generierter Umsatz{" "}
                 </span>
@@ -147,13 +147,13 @@ export default function StatsHeroSection() {
                 visible: { opacity: 1, scale: 1 }
               }}
             >
-              <div className="mb-2 h-12 w-12">
+              <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px]">
                 <img src={imgIcon4} alt="" className="h-full w-full object-contain" />
               </div>
-              <p className="text-[40px] font-medium leading-[1.3] text-black">
+              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px]">
                 +500
               </p>
-              <p className="text-[20px] leading-[20px] text-[#404040]">
+              <p className="text-[20px] leading-[20px] text-[#404040] max-md:text-[12px] max-md:leading-[12.638px]">
                 <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
                   Entwickelte Creatives
                 </span>

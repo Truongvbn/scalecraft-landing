@@ -50,11 +50,11 @@ export default function ScalecraftComparisonSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#f0f0f0] py-20">
-      <div className="mx-auto max-w-[1440px] px-8">
+    <section className="relative w-full bg-[#f0f0f0] py-20 max-md:py-12">
+      <div className="mx-auto max-w-[1440px] px-8 max-md:px-4">
         {/* Heading */}
         <motion.h2 
-          className="mb-16 text-center text-[44px] font-normal leading-[1.25] tracking-[-1.92px] text-[#252525]"
+          className="mb-16 text-center text-[44px] font-normal leading-[1.25] tracking-[-1.92px] text-[#252525] max-md:mb-8 max-md:text-[28px] max-md:leading-[1.3]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -69,7 +69,7 @@ export default function ScalecraftComparisonSection() {
 
         {/* Toggle Button */}
         <motion.div 
-          className="relative mx-auto mb-12 flex h-16 w-full max-w-[525px] items-center justify-center gap-2 rounded-[13px] border border-white p-2 backdrop-blur-[4.875px]"
+          className="relative mx-auto mb-12 flex h-16 w-full max-w-[525px] items-center justify-center gap-2 rounded-[13px] border border-white p-2 backdrop-blur-[4.875px] max-md:h-[46.568px] max-md:max-w-none max-md:gap-1"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -81,7 +81,7 @@ export default function ScalecraftComparisonSection() {
           {/* Buttons */}
           <button
             onClick={() => setActiveTab("mit")}
-            className={`relative z-10 rounded-[10px] px-6 py-3 text-[20px] leading-[28px] tracking-[0.15px] transition-all duration-300 ${
+            className={`relative z-10 rounded-[10px] px-6 py-3 text-[20px] leading-[28px] tracking-[0.15px] transition-all duration-300 max-md:flex-1 max-md:px-4 max-md:py-2 max-md:text-[14px] ${
               activeTab === "mit" ? "bg-[#404040] text-white" : "text-[#1d1d1d] hover:bg-white/10"
             }`}
           >
@@ -89,7 +89,7 @@ export default function ScalecraftComparisonSection() {
           </button>
           <button
             onClick={() => setActiveTab("ohne")}
-            className={`relative z-10 rounded-[10px] px-6 py-3 text-[20px] leading-[28px] tracking-[0.15px] transition-all duration-300 ${
+            className={`relative z-10 rounded-[10px] px-6 py-3 text-[20px] leading-[28px] tracking-[0.15px] transition-all duration-300 max-md:flex-1 max-md:px-4 max-md:py-2 max-md:text-[14px] ${
               activeTab === "ohne" ? "bg-[#404040] text-white" : "text-[#1d1d1d] hover:bg-white/10"
             }`}
           >
@@ -127,7 +127,7 @@ export default function ScalecraftComparisonSection() {
                  boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
                }}>
             {/* Image Container */}
-            <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[15px]">
+            <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[15px] max-md:h-[195px]">
               <Image
                 src={imgGeminiGeneratedImageOulitpoulitpouli1}
                 alt="Agenturen"
@@ -156,7 +156,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Features List */}
-            <div className="mx-11 mt-6 flex-1 space-y-2">
+            <div className="mx-11 mt-6 flex-1 space-y-2 max-md:mx-6 max-md:space-y-1">
               {[
                 "Dediziertes Performance-Designteam nach deutscher Qualitätsnorm",
                 "Strukturierter Workflow mit fester Priorisierung",
@@ -170,13 +170,13 @@ export default function ScalecraftComparisonSection() {
                       <path d="M1 4.5L5 8.5L12 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <p className="text-[16px] font-light leading-[24px] text-[#546989]">{feature}</p>
+                  <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[14px] max-md:leading-[22px]">{feature}</p>
                 </div>
               ))}
             </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989]">
+            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
               <span className="font-semibold">Ergebnis:</span> Stabile Qualität, planbarer Output, zufriedene Kunden.
             </p>
           </motion.div>
@@ -193,7 +193,7 @@ export default function ScalecraftComparisonSection() {
                  boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
                }}>
             {/* Image Container */}
-            <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[15px]">
+            <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[15px] max-md:h-[195px]">
               <Image
                 src={imgGeminiGeneratedImage2M1Knj2M1Knj2M1K1}
                 alt="Mitarbeiter"
@@ -216,7 +216,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Features List */}
-            <div className="mx-11 mt-6 flex-1 space-y-2">
+            <div className="mx-11 mt-6 flex-1 space-y-2 max-md:mx-6 max-md:space-y-1">
               {[
                 "Externe Entlastung durch skalierbares Designteam",
                 "Performance-orientierte Trainings & Guidelines | UP TO DATE",
@@ -229,13 +229,13 @@ export default function ScalecraftComparisonSection() {
                       <path d="M1 4.5L5 8.5L12 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <p className="text-[16px] font-light leading-[24px] text-[#546989]">{feature}</p>
+                  <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[14px] max-md:leading-[22px]">{feature}</p>
                 </div>
               ))}
             </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989]">
+            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
               <span className="font-semibold">Ergebnis:</span> Dein Team bleibt fokussiert und arbeitet strategisch – nicht operativ im Chaos.
             </p>
           </motion.div>
@@ -248,7 +248,7 @@ export default function ScalecraftComparisonSection() {
                boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
              }}>
           {/* Image Container */}
-          <div className="relative mx-6 mt-5 h-[297px] overflow-hidden rounded-[15px]">
+          <div className="relative mx-6 mt-5 h-[297px] overflow-hidden rounded-[15px] max-md:mx-4 max-md:h-[195px]">
             <Image
               src={imgGeminiGeneratedImageOrf8Qtorf8Qtorf83}
               alt="Systeme"
@@ -258,7 +258,7 @@ export default function ScalecraftComparisonSection() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 gap-8 px-11 py-8 lg:grid-cols-2 lg:items-start">
+          <div className="grid grid-cols-1 gap-8 px-11 py-8 lg:grid-cols-2 lg:items-start max-md:px-6 max-md:py-6 max-md:gap-6">
             {/* Left Side */}
             <div>
               {/* Badge */}
@@ -282,7 +282,7 @@ export default function ScalecraftComparisonSection() {
                         <path d="M1 4.5L5 8.5L12 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                    <p className="text-[16px] font-light leading-[24px] text-[#546989]">{feature}</p>
+                    <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[14px] max-md:leading-[22px]">{feature}</p>
                   </div>
                 ))}
               </div>
@@ -373,7 +373,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989]">
+            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
               <span className="font-semibold">Ergebnis:</span> {ohneScalecraftData.agenturen.result}
             </p>
           </motion.div>
@@ -428,7 +428,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989]">
+            <p className="mx-11 mb-11 mt-6 text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
               <span className="font-semibold">Ergebnis:</span> {ohneScalecraftData.mitarbeiter.result}
             </p>
           </motion.div>
@@ -490,7 +490,7 @@ export default function ScalecraftComparisonSection() {
 
         {/* CTA Button */}
         <div className="mt-16 flex justify-center">
-          <button className="rounded-full border border-black border-solid bg-[#252525] px-8 py-3 text-[16px] text-white transition-colors hover:bg-[#404040]">
+          <button className="rounded-full border border-black border-solid bg-[#252525] px-8 py-3 text-[16px] text-white transition-colors hover:bg-[#404040] max-md:w-full max-md:max-w-md">
             Projekt starten →
           </button>
         </div>

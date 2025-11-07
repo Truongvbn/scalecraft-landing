@@ -18,7 +18,7 @@ export default function StatsSection() {
     {
       title: "Performance Design, das verkauft",
       description: "Unsere Designs entstehen nicht zufällig – sie folgen klaren Prinzipien aus Storytelling, Verkaufspsychologie und Conversion-Optimierung.\nSo wird jedes Creative zu einem Werkzeug, das Emotion, Vertrauen und Kaufimpuls verbindet.\n\n💡 Ergebnis: Design, das verkauft – mit nachweislich besseren KPIs und längerer Customer Retention.",
-      image: "/assets/images/stats/wow-image → Picture → A progress screen for building a subscription tracker app shows all setup tasks completed with green check mark and an orange arrow button on a pastel blue-orange gradient background..png",
+      image: "/assets/images/stats/wow-image.png",
       imageRight: false,
       useIllustration: false,
       useGradientBg: false
