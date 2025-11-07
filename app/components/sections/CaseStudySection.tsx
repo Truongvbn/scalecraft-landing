@@ -7,11 +7,7 @@ import CaseStudyCard1 from "./CaseStudyCard1";
 import CaseStudyCard2 from "./CaseStudyCard2";
 import CaseStudyCard3 from "./CaseStudyCard3";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
+// Swiper styles now imported in globals.css to reduce HTTP requests
 
 const caseStudyComponents = [
   CaseStudyCard1,

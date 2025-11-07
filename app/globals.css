@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Swiper CSS - Combined to reduce HTTP requests */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-coverflow";
+
 /* HeroUI Tabs Glassmorphism */
 [data-slot="tabList"] {
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%) !important;
