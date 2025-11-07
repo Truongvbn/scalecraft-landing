@@ -166,37 +166,37 @@ export default function VisualSolutionsSection() {
         <div className="relative h-[300px] w-full md:mx-auto md:h-[400px] md:max-w-[500px] lg:mx-0 lg:h-[501px] lg:max-w-none">
           {/* Main large image - từ Figma: w-72 h-48 left-[45.67px] top-[88.52px] */}
           <div className="absolute left-[45.67px] top-[88.52px] h-[192px] w-[288px] overflow-hidden rounded-2xl border border-white lg:absolute lg:left-[65px] lg:top-[126px] lg:h-[284px] lg:w-[392px] lg:rounded-[20.608px] lg:border-[1.288px]">
-            <Image src={imgPhc082541} alt="" fill className="object-cover" style={{ objectPosition: '-6.04% 0' }} />
+            <Image src={imgPhc082541} alt="" fill className="object-cover" style={{ objectPosition: '-6.04% 0' }} sizes="(max-width: 1024px) 288px, 392px" loading="lazy" quality={85} />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
           {/* Small image - bottom left - từ Figma: w-24 h-20 left-[-13px] top-[229px] */}
           <div className="absolute left-[-13px] top-[229px] h-[80px] w-[96px] overflow-hidden rounded-lg border-[0.63px] border-white/90 lg:absolute lg:left-[-31px] lg:top-[332px] lg:h-[130px] lg:w-[166px] lg:rounded-[10.304px] lg:border-[0.902px]">
-            <Image src={imgPhc08175} alt="" fill className="object-cover" />
+            <Image src={imgPhc08175} alt="" fill className="object-cover" sizes="(max-width: 1024px) 96px, 166px" loading="lazy" quality={85} />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
           {/* Small image - bottom right - từ Figma: w-32 h-28 left-[232px] top-[227px] */}
           <div className="absolute left-[232px] top-[227px] h-[112px] w-[128px] overflow-hidden rounded border-[0.59px] border-white/90 lg:absolute lg:left-[363px] lg:top-[329px] lg:h-[154px] lg:w-[181px] lg:rounded-[4.779px] lg:border-[0.836px]">
-            <Image src={imgPhc08183} alt="" fill className="object-cover" />
+            <Image src={imgPhc08183} alt="" fill className="object-cover" sizes="(max-width: 1024px) 128px, 181px" loading="lazy" quality={85} />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
           {/* Small image - top middle - từ Figma: w-16 h-20 left-[103.98px] top-[23.18px] */}
           <div className="absolute left-[103.98px] top-[23.18px] h-[80px] w-[64px] overflow-hidden rounded border-[0.56px] border-white/90 lg:absolute lg:left-[148px] lg:top-[33px] lg:h-[109px] lg:w-[97px] lg:rounded-[4.573px] lg:border-[0.8px]">
-            <Image src={imgPhc08179} alt="" fill className="object-cover" />
+            <Image src={imgPhc08179} alt="" fill className="object-cover" sizes="(max-width: 1024px) 64px, 97px" loading="lazy" quality={85} />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
           {/* Small image - top left - từ Figma: w-24 h-24 left-[7.73px] top-[35.13px] */}
           <div className="absolute left-[7.73px] top-[35.13px] h-[96px] w-[96px] overflow-hidden rounded-[3.16px] border-[0.55px] border-white/90 lg:absolute lg:left-[11px] lg:top-[50px] lg:h-[141px] lg:w-[145px] lg:rounded-[4.5px] lg:border-[0.788px]">
-            <Image src={imgPhc08206} alt="" fill className="object-cover" />
+            <Image src={imgPhc08206} alt="" fill className="object-cover" sizes="(max-width: 1024px) 96px, 145px" loading="lazy" quality={85} />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
           {/* Small image - middle bottom - từ Figma: w-14 h-11 left-[44px] top-[276px] */}
           <div className="absolute left-[44px] top-[276px] h-[44px] w-[56px] overflow-hidden rounded-sm border-[0.46px] border-white/90 lg:absolute lg:left-[274px] lg:top-[357px] lg:h-[81px] lg:w-[105px] lg:rounded-[3.761px] lg:border-[0.658px]">
-            <Image src={imgPhc08256} alt="" fill className="object-cover" />
+            <Image src={imgPhc08256} alt="" fill className="object-cover" sizes="(max-width: 1024px) 56px, 105px" loading="lazy" quality={85} />
             <div className="absolute inset-0 bg-[rgba(12,12,12,0.2)]" />
           </div>
 
@@ -212,28 +212,28 @@ export default function VisualSolutionsSection() {
             </p>
             <div className="flex items-center justify-center">
               <div className="relative -ml-0 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
-                <Image src={imgImg13751} alt="" fill className="object-cover" />
+                <Image src={imgImg13751} alt="" fill className="object-cover" sizes="24px" loading="lazy" quality={80} />
               </div>
               <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
-                <Image src={imgImage15} alt="" fill className="object-cover" />
+                <Image src={imgImage15} alt="" fill className="object-cover" sizes="24px" loading="lazy" quality={80} />
               </div>
               <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
-                <Image src={imgImg1779} alt="" fill className="object-cover" />
+                <Image src={imgImg1779} alt="" fill className="object-cover" sizes="24px" loading="lazy" quality={80} />
               </div>
               <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
-                <Image src={imgImg1770} alt="" fill className="object-cover" />
+                <Image src={imgImg1770} alt="" fill className="object-cover" sizes="24px" loading="lazy" quality={80} />
               </div>
               <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
-                <Image src={imgImg1778} alt="" fill className="object-cover" />
+                <Image src={imgImg1778} alt="" fill className="object-cover" sizes="24px" loading="lazy" quality={80} />
               </div>
               <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
-                <Image src={imgImg1781} alt="" fill className="object-cover" />
+                <Image src={imgImg1781} alt="" fill className="object-cover" sizes="24px" loading="lazy" quality={80} />
               </div>
               <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
-                <Image src={imgImg1780} alt="" fill className="object-cover" />
+                <Image src={imgImg1780} alt="" fill className="object-cover" sizes="24px" loading="lazy" quality={80} />
               </div>
               <div className="relative -ml-1 h-6 w-6 flex-shrink-0 overflow-hidden rounded-full border-[0.11px] border-white lg:h-6 lg:w-6">
-                <Image src={imgImg1764} alt="" fill className="object-cover" />
+                <Image src={imgImg1764} alt="" fill className="object-cover" sizes="24px" loading="lazy" quality={80} />
               </div>
             </div>
           </div>

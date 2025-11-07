@@ -125,7 +125,7 @@ export default function CaseStudySection() {
 
                 {/* Custom Navigation Buttons - Hidden on mobile */}
                 <button 
-                  className="swiper-button-prev-custom absolute left-2 lg:left-6 xl:left-4 top-1/2 z-20 -translate-y-1/2 w-12 h-12 lg:w-16 lg:h-16 xl:w-14 xl:h-14 rounded-full bg-gradient-to-br from-white/10 to-white/10 shadow-[0px_1px_8.1px_0px_rgba(0,0,0,0.10)] shadow-[inset_0px_1.625px_6.5px_0px_rgba(255,255,255,0.40)] outline outline-1 outline-offset-[-1px] outline-white backdrop-blur-[4.88px] hidden lg:flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:shadow-xl active:scale-95"
+                  className="swiper-button-prev-custom absolute left-2 md:left-[calc((100%-380px)/2-60px)] lg:left-[calc((100%-820px)/2-70px)] xl:left-[calc((100%-1080px)/2-70px)] top-1/2 z-20 -translate-y-1/2 w-12 h-12 lg:w-16 lg:h-16 xl:w-14 xl:h-14 rounded-full bg-gradient-to-br from-white/10 to-white/10 shadow-[0px_1px_8.1px_0px_rgba(0,0,0,0.10)] shadow-[inset_0px_1.625px_6.5px_0px_rgba(255,255,255,0.40)] outline outline-1 outline-offset-[-1px] outline-white backdrop-blur-[4.88px] hidden lg:flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:shadow-xl active:scale-95"
                   aria-label="Previous slide"
                 >
                   <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform duration-300 group-hover:-translate-x-1">
@@ -134,7 +134,7 @@ export default function CaseStudySection() {
                 </button>
 
                 <button 
-                  className="swiper-button-next-custom absolute right-2 lg:right-6 xl:right-4 top-1/2 z-20 -translate-y-1/2 w-12 h-12 lg:w-16 lg:h-16 xl:w-14 xl:h-14 rounded-full bg-gradient-to-br from-white/10 to-white/10 shadow-[0px_1px_8.1px_0px_rgba(0,0,0,0.10)] shadow-[inset_0px_1.625px_6.5px_0px_rgba(255,255,255,0.40)] outline outline-1 outline-offset-[-1px] outline-white backdrop-blur-[4.88px] hidden lg:flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:shadow-xl active:scale-95"
+                  className="swiper-button-next-custom absolute right-2 md:right-[calc((100%-380px)/2-60px)] lg:right-[calc((100%-820px)/2-70px)] xl:right-[calc((100%-1080px)/2-70px)] top-1/2 z-20 -translate-y-1/2 w-12 h-12 lg:w-16 lg:h-16 xl:w-14 xl:h-14 rounded-full bg-gradient-to-br from-white/10 to-white/10 shadow-[0px_1px_8.1px_0px_rgba(0,0,0,0.10)] shadow-[inset_0px_1.625px_6.5px_0px_rgba(255,255,255,0.40)] outline outline-1 outline-offset-[-1px] outline-white backdrop-blur-[4.88px] hidden lg:flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:shadow-xl active:scale-95"
                   aria-label="Next slide"
                 >
                   <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform duration-300 group-hover:translate-x-1">

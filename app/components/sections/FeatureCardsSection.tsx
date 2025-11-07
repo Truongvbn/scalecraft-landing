@@ -53,7 +53,7 @@ export default function FeatureCardsSection() {
           <div className="flex items-start gap-4 md:hidden">
             {/* Profile Image + Name/Title */}
             <div className="flex flex-col gap-2 flex-shrink-0">
-              <div className="relative h-[90px] w-[90px] overflow-hidden rounded-full border border-white/90 md:h-[120px] md:w-[120px]">
+              <div className="relative h-[90px] w-[90px] overflow-hidden rounded-[16px] border-[1.5px] border-white/90 shadow-lg md:h-[120px] md:w-[120px] md:rounded-[20px]">
                 <Image
                   src="/assets/images/features/feature-profile.png"
                   alt="Nguyen Dac Hoa"
@@ -62,7 +62,6 @@ export default function FeatureCardsSection() {
                   quality={85}
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gray-500/20"></div>
               </div>
               
               <div className="space-y-0.5">
@@ -103,7 +102,7 @@ export default function FeatureCardsSection() {
           </div>
 
           {/* Desktop: Profile Image only */}
-          <div className="relative hidden h-[160px] w-[160px] overflow-hidden rounded-full border border-white/90 md:block md:h-[180px] md:w-[180px] lg:h-[200px] lg:w-[200px]">
+          <div className="relative hidden h-[160px] w-[160px] overflow-hidden rounded-[24px] border-[2px] border-white/90 shadow-xl md:block md:h-[180px] md:w-[180px] md:rounded-[28px] lg:h-[220px] lg:w-[220px] lg:rounded-[32px]">
             <Image
               src="/assets/images/features/feature-profile.png"
               alt="Nguyen Dac Hoa"
@@ -112,7 +111,6 @@ export default function FeatureCardsSection() {
               quality={85}
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gray-500/20"></div>
           </div>
 
           {/* Desktop: Quote & Info */}

@@ -56,18 +56,18 @@ export default function TimelineCard({ year, title, fontSize = '20px' }: Timelin
         </g>
         
         {/* Line */}
-        <line x1="52.2719" y1="0" x2="52.2719" y2="61" stroke="#8C8C8C" strokeWidth="0.725348"/>
+        <line x1="52.2719" y1="0" x2="52.2719" y2="75" stroke="#8C8C8C" strokeWidth="0.725348"/>
         
-        {/* Icon Circle Background */}
-        <ellipse cx="52.3095" cy="43.9383" rx="15.4154" ry="15.2322" fill="#D9D9D9"/>
+        {/* Icon Circle Background - White outer circle */}
+        <circle cx="52.3095" cy="58" r="15.4154" fill="#FFFFFF" stroke="#E5E5E5" strokeWidth="1"/>
         
-        {/* Icon Circle Gradient */}
-        <ellipse cx="52.3082" cy="43.939" rx="7.34045" ry="7.25345" fill={`url(#paint2_${year})`}/>
+        {/* Icon Circle - Orange solid dot */}
+        <circle cx="52.3095" cy="58" r="10" fill="#F1983F"/>
       </svg>
 
       {/* Card Content */}
       <div className="relative z-10 col-[1] row-[1] mt-[78px] h-[188px] w-[220.865px]">
-        <div className="absolute left-[22px] top-[69.75px] flex w-[165px] flex-col gap-[12.331px]">
+        <div className="absolute left-[22px] top-[42px] flex w-[165px] flex-col gap-[12.331px]">
           <p className="whitespace-pre-wrap text-[#252525]" style={{ fontSize, fontWeight: 500, lineHeight: 1.2 }}>
             {title}
           </p>

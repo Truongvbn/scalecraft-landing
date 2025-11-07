@@ -75,10 +75,10 @@ export default function BenefitsSection() {
               whileHover={{ y: -8, scale: 1.02, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <div className="flex h-[172px] flex-row gap-4 p-0 md:h-auto md:flex-col md:gap-6 md:p-6 lg:h-[250px] lg:flex-row">
+              <div className="flex h-[172px] flex-row gap-0 p-0 md:h-auto md:flex-col md:gap-6 md:p-6 lg:h-[250px] lg:flex-row lg:gap-0 lg:p-0">
                 {/* Image */}
                 <motion.div 
-                  className="relative h-full w-[160px] flex-shrink-0 overflow-hidden rounded-l-2xl md:h-[219px] md:w-full md:rounded-2xl lg:h-[250px] lg:w-[229px] lg:rounded-2xl"
+                  className="relative h-full w-[160px] flex-shrink-0 overflow-hidden md:h-[219px] md:w-full md:rounded-2xl lg:h-full lg:w-[229px]"
                   whileHover={{ scale: 1.05, rotate: 2 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -87,15 +87,16 @@ export default function BenefitsSection() {
                     alt={benefit.title}
                     fill
                     sizes="(max-width: 768px) 160px, (max-width: 1024px) 100vw, 229px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 will-change-transform group-hover:scale-110"
                     quality={85}
                     priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </motion.div>
 
                 {/* Content */}
-                <div className="flex flex-1 flex-col justify-center py-4 pr-4 md:p-0">
+                <div className="flex flex-1 flex-col justify-center p-4 md:p-0 lg:p-6">
                   <h3 className="mb-3 text-[18px] font-normal leading-[1.17] text-[#404040] md:mb-4 md:text-2xl md:leading-tight">
                     {benefit.title}
                   </h3>

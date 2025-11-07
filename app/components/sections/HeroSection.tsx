@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 // Background and texture
@@ -11,7 +12,7 @@ const imgGroup1 = "/assets/images/hero/hero-group1.svg";
 // Logo marquee images - NEW IMAGES
 const imgImage4 = "/assets/images/hero/image 4.png";
 const imgImage5 = "/assets/images/hero/image 5.png";
-const imgImage6 = "/assets/images/hero/image 6.png";
+const imgImage6 = "/assets/images/hero/Frame 1707480419.png";
 const imgImage7 = "/assets/images/hero/image 7.png";
 const imgImage11 = "/assets/images/hero/image 11.png";
 const imgImage13 = "/assets/images/hero/image 13.png";
@@ -34,12 +35,12 @@ const imgFrame = "/assets/images/hero/hero-nav-frame.svg";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[889px] md:h-[1200px] lg:h-[1400px] w-full overflow-x-hidden bg-white">
+    <section className="relative h-[889px] md:h-[900px] lg:h-[1400px] w-full overflow-x-hidden bg-white">
       {/* Background Image - Full Screen */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="relative h-full w-full">
           <div className="absolute left-0 top-0 h-full w-full">
-            <img src={imgFrame2} alt="" className="h-full w-full object-cover" />
+            <Image src={imgFrame2} alt="" fill className="object-cover" priority quality={90} />
           </div>
           
           {/* Texture Overlay */}
@@ -69,7 +70,7 @@ export default function HeroSection() {
                   transform: 'translateX(calc(-50% + 54.81px))'
                 }}
               >
-                <img src={imgGroup1} alt="" className="h-full w-full object-cover" />
+                <Image src={imgGroup1} alt="" fill className="object-cover" priority quality={85} />
               </div>
             </div>
           </div>
@@ -77,7 +78,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content Container */}
-      <div className="relative mx-auto h-auto w-[414px] md:w-[768px] lg:w-[1440px] md:h-[1000px] lg:h-[900px]">
+      <div className="relative mx-auto h-auto w-[414px] md:w-[768px] lg:w-[1440px] md:h-[900px] lg:h-[900px]">
         {/* Navigation Bar */}
         <motion.div 
           className="absolute left-[17px] md:left-[40px] lg:left-[134px] top-[23px] md:top-[24px] lg:top-[26px] h-[58px] md:h-[60px] lg:h-[77px] w-[380px] md:w-[688px] lg:w-[1172px] transform-gpu will-change-transform"
@@ -97,10 +98,10 @@ export default function HeroSection() {
             {/* Logo */}
             <div className="relative h-[33px] w-[158px] md:h-[30px] md:w-[130px] lg:h-[33px] lg:w-[158px] overflow-hidden flex-shrink-0">
               <div className="absolute bottom-0 left-0 right-[81.36%] top-0">
-                <img src={imgGroup2} alt="" className="h-full w-full object-contain" />
+                <Image src={imgGroup2} alt="" fill className="object-contain" priority sizes="30px" />
               </div>
               <div className="absolute bottom-[33.06%] left-[23.53%] right-0 top-[26.76%]">
-                <img src={imgGroup3} alt="" className="h-full w-full object-contain" />
+                <Image src={imgGroup3} alt="" fill className="object-contain" priority sizes="120px" />
               </div>
             </div>
 
@@ -110,8 +111,8 @@ export default function HeroSection() {
               
               <div className="flex items-center gap-0.5 lg:gap-1">
                 <p className="whitespace-nowrap text-center text-[12px] tracking-[-0.24px] text-[#404040] lg:text-[16px] lg:tracking-[-0.32px]">Dienstleistung</p>
-                <div className="h-[11px] w-[11px] lg:h-[14px] lg:w-[14px]">
-                  <img src={imgFrame} alt="" className="h-full w-full object-contain" />
+                <div className="relative h-[11px] w-[11px] lg:h-[14px] lg:w-[14px]">
+                  <Image src={imgFrame} alt="" fill className="object-contain" sizes="14px" loading="lazy" />
                 </div>
               </div>
 
@@ -119,8 +120,8 @@ export default function HeroSection() {
 
               <div className="flex items-center gap-0.5 lg:gap-1">
                 <p className="whitespace-nowrap text-center text-[12px] tracking-[-0.24px] text-[#404040] lg:text-[16px] lg:tracking-[-0.32px]">Ressourcen</p>
-                <div className="h-[11px] w-[11px] lg:h-[14px] lg:w-[14px]">
-                  <img src={imgFrame} alt="" className="h-full w-full object-contain" />
+                <div className="relative h-[11px] w-[11px] lg:h-[14px] lg:w-[14px]">
+                  <Image src={imgFrame} alt="" fill className="object-contain" sizes="14px" loading="lazy" />
                 </div>
               </div>
 
@@ -147,7 +148,7 @@ export default function HeroSection() {
 
         {/* Rating Badge */}
         <motion.div 
-          className="absolute left-[88.34px] md:left-1/2 lg:left-1/2 top-[84px] md:top-[110px] lg:top-[145px] h-[32px] md:h-[50px] lg:h-[71px] w-[239.324px] md:w-[380px] lg:w-[531px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 will-change-transform"
+          className="absolute left-[88.34px] md:left-1/2 lg:left-1/2 top-[84px] md:top-[95px] lg:top-[145px] h-[32px] md:h-[45px] lg:h-[71px] w-[239.324px] md:w-[350px] lg:w-[531px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 will-change-transform"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
@@ -162,22 +163,22 @@ export default function HeroSection() {
           {/* Avatars */}
           <div className="absolute left-[7.66px] md:left-[12px] lg:left-[17px] top-[7.66px] md:top-[12px] lg:top-[17px] flex items-center">
             <div className="relative -mr-[4.056px] md:-mr-[6.5px] lg:-mr-[9px] h-[16.676px] md:h-[26px] lg:h-[37px] w-[16.676px] md:w-[26px] lg:w-[37px] overflow-hidden rounded-full border-[0.225px] md:border-[0.35px] lg:border-[0.5px] border-[rgba(255,255,255,0.9)]">
-              <img src={imgImage28} alt="" className="h-full w-full rounded-full object-cover" />
+              <Image src={imgImage28} alt="" fill className="rounded-full object-cover" sizes="37px" loading="lazy" />
             </div>
             <div className="relative -mr-[4.056px] md:-mr-[6.5px] lg:-mr-[9px] h-[16.676px] md:h-[26px] lg:h-[37px] w-[16.676px] md:w-[26px] lg:w-[37px] overflow-hidden rounded-full border-[0.451px] md:border-[0.7px] lg:border border-[rgba(255,255,255,0.9)]">
-              <img src={imgIntersect} alt="" className="h-full w-full object-contain" />
+              <Image src={imgIntersect} alt="" fill className="object-contain" sizes="37px" loading="lazy" />
             </div>
             <div className="relative -mr-[4.056px] md:-mr-[6.5px] lg:-mr-[9px] h-[16.676px] md:h-[26px] lg:h-[37px] w-[16.676px] md:w-[26px] lg:w-[37px] overflow-hidden rounded-full border-[0.225px] md:border-[0.35px] lg:border-[0.5px] border-[rgba(255,255,255,0.9)]">
-              <img src={imgImage25} alt="" className="h-full w-full rounded-full object-cover" />
+              <Image src={imgImage25} alt="" fill className="rounded-full object-cover" sizes="37px" loading="lazy" />
             </div>
             <div className="relative -mr-[4.056px] md:-mr-[6.5px] lg:-mr-[9px] h-[16.676px] md:h-[26px] lg:h-[37px] w-[16.676px] md:w-[26px] lg:w-[37px] overflow-hidden rounded-full border-[0.225px] md:border-[0.35px] lg:border-[0.5px] border-[rgba(255,255,255,0.9)]">
-              <img src={imgImage27} alt="" className="h-full w-full rounded-full object-cover" />
+              <Image src={imgImage27} alt="" fill className="rounded-full object-cover" sizes="37px" loading="lazy" />
             </div>
             <div className="relative -mr-[4.056px] md:-mr-[6.5px] lg:-mr-[9px] h-[16.676px] md:h-[26px] lg:h-[37px] w-[16.676px] md:w-[26px] lg:w-[37px] overflow-hidden rounded-full border-[0.225px] md:border-[0.35px] lg:border-[0.5px] border-[rgba(255,255,255,0.9)]">
-              <img src={imgImage24} alt="" className="h-full w-full object-cover" style={{ objectPosition: '-57.98% -47.27%', width: '286.03%', height: '286.03%' }} />
+              <Image src={imgImage24} alt="" fill className="object-cover" style={{ objectPosition: '-57.98% -47.27%' }} sizes="37px" loading="lazy" />
             </div>
             <div className="relative -mr-[4.056px] md:-mr-[6.5px] lg:-mr-[9px] h-[16.676px] md:h-[26px] lg:h-[37px] w-[16.676px] md:w-[26px] lg:w-[37px] overflow-hidden rounded-full border-[0.225px] md:border-[0.35px] lg:border-[0.5px] border-[rgba(255,255,255,0.9)]">
-              <img src={imgImage291} alt="" className="h-full w-full rounded-full object-cover" />
+              <Image src={imgImage291} alt="" fill className="rounded-full object-cover" sizes="37px" loading="lazy" />
             </div>
           </div>
 
@@ -191,13 +192,13 @@ export default function HeroSection() {
 
           {/* Stars */}
           <div className="absolute left-[93.3px] md:left-[148px] lg:left-[207px] top-[18.48px] md:top-[28px] lg:top-[41px] h-[5.73px] md:h-[9px] lg:h-[12.714px] w-[40.113px] md:w-[63px] lg:w-[89px]">
-            <img src={imgGroup13681} alt="" className="h-full w-full object-contain" />
+            <Image src={imgGroup13681} alt="" fill className="object-contain" sizes="89px" loading="lazy" />
           </div>
         </motion.div>
 
         {/* Main Heading */}
         <motion.h1 
-          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[126px] md:top-[160px] lg:top-[256px] w-[380px] md:w-[680px] lg:w-[1026px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 text-left md:text-center lg:text-center text-[30px] md:text-[38px] lg:text-[55.664px] font-normal leading-[33px] md:leading-[44px] lg:leading-[62.7px] tracking-[-0.57px] md:tracking-[-0.76px] lg:tracking-[-1.11px] text-black will-change-transform"
+          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[126px] md:top-[120px] lg:top-[256px] w-[380px] md:w-[680px] lg:w-[1026px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 text-left md:text-center lg:text-center text-[30px] md:text-[34px] lg:text-[55.664px] font-normal leading-[33px] md:leading-[40px] lg:leading-[62.7px] tracking-[-0.57px] md:tracking-[-0.68px] lg:tracking-[-1.11px] text-black will-change-transform"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
@@ -209,7 +210,7 @@ export default function HeroSection() {
 
         {/* Subheading */}
         <motion.div 
-          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[263px] md:top-[280px] lg:top-[396px] w-[380px] md:w-[680px] lg:w-[1026px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 whitespace-pre-wrap text-left md:text-center lg:text-center text-[14px] md:text-[14.5px] lg:text-[16.5px] font-light leading-[20px] md:leading-[21px] lg:leading-[23.1px] text-black will-change-transform"
+          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[263px] md:top-[230px] lg:top-[396px] w-[380px] md:w-[680px] lg:w-[1026px] translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 whitespace-pre-wrap text-left md:text-center lg:text-center text-[14px] md:text-[13.5px] lg:text-[16.5px] font-light leading-[20px] md:leading-[19px] lg:leading-[23.1px] text-black will-change-transform"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
@@ -223,14 +224,14 @@ export default function HeroSection() {
 
         {/* Stats Badges */}
         <motion.div 
-          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[420px] md:top-[400px] lg:top-[495px] flex translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 items-start md:items-center lg:items-center gap-[24px] md:gap-2 lg:gap-6 flex-col md:flex-row lg:flex-row will-change-transform"
+          className="absolute left-[17px] md:left-1/2 lg:left-1/2 top-[420px] md:top-[330px] lg:top-[495px] flex translate-x-0 md:-translate-x-1/2 lg:-translate-x-1/2 items-start md:items-center lg:items-center gap-[24px] md:gap-2 lg:gap-6 flex-col md:flex-row lg:flex-row will-change-transform"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8, ease: [0.25, 0.1, 0.25, 1], staggerChildren: 0.1 }}
         >
           <div className="flex items-center gap-[8px] md:gap-[6px] lg:gap-[11px]">
-            <div className="h-[20px] w-[20px] md:h-[20px] md:w-[20px] lg:h-[30px] lg:w-[30px] flex-shrink-0">
-              <img src={imgIcon} alt="" className="h-full w-full object-contain" />
+            <div className="relative h-[20px] w-[20px] md:h-[20px] md:w-[20px] lg:h-[30px] lg:w-[30px] flex-shrink-0">
+              <Image src={imgIcon} alt="" fill className="object-contain" sizes="30px" loading="lazy" />
             </div>
             <div className="font-normal leading-[20px] md:leading-[18px] lg:leading-[24px] text-[#404040] whitespace-nowrap">
               <span className="text-[14px] md:text-[13px] lg:text-[20px] font-bold md:font-semibold lg:font-semibold">x2</span>
@@ -239,8 +240,8 @@ export default function HeroSection() {
           </div>
 
           <div className="flex items-center gap-[8px] md:gap-[6px] lg:gap-[11px]">
-            <div className="h-[20px] w-[20px] md:h-[20px] md:w-[20px] lg:h-[30px] lg:w-[30px] flex-shrink-0">
-              <img src={imgIcon} alt="" className="h-full w-full object-contain" />
+            <div className="relative h-[20px] w-[20px] md:h-[20px] md:w-[20px] lg:h-[30px] lg:w-[30px] flex-shrink-0">
+              <Image src={imgIcon} alt="" fill className="object-contain" sizes="30px" loading="lazy" />
             </div>
             <div className="font-normal leading-[20px] md:leading-[18px] lg:leading-[24px] text-[#404040] whitespace-nowrap">
               <span className="text-[14px] md:text-[13px] lg:text-[20px] font-bold md:font-semibold lg:font-semibold">x2</span>
@@ -249,8 +250,8 @@ export default function HeroSection() {
           </div>
 
           <div className="flex items-center gap-[8px] md:gap-[6px] lg:gap-[11px]">
-            <div className="h-[20px] w-[20px] md:h-[20px] md:w-[20px] lg:h-[30px] lg:w-[30px] flex-shrink-0">
-              <img src={imgIcon} alt="" className="h-full w-full object-contain" />
+            <div className="relative h-[20px] w-[20px] md:h-[20px] md:w-[20px] lg:h-[30px] lg:w-[30px] flex-shrink-0">
+              <Image src={imgIcon} alt="" fill className="object-contain" sizes="30px" loading="lazy" />
             </div>
             <div className="font-normal leading-[20px] md:leading-[18px] lg:leading-[24px] text-[#404040] whitespace-nowrap">
               <span className="text-[14px] md:text-[11px] lg:text-[18px]">Umsatzsteigerung & Kostenreduktion</span>
@@ -260,7 +261,7 @@ export default function HeroSection() {
 
         {/* CTA Buttons */}
         <motion.div 
-          className="absolute left-1/2 top-[570px] md:top-[590px] lg:top-[613px] flex -translate-x-1/2 items-center gap-[10.4px] md:gap-[14px] lg:gap-[18px] flex-col md:flex-row lg:flex-row mb-8 md:mb-0 lg:mb-0 will-change-transform"
+          className="absolute left-1/2 top-[570px] md:top-[420px] lg:top-[613px] flex -translate-x-1/2 items-center gap-[10.4px] md:gap-[12px] lg:gap-[18px] flex-col md:flex-row lg:flex-row mb-8 md:mb-0 lg:mb-0 will-change-transform"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1, ease: [0.25, 0.1, 0.25, 1] }}
@@ -284,56 +285,56 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Logo Marquee - Desktop only */}
-        <div className="absolute left-[136px] top-[748px] h-[78px] w-[1104px] overflow-hidden max-md:hidden">
+        {/* Logo Marquee - Tablet & Desktop */}
+        <div className="absolute left-[40px] md:left-[80px] lg:left-[136px] top-[748px] md:top-[520px] lg:top-[748px] h-[60px] md:h-[65px] lg:h-[78px] w-[688px] md:w-[608px] lg:w-[1104px] overflow-hidden max-md:hidden">
           <div className="animate-marquee flex h-[78px] w-[3020px] grayscale">
             {/* First set of logos */}
             <div className="flex h-[78px] min-w-[1510px] items-center gap-[80px]">
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage4} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage4} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage5} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage5} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage6} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage6} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage7} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage7} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage11} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage11} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage13} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage13} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage14} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage14} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
             </div>
 
             {/* Duplicate set for seamless loop */}
             <div className="flex h-[78px] min-w-[1510px] items-center gap-[80px]">
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage4} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage4} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage5} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage5} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage6} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage6} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage7} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage7} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage11} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage11} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage13} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage13} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
               <div className="relative h-[60px] w-[120px]">
-                <img src={imgImage14} alt="Partner logo" className="h-full w-full object-contain" />
+                <Image src={imgImage14} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
               </div>
             </div>
           </div>
@@ -346,23 +347,23 @@ export default function HeroSection() {
         <div className="animate-marquee-mobile flex h-[58.734px] w-[2274.066px]">
           {/* First set of logos */}
           <div className="flex h-[58.734px] min-w-[1137.033px] items-center justify-around px-4">
-            <img src={imgImage6} alt="Partner logo" className="h-[22.814px] w-auto object-contain opacity-70" />
-            <img src={imgImage5} alt="Partner logo" className="h-[17.814px] w-auto object-contain opacity-70" />
-            <img src={imgImage4} alt="Partner logo" className="h-[25.674px] w-auto object-contain opacity-70" />
-            <img src={imgImage7} alt="Partner logo" className="h-[15.038px] w-auto object-contain opacity-70" />
-            <img src={imgImage11} alt="Partner logo" className="h-[58.734px] w-auto object-contain opacity-70" />
-            <img src={imgImage13} alt="Partner logo" className="h-[23.343px] w-auto object-contain opacity-70" />
-            <img src={imgImage14} alt="Partner logo" className="h-[49.626px] w-auto object-contain opacity-70" />
+            <Image src={imgImage6} alt="Partner logo" width={80} height={23} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage5} alt="Partner logo" width={80} height={18} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage4} alt="Partner logo" width={80} height={26} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage7} alt="Partner logo" width={80} height={15} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage11} alt="Partner logo" width={80} height={59} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage13} alt="Partner logo" width={80} height={23} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage14} alt="Partner logo" width={80} height={50} className="object-contain opacity-70" loading="lazy" />
           </div>
           {/* Duplicate set for seamless loop */}
           <div className="flex h-[58.734px] min-w-[1137.033px] items-center justify-around px-4">
-            <img src={imgImage6} alt="Partner logo" className="h-[22.814px] w-auto object-contain opacity-70" />
-            <img src={imgImage5} alt="Partner logo" className="h-[17.814px] w-auto object-contain opacity-70" />
-            <img src={imgImage4} alt="Partner logo" className="h-[25.674px] w-auto object-contain opacity-70" />
-            <img src={imgImage7} alt="Partner logo" className="h-[15.038px] w-auto object-contain opacity-70" />
-            <img src={imgImage11} alt="Partner logo" className="h-[58.734px] w-auto object-contain opacity-70" />
-            <img src={imgImage13} alt="Partner logo" className="h-[23.343px] w-auto object-contain opacity-70" />
-            <img src={imgImage14} alt="Partner logo" className="h-[49.626px] w-auto object-contain opacity-70" />
+            <Image src={imgImage6} alt="Partner logo" width={80} height={23} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage5} alt="Partner logo" width={80} height={18} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage4} alt="Partner logo" width={80} height={26} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage7} alt="Partner logo" width={80} height={15} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage11} alt="Partner logo" width={80} height={59} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage13} alt="Partner logo" width={80} height={23} className="object-contain opacity-70" loading="lazy" />
+            <Image src={imgImage14} alt="Partner logo" width={80} height={50} className="object-contain opacity-70" loading="lazy" />
           </div>
         </div>
       </div>

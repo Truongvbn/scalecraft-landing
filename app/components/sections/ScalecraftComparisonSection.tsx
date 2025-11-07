@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Tabs, Tab } from "@heroui/react";
 import CheckIcon from "@/app/components/ui/CheckIcon";
 import XIcon from "@/app/components/ui/XIcon";
 
@@ -14,7 +14,6 @@ const imgGeminiGeneratedImageL67Ngnl67Ngnl67N2 = "/assets/images/comparison/comp
 const imgGeminiGeneratedImageOrf8Qtorf8Qtorf83 = "/assets/images/comparison/comparison-systeme.png";
 
 export default function ScalecraftComparisonSection() {
-  const [activeTab, setActiveTab] = useState<"mit" | "ohne">("mit");
 
   // Ohne Scalecraft Data
   const ohneScalecraftData = {
@@ -69,38 +68,27 @@ export default function ScalecraftComparisonSection() {
           </span>
         </motion.h2>
 
-        {/* Toggle Button */}
+        {/* HeroUI Tabs */}
         <motion.div 
-          className="relative mx-auto mb-8 flex h-[46.568px] w-full max-w-none items-center justify-center gap-1 rounded-[13px] border border-white p-2 backdrop-blur-[4.875px] md:mb-10 md:h-14 md:max-w-[480px] md:gap-1.5 lg:mb-12 lg:h-16 lg:max-w-[525px] lg:gap-2"
+          className="mx-auto mb-8 md:mb-10 lg:mb-12"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, delay: 0.2 }} 
-             style={{
-               backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
-               boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
-             }}>
-          {/* Buttons */}
-          <button
-            onClick={() => setActiveTab("mit")}
-            className={`relative z-10 flex-1 rounded-[10px] px-4 py-2 text-[14px] leading-[20px] tracking-[0.15px] transition-all duration-300 md:px-5 md:py-2.5 md:text-[16px] lg:flex-none lg:px-6 lg:py-3 lg:text-[20px] lg:leading-[28px] ${
-              activeTab === "mit" ? "bg-[#404040] text-white" : "text-[#1d1d1d] hover:bg-white/10"
-            }`}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <Tabs 
+            defaultSelectedKey="mit"
+            disableAnimation={false}
+            classNames={{
+              base: "w-full",
+              tabList: "relative flex h-[46px] w-full max-w-[340px] items-center justify-center gap-[6px] rounded-xl border border-white p-[5px] backdrop-blur-[4.88px] md:h-[52px] md:max-w-[420px] md:gap-[7px] md:p-[6px] lg:h-16 lg:max-w-[525px] mx-auto",
+              cursor: "bg-[#404040] rounded-[10px] transition-all duration-300 ease-in-out",
+              tab: "h-[36px] md:h-[40px] lg:h-[52px] flex-1 rounded-[10px] px-3 py-1.5 text-[14px] leading-[20px] tracking-tight md:px-4 md:py-2 md:text-[16px] md:leading-6 lg:px-6 lg:py-2.5 lg:text-[20px] lg:leading-7 data-[selected=true]:text-white text-[#1d1d1d] transition-all duration-300 ease-in-out hover:bg-white/10 font-normal",
+              tabContent: "group-data-[selected=true]:text-white z-10 relative transition-all duration-300",
+              panel: "pt-4 md:pt-6 lg:pt-8"
+            }}
           >
-            Mit Scalecraft
-          </button>
-          <button
-            onClick={() => setActiveTab("ohne")}
-            className={`relative z-10 flex-1 rounded-[10px] px-4 py-2 text-[14px] leading-[20px] tracking-[0.15px] transition-all duration-300 md:px-5 md:py-2.5 md:text-[16px] lg:flex-none lg:px-6 lg:py-3 lg:text-[20px] lg:leading-[28px] ${
-              activeTab === "ohne" ? "bg-[#404040] text-white" : "text-[#1d1d1d] hover:bg-white/10"
-            }`}
-          >
-            Ohne Scalecraft
-          </button>
-        </motion.div>
-
-        {/* Mit Scalecraft Cards */}
-        {activeTab === "mit" && (
+          <Tab key="mit" title="Mit Scalecraft">
         <>
         <motion.div 
           className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2"
@@ -152,7 +140,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Badge */}
-            <div className="mx-6 mt-4 flex justify-center md:mx-8 md:mt-5 lg:mx-11 lg:mt-6">
+            <div className="mx-6 mt-4 flex justify-start md:mx-8 md:mt-5 lg:mx-11 lg:mt-6">
               <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[7px] py-[6px] md:px-[8px] md:py-[6.5px] lg:px-[8.75px] lg:py-[7.5px]">
                 <span className="text-[14px] font-medium leading-[20px] text-white md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24.99px]">AGENTUREN</span>
               </div>
@@ -210,7 +198,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Badge */}
-            <div className="mx-6 mt-4 flex justify-center md:mx-8 md:mt-5 lg:mx-11 lg:mt-6">
+            <div className="mx-6 mt-4 flex justify-start md:mx-8 md:mt-5 lg:mx-11 lg:mt-6">
               <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[7px] py-[6px] md:px-[8.5px] md:py-[6.5px] lg:px-[10px] lg:py-[7px]">
                 <span className="text-[14px] font-medium leading-[20px] text-white md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px]">MITARBEITER</span>
               </div>
@@ -291,10 +279,9 @@ export default function ScalecraftComparisonSection() {
           </div>
         </div>
         </>
-        )}
-
-        {/* Ohne Scalecraft Cards */}
-        {activeTab === "ohne" && (
+          </Tab>
+          
+          <Tab key="ohne" title="Ohne Scalecraft">
         <>
         <motion.div 
           className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2"
@@ -346,7 +333,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Badge */}
-            <div className="mx-11 mt-6 flex justify-center max-md:mx-6 max-md:mt-4">
+            <div className="mx-11 mt-6 flex justify-start max-md:mx-6 max-md:mt-4">
               <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2 max-md:px-[7px] max-md:py-[6px]">
                 <span className="text-[16px] font-medium uppercase text-white max-md:text-[14px] max-md:leading-[20px]">{ohneScalecraftData.agenturen.title}</span>
               </div>
@@ -398,7 +385,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Badge */}
-            <div className="mx-11 mt-6 flex justify-center max-md:mx-6 max-md:mt-4">
+            <div className="mx-11 mt-6 flex justify-start max-md:mx-6 max-md:mt-4">
               <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2 max-md:px-[7px] max-md:py-[6px]">
                 <span className="text-[16px] font-medium uppercase text-white max-md:text-[14px] max-md:leading-[20px]">{ohneScalecraftData.mitarbeiter.title}</span>
               </div>
@@ -469,12 +456,16 @@ export default function ScalecraftComparisonSection() {
           </div>
         </div>
         </>
-        )}
+          </Tab>
+        </Tabs>
+        </motion.div>
 
         {/* CTA Button */}
-        <div className="mt-16 flex justify-center max-md:mt-12">
-          <button className="rounded-full border border-black border-solid bg-[#252525] px-8 py-3 text-[16px] text-white transition-colors hover:bg-[#404040] max-md:w-full max-md:max-w-md max-md:text-[14px]">
-            Projekt starten →
+        <div className="mt-12 flex justify-center md:mt-14 lg:mt-16">
+          <button className="relative h-10 w-[180px] overflow-hidden rounded-[300px] bg-neutral-800 outline outline-1 outline-offset-[-1px] outline-black transition-all duration-300 hover:bg-[#404040] hover:scale-105 md:h-11 md:w-[200px] lg:h-12 lg:w-52">
+            <div className="absolute left-[14px] top-1/2 w-[calc(100%-28px)] -translate-y-1/2 text-center text-[14px] font-normal text-white md:text-[15px] lg:text-base">
+              Projekt starten →
+            </div>
           </button>
         </div>
       </div>
