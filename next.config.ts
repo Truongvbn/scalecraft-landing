@@ -3,6 +3,15 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  compress: true,
+  poweredByHeader: false,
+  productionBrowserSourceMaps: false,
+  
+  // Safe experimental features
+  experimental: {
+    optimizePackageImports: ['framer-motion'],
+  },
+  
   images: {
     remotePatterns: [
       {
@@ -11,6 +20,10 @@ const nextConfig: NextConfig = {
         pathname: '/api/mcp/asset/**',
       },
     ],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
   },
 };
 
