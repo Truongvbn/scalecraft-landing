@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { fadeInUp, fastStagger, viewport } from "@/app/lib/animations";
 
 // Figma assets are SVGs, using img tags instead of Next Image
@@ -52,12 +53,12 @@ export default function StatsHeroSection() {
         >
           {/* Gradient Background Right */}
           <div className="pointer-events-none absolute -right-[100px] -top-[100px] h-[400px] w-[400px] opacity-60">
-            <img src={imgGradient} alt="" className="h-full w-full object-contain" />
+            <Image src={imgGradient} alt="" fill className="object-contain" loading="lazy" unoptimized />
           </div>
 
           {/* Gradient Background Left */}
           <div className="pointer-events-none absolute -bottom-[150px] -left-[100px] h-[400px] w-[400px] opacity-60">
-            <img src={imgGradient1} alt="" className="h-full w-full object-contain" />
+            <Image src={imgGradient1} alt="" fill className="object-contain" loading="lazy" unoptimized />
           </div>
 
           {/* Texture Overlay */}
@@ -92,7 +93,7 @@ export default function StatsHeroSection() {
               }}
             >
               <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px] md:max-lg:h-10 md:max-lg:w-10 transition-transform duration-300 hover:rotate-12">
-                <img src={imgIcon1} alt="" className="h-full w-full object-contain" />
+                <Image src={imgIcon1} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
               </div>
               <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px] md:max-lg:text-[32px]">
                 +100
@@ -119,7 +120,7 @@ export default function StatsHeroSection() {
               }}
             >
               <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px] md:max-lg:h-10 md:max-lg:w-10 transition-transform duration-300 hover:rotate-12">
-                <img src={imgIcon2} alt="" className="h-full w-full object-contain" />
+                <Image src={imgIcon2} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
               </div>
               <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px] md:max-lg:text-[32px]">
                 +50
@@ -146,7 +147,7 @@ export default function StatsHeroSection() {
               }}
             >
               <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px] md:max-lg:h-10 md:max-lg:w-10 transition-transform duration-300 hover:rotate-12">
-                <img src={imgIcon3} alt="" className="h-full w-full object-contain" />
+                <Image src={imgIcon3} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
               </div>
               <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px] md:max-lg:text-[32px]">
                 +20 Mio. €
@@ -173,7 +174,7 @@ export default function StatsHeroSection() {
               }}
             >
               <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px] md:max-lg:h-10 md:max-lg:w-10 transition-transform duration-300 hover:rotate-12">
-                <img src={imgIcon4} alt="" className="h-full w-full object-contain" />
+                <Image src={imgIcon4} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
               </div>
               <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px] md:max-lg:text-[32px]">
                 +500
