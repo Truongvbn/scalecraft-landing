@@ -11,30 +11,82 @@ export default function GlassCard({ children, pointRight = false, height = 'larg
   const cardHeight = height === 'small' ? 256 : 278;
   const cardWidth = height === 'small' ? 474 : 497;
   
-  // Mobile dimensions from Figma: 384px x 240px (w-96 h-60)
-  const mobileHeight = 240;
+  // Mobile: no arrow, just rectangle
+  const mobileCardWidth = 384;
+  const mobileCardHeight = 240;
+  
+  // Calculate aspect ratio for responsive scaling
+  const aspectRatio = cardWidth / cardHeight; // ~1.79
   
   return (
     <div 
-      className="relative w-full max-w-[384px] lg:max-w-none" 
+      className="relative w-full max-w-[384px] md:max-w-none" 
       style={{ 
-        height: `${mobileHeight}px`
+        minHeight: '220px',
+        aspectRatio: `${aspectRatio}`
       }}
     >
       <style dangerouslySetInnerHTML={{
         __html: `
-          @media (min-width: 1024px) {
+          @media (min-width: 768px) {
             .glass-card-${cardId} {
               width: ${cardWidth}px !important;
               height: ${cardHeight}px !important;
-              max-width: none !important;
             }
           }
         `
       }} />
       <div className={`glass-card-${cardId} relative h-full w-full`}>
+      {/* Mobile SVG - no arrow */}
       <svg 
-        className="absolute inset-0 h-full w-full" 
+        className="absolute inset-0 h-full w-full md:hidden" 
+        viewBox={`0 0 ${mobileCardWidth} ${mobileCardHeight}`} 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg" 
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <filter 
+            id={`filter_mobile_${cardId}`} 
+            x="-9.75" 
+            y="-9.75" 
+            width="403.5" 
+            height="259.5" 
+            filterUnits="userSpaceOnUse" 
+            colorInterpolationFilters="sRGB"
+          >
+            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="1.625"/>
+            <feGaussianBlur stdDeviation="3.25"/>
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0"/>
+            <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+          </filter>
+          <linearGradient id={`gradient_mobile_${cardId}`} x1="0" y1="0" x2="384" y2="240" gradientUnits="userSpaceOnUse">
+            <stop stopColor="white"/>
+            <stop offset="1" stopColor="white"/>
+          </linearGradient>
+        </defs>
+        <g filter={`url(#filter_mobile_${cardId})`} style={{ backdropFilter: 'blur(4.88px)' }}>
+          {/* Simple rectangle - no arrow */}
+          <path 
+            d="M368 0C376.837 0 384 7.16344 384 16V224C384 232.837 376.837 240 368 240H16C7.16344 240 0 232.837 0 224V16C0 7.16344 7.16344 0 16 0H368Z"
+            fill="white" 
+            fillOpacity="0.15"
+          />
+          <path 
+            d="M368 0C376.837 0 384 7.16344 384 16V224C384 232.837 376.837 240 368 240H16C7.16344 240 0 232.837 0 224V16C0 7.16344 7.16344 0 16 0H368Z"
+            fill={`url(#gradient_mobile_${cardId})`}
+            fillOpacity="0.1"
+          />
+        </g>
+      </svg>
+      
+      {/* Tablet/Desktop SVG - with arrow */}
+      <svg 
+        className="absolute inset-0 h-full w-full hidden md:block" 
         viewBox={`0 0 ${cardWidth} ${cardHeight}`} 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg" 
@@ -101,7 +153,7 @@ export default function GlassCard({ children, pointRight = false, height = 'larg
           />
         </g>
       </svg>
-      <div className="relative p-8">
+      <div className="relative p-6 md:p-8">
         {children}
       </div>
       </div>

@@ -53,11 +53,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-white py-12 px-4 md:py-16 md:px-12 lg:py-24 lg:px-24">
-      <div className="mx-auto max-w-[382px] md:max-w-[720px] lg:max-w-[1172px]">
+    <section className="w-full bg-white py-12 px-4 md:py-[clamp(3rem,6vw,6rem)] md:px-[clamp(3rem,6vw,6rem)]">
+      <div className="mx-auto max-w-[382px] md:max-w-[1172px]">
         {/* Heading */}
         <motion.h2 
-          className="mb-12 text-center text-[28px] font-normal leading-[40px] text-[#252525] md:mb-16 md:text-[34px] md:leading-[48px] lg:mb-24 lg:text-[40px] lg:leading-[56px]"
+          className="mb-12 text-center text-[28px] font-normal leading-[40px] text-[#252525] md:mb-[clamp(4rem,6vw,6rem)] md:text-[clamp(32px,3vw,40px)] md:leading-[clamp(48px,4vw,56px)]"
           variants={fadeInUp}
           initial="hidden"
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,9 +96,9 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="flex w-full items-center justify-between py-8 text-left transition-colors hover:bg-gray-50 md:py-10 lg:py-[50px]"
+                className="flex w-full items-center justify-between py-8 text-left transition-colors hover:bg-gray-50 md:py-[clamp(2.5rem,4vw,3.125rem)]"
               >
-                <h3 className="text-[12px] font-normal leading-[14px] text-[#252525] pr-6 md:pr-8 md:text-[18px] md:leading-[22px] lg:text-[24px] lg:leading-[28.68px]">
+                <h3 className="text-[12px] font-normal leading-[14px] text-[#252525] pr-6 md:pr-8 md:text-[clamp(18px,2vw,24px)] md:leading-[clamp(22px,2.4vw,28.68px)]">
                   {faq.question}
                 </h3>
                 
@@ -109,7 +109,7 @@ export default function FAQSection() {
                       alt="Collapse"
                       width={11.308}
                       height={11.308}
-                      className="transition-transform lg:w-[22.5] lg:h-[22.5]"
+                      className="transition-transform md:w-[22.5] md:h-[22.5]"
                       quality={85}
                     />
                   ) : (
@@ -118,7 +118,7 @@ export default function FAQSection() {
                       alt="Expand"
                       width={11.308}
                       height={11.308}
-                      className="transition-transform lg:w-[22.5] lg:h-[22.5]"
+                      className="transition-transform md:w-[22.5] md:h-[22.5]"
                       quality={85}
                     />
                   )}
@@ -128,7 +128,7 @@ export default function FAQSection() {
               {/* Answer - Expandable */}
               {openIndex === index && faq.answer && (
                 <div className="pb-6 pr-12 animate-in slide-in-from-top-2 duration-200 md:pb-8 md:pr-16">
-                  <p className="text-[13px] leading-[19px] text-gray-700 md:text-[15px] md:leading-[22px] lg:text-[18px] lg:leading-[26px]">
+                  <p className="text-[13px] leading-[19px] text-gray-700 md:text-[clamp(15px,1.5vw,18px)] md:leading-[clamp(22px,2vw,26px)]">
                     {faq.answer}
                   </p>
                 </div>

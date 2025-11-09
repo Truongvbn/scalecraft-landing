@@ -9,9 +9,56 @@ import DownIcon from "../icons/DownIcon";
 import CrystalIcon from "../icons/CrystalIcon";
 import UserInfoIcon from "../icons/UserInfoIcon";
 
+// Feature cards data
+const FEATURE_CARDS = [
+  {
+    id: 1,
+    side: 'left' as const,
+    icon: SettingsIcon,
+    text: (
+      <>
+        <span className="font-semibold text-[#ff8d28]">Wie wir dein Design-System strukturieren</span>, damit du schneller hochwertige Creatives erhältst – ganz ohne Feedback-Chaos oder Bottlenecks.
+      </>
+    ),
+  },
+  {
+    id: 2,
+    side: 'right' as const,
+    icon: DownIcon,
+    text: (
+      <>
+        <span className="font-semibold text-[#ff8d28]">Wie du deine Produktionskosten um bis zu 50 % reduzierst</span>, während dein Creative-Output sich verdoppelt.
+      </>
+    ),
+  },
+  {
+    id: 3,
+    side: 'left' as const,
+    icon: CrystalIcon,
+    text: (
+      <>
+        <span className="font-semibold text-[#ff8d28]">Wie die BAT-Methode</span> klare Verantwortlichkeiten schafft, Kommunikation vereinfacht und Prioritäten automatisch richtig setzt.
+      </>
+    ),
+  },
+  {
+    id: 4,
+    side: 'right' as const,
+    icon: UserInfoIcon,
+    text: (
+      <>
+        <span className="font-semibold text-[#ff8d28]">Wie Scalecraft bereits über 30 Agenturen & Freelancern</span> geholfen hat, Workflows zu optimieren, ROAS zu steigern und Projekte planbarer zu machen und wie wir Zusammenarbeiten
+      </>
+    ),
+  },
+];
+
+// Timeline dots positions (in px from top)
+const TIMELINE_DOTS = [85, 411, 715, 1041];
+
 export default function FeatureCardsSection() {
   return (
-    <section className="relative w-full overflow-hidden px-4 pb-4 pt-16 md:px-8 md:pt-20 lg:px-16 lg:pt-24">
+    <section className="relative w-full overflow-hidden px-4 pb-4 pt-16 md:px-8 md:pt-20">
       {/* Background SVG Pattern */}
       <div className="absolute inset-0 bg-[#202020]">
         {/* Radial Gradients */}
@@ -48,12 +95,12 @@ export default function FeatureCardsSection() {
         </motion.h1>
 
         {/* Profile Section */}
-        <div className="mb-12 flex flex-col gap-6 md:mb-16 lg:mb-20 lg:flex-row lg:items-start lg:justify-center lg:gap-8">
-          {/* Mobile: Image + Quote in same row */}
+        <div className="mb-12 flex flex-col gap-6 md:mb-16 lg:mb-20 md:flex-row md:items-start md:justify-center md:gap-6 lg:gap-8">
+          {/* Mobile + Tablet: Image + Quote in same row */}
           <div className="flex items-start gap-4 md:hidden">
             {/* Profile Image + Name/Title */}
-            <div className="flex flex-col gap-2 flex-shrink-0">
-              <div className="relative h-[90px] w-[90px] overflow-hidden rounded-[16px] border-[1.5px] border-white/90 shadow-lg md:h-[120px] md:w-[120px] md:rounded-[20px]">
+            <div className="flex flex-col gap-2 md:gap-3 flex-shrink-0">
+              <div className="relative h-[90px] w-[90px] overflow-hidden rounded-[16px] border-[1.5px] border-white/90 shadow-lg md:h-[130px] md:w-[130px] md:rounded-[22px]">
                 <Image
                   src="/assets/images/features/feature-profile.png"
                   alt="Nguyen Dac Hoa"
@@ -64,26 +111,27 @@ export default function FeatureCardsSection() {
                 />
               </div>
               
-              <div className="space-y-0.5">
-                <p className="text-sm font-medium text-white md:text-base">Nguyen Dac Hoa</p>
-                <p className="text-[9px] font-light uppercase tracking-wide text-white/80">GESCHÄFTSFÜHRER</p>
+              <div className="space-y-0.5 md:space-y-1">
+                <p className="text-sm font-medium text-white md:text-lg">Nguyen Dac Hoa</p>
+                <p className="text-[9px] font-light uppercase tracking-wide text-white/80 md:text-[11px]">GESCHÄFTSFÜHRER</p>
               </div>
             </div>
 
             {/* Quote */}
-            <div className="flex-1 space-y-2">
+            <div className="flex-1 space-y-2 md:space-y-3">
               <div className="flex items-start">
                 <Image
                   src="/assets/images/features/feature-icon-1.svg"
                   alt=""
                   width={10}
                   height={8}
+                  className="md:h-[12px] md:w-[15px]"
                   quality={85}
                   loading="lazy"
                 />
               </div>
               
-              <p className="text-[9px] leading-[1.4] text-white md:text-[11px]">
+              <p className="text-[9px] leading-[1.4] text-white md:text-[13px] md:leading-[1.5]">
                 Wir zeigen dir, wie du mit der BAT-Methode (Business Development – Account Management – Team Lead) deine Creative-Prozesse systematisch beschleunigst und gleichzeitig Kosten senkst, Qualität erhöhst und Kontrolle behältst.
               </p>
 
@@ -93,7 +141,7 @@ export default function FeatureCardsSection() {
                   alt=""
                   width={10}
                   height={8}
-                  className="rotate-180"
+                  className="rotate-180 md:h-[12px] md:w-[15px]"
                   quality={85}
                   loading="lazy"
                 />
@@ -102,7 +150,7 @@ export default function FeatureCardsSection() {
           </div>
 
           {/* Desktop: Profile Image only */}
-          <div className="relative hidden h-[160px] w-[160px] overflow-hidden rounded-[24px] border-[2px] border-white/90 shadow-xl md:block md:h-[180px] md:w-[180px] md:rounded-[28px] lg:h-[220px] lg:w-[220px] lg:rounded-[32px]">
+          <div className="relative hidden overflow-hidden rounded-[24px] border-[2px] border-white/90 shadow-xl md:block md:h-[180px] md:w-[180px] lg:h-[220px] lg:w-[220px] md:rounded-[28px] lg:rounded-[32px] flex-shrink-0 aspect-square">
             <Image
               src="/assets/images/features/feature-profile.png"
               alt="Nguyen Dac Hoa"
@@ -150,74 +198,41 @@ export default function FeatureCardsSection() {
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="relative mx-auto max-w-6xl">
-          {/* Vertical Timeline Line */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gray-600 lg:block">
+        <div 
+          className="relative mx-auto px-4 md:px-0 md:w-[905px] lg:w-[1104px]"
+        >
+          <div 
+            className="relative md:w-[1104px] md:scale-[0.82] md:origin-center lg:scale-100"
+          >
+          {/* Vertical Timeline Line - at exact grid boundary (520px = col1 end) */}
+          <div 
+            className="absolute top-0 hidden h-full w-px bg-gray-600 md:block"
+            style={{ left: '520px' }}
+          >
             {/* Timeline Dots */}
-            <motion.div 
-              className="absolute left-1/2 top-[85px] h-[26px] w-[26px] -translate-x-1/2"
-              variants={pulse}
-              initial="initial"
-              animate="animate"
-            >
-              <Image
-                src="/assets/images/features/feature-timeline-dot-1.svg"
-                alt=""
-                width={26}
-                height={26}
-                quality={85}
-                loading="lazy"
-              />
-            </motion.div>
-            <motion.div 
-              className="absolute left-1/2 top-[411px] h-[26px] w-[26px] -translate-x-1/2"
-              variants={pulse}
-              initial="initial"
-              animate="animate"
-            >
-              <Image
-                src="/assets/images/features/feature-timeline-dot-2.svg"
-                alt=""
-                width={26}
-                height={26}
-                quality={85}
-              loading="lazy"
-              />
-            </motion.div>
-            <motion.div 
-              className="absolute left-1/2 top-[715px] h-[26px] w-[26px] -translate-x-1/2"
-              variants={pulse}
-              initial="initial"
-              animate="animate"
-            >
-              <Image
-                src="/assets/images/features/feature-timeline-dot-3.svg"
-                alt=""
-                width={26}
-                height={26}
-                quality={85}
-              loading="lazy"
-              />
-            </motion.div>
-            <motion.div 
-              className="absolute left-1/2 top-[1041px] h-[26px] w-[26px] -translate-x-1/2"
-              variants={pulse}
-              initial="initial"
-              animate="animate"
-            >
-              <Image
-                src="/assets/images/features/feature-timeline-dot-4.svg"
-                alt=""
-                width={26}
-                height={26}
-                quality={85}
-              loading="lazy"
-              />
-            </motion.div>
+            {TIMELINE_DOTS.map((top, index) => (
+              <motion.div 
+                key={index}
+                className="absolute left-1/2 h-[26px] w-[26px] -translate-x-1/2"
+                style={{ top: `${top}px` }}
+                variants={pulse}
+                initial="initial"
+                animate="animate"
+              >
+                <Image
+                  src={`/assets/images/features/feature-timeline-dot-${index + 1}.svg`}
+                  alt=""
+                  width={26}
+                  height={26}
+                  quality={85}
+                  loading="lazy"
+                />
+              </motion.div>
+            ))}
           </div>
 
           <motion.div 
-            className="space-y-12"
+            className="space-y-8 md:space-y-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -230,90 +245,44 @@ export default function FeatureCardsSection() {
               }
             }}
           >
-            {/* Card 1 - Left */}
-            <motion.div 
-              className="flex justify-center lg:justify-start lg:pr-[50%]"
-              variants={{
-                hidden: { opacity: 0, x: -50 },
-                visible: { opacity: 1, x: 0 }
-              }}
-            >
-              <div className="w-full max-w-[497px]">
-                <GlassCard>
-                  <div className="mb-4 h-[70px] w-[70px] lg:h-[72px] lg:w-[72px]">
-                    <SettingsIcon />
+            {FEATURE_CARDS.map((card) => {
+              const IconComponent = card.icon;
+              const isLeft = card.side === 'left';
+              
+              return (
+                <motion.div 
+                  key={card.id}
+                  className="flex justify-center items-center md:grid md:grid-cols-[520px_584px]"
+                  variants={{
+                    hidden: { opacity: 0, x: isLeft ? -50 : 50 },
+                    visible: { opacity: 1, x: 0 }
+                  }}
+                >
+                  <div className={`
+                    w-full max-w-[382px] md:max-w-none
+                    ${isLeft 
+                      ? 'md:justify-self-end md:col-start-1 md:mr-[23px]' 
+                      : 'md:col-start-2 md:justify-self-start md:ml-[23px]'
+                    }
+                  `}>
+                    <GlassCard pointRight={!isLeft}>
+                      <div className="mb-4 md:mb-5 h-[56px] w-[56px] md:h-[72px] md:w-[72px]">
+                        <IconComponent />
+                      </div>
+                      <p className="text-[13px] leading-[1.4] text-white md:text-[17px] md:leading-[1.6]">
+                        {card.text}
+                      </p>
+                    </GlassCard>
                   </div>
-                  <p className="text-[14px] leading-[1.5] text-white lg:text-[17px] lg:leading-[1.6]">
-                    <span className="font-semibold text-[#ff8d28]">Wie wir dein Design-System strukturieren</span>, damit du schneller hochwertige Creatives erhältst – ganz ohne Feedback-Chaos oder Bottlenecks.
-                  </p>
-                </GlassCard>
-              </div>
-            </motion.div>
-
-            {/* Card 2 - Right */}
-            <motion.div 
-              className="flex justify-center lg:justify-end lg:pl-[50%]"
-              variants={{
-                hidden: { opacity: 0, x: 50 },
-                visible: { opacity: 1, x: 0 }
-              }}
-            >
-              <div className="w-full max-w-[474px]">
-                <GlassCard pointRight height="small">
-                  <div className="mb-4 h-[70px] w-[70px] lg:h-[72px] lg:w-[72px]">
-                    <DownIcon />
-                  </div>
-                  <p className="text-[14px] leading-[1.5] text-white lg:text-[17px] lg:leading-[1.6]">
-                    <span className="font-semibold text-[#ff8d28]">Wie du deine Produktionskosten um bis zu 50 % reduzierst</span>, während dein Creative-Output sich verdoppelt.
-                  </p>
-                </GlassCard>
-              </div>
-            </motion.div>
-
-            {/* Card 3 - Left */}
-            <motion.div 
-              className="flex justify-center lg:justify-start lg:pr-[50%]"
-              variants={{
-                hidden: { opacity: 0, x: -50 },
-                visible: { opacity: 1, x: 0 }
-              }}
-            >
-              <div className="w-full max-w-[497px]">
-                <GlassCard>
-                  <div className="mb-4 h-[70px] w-[70px] lg:h-[72px] lg:w-[72px]">
-                    <CrystalIcon />
-                  </div>
-                  <p className="text-[14px] leading-[1.5] text-white lg:text-[17px] lg:leading-[1.6]">
-                    <span className="font-semibold text-[#ff8d28]">Wie die BAT-Methode</span> klare Verantwortlichkeiten schafft, Kommunikation vereinfacht und Prioritäten automatisch richtig setzt.
-                  </p>
-                </GlassCard>
-              </div>
-            </motion.div>
-
-            {/* Card 4 - Right */}
-            <motion.div 
-              className="flex justify-center lg:justify-end lg:pl-[50%]"
-              variants={{
-                hidden: { opacity: 0, x: 50 },
-                visible: { opacity: 1, x: 0 }
-              }}
-            >
-              <div className="w-full max-w-[474px]">
-                <GlassCard pointRight height="small">
-                  <div className="mb-3 h-[70px] w-[70px] lg:h-[72px] lg:w-[72px]">
-                    <UserInfoIcon />
-                  </div>
-                  <p className="text-[14px] leading-[1.5] text-white lg:text-[16px]">
-                    <span className="font-semibold text-[#ff8d28]">Wie Scalecraft bereits über 30 Agenturen & Freelancern</span> geholfen hat, Workflows zu optimieren, ROAS zu steigern und Projekte planbarer zu machen und wie wir Zusammenarbeiten
-                  </p>
-                </GlassCard>
-              </div>
-            </motion.div>
+                </motion.div>
+              );
+            })}
           </motion.div>
+          </div>
         </div>
 
         {/* Bottom SCALECRAFT Text */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 md:mt-12 text-center">
           <div className="inline-block">
             <Image
               src="/assets/images/features/feature-scalecraft-text.svg"

@@ -30,17 +30,17 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="relative w-full bg-white px-4 py-16 md:px-8 md:py-24 lg:px-16">
+    <section className="relative w-full bg-white px-4 py-16 md:px-[clamp(2rem,4vw,4rem)] md:py-[clamp(5rem,6vw,6rem)]">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div 
-          className="mb-12 flex flex-col items-center justify-between gap-6 text-center lg:mb-16 lg:flex-row lg:items-start lg:gap-8 lg:text-left"
+          className="mb-12 flex flex-col items-center justify-between gap-6 text-center md:mb-[clamp(3rem,4vw,4rem)] md:flex-row md:items-start md:gap-[clamp(1.5rem,2vw,2rem)] md:text-left"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
         >
-          <h2 className="w-full max-w-xl text-[30px] font-normal leading-[1.2] text-[#252525] lg:text-[44px]">
+          <h2 className="w-full max-w-xl text-[30px] font-normal leading-[1.2] text-[#252525] md:text-[clamp(36px,3.5vw,44px)]">
             <span 
               className="bg-gradient-to-r from-[#ec6036] to-[#f1983f] bg-clip-text text-transparent"
               style={{
@@ -54,14 +54,14 @@ export default function BenefitsSection() {
             {" auf einen Blick"}
           </h2>
           
-          <p className="w-full max-w-md text-[14px] leading-[1.5] text-[#373A40] lg:text-lg lg:leading-relaxed">
+          <p className="w-full max-w-md text-[14px] leading-[1.5] text-[#373A40] md:text-[clamp(16px,1.5vw,18px)] md:leading-relaxed">
             Unsere Kunden profitieren von einem klaren Vorteilspaket - speziell entwickelt für Agenturen, Marken und Marketing - Teams, die Effizienz und Qualität skalieren wollen.
           </p>
         </motion.div>
 
         {/* Benefits Grid */}
         <motion.div 
-          className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:mb-16"
+          className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-[clamp(1.5rem,2vw,2rem)] md:mb-[clamp(3rem,4vw,4rem)]"
           variants={gridContainer}
           initial="hidden"
           whileInView="visible"
@@ -75,10 +75,10 @@ export default function BenefitsSection() {
               whileHover={{ y: -8, scale: 1.02, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <div className="flex h-[172px] flex-row gap-0 p-0 md:h-auto md:flex-col md:gap-6 md:p-6 lg:h-[250px] lg:flex-row lg:gap-0 lg:p-0">
+              <div className="flex h-[172px] flex-row gap-0 p-0 md:h-auto md:flex-col md:gap-6 md:p-6 lg:h-[clamp(220px,20vw,250px)] lg:flex-row lg:gap-0 lg:p-0">
                 {/* Image */}
                 <motion.div 
-                  className="relative h-full w-[160px] flex-shrink-0 overflow-hidden md:h-[219px] md:w-full md:rounded-2xl lg:h-full lg:w-[229px]"
+                  className="relative h-full w-[160px] flex-shrink-0 overflow-hidden md:h-[clamp(200px,18vw,219px)] md:w-full md:rounded-2xl lg:h-full lg:w-[clamp(200px,19vw,229px)]"
                   whileHover={{ scale: 1.05, rotate: 2 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -96,11 +96,11 @@ export default function BenefitsSection() {
                 </motion.div>
 
                 {/* Content */}
-                <div className="flex flex-1 flex-col justify-center p-4 md:p-0 lg:p-6">
-                  <h3 className="mb-3 text-[18px] font-normal leading-[1.17] text-[#404040] md:mb-4 md:text-2xl md:leading-tight">
+                <div className="flex flex-1 flex-col justify-center p-4 md:p-0 lg:p-[clamp(1rem,1.5vw,1.5rem)]">
+                  <h3 className="mb-3 text-[18px] font-normal leading-[1.17] text-[#404040] md:mb-[clamp(0.75rem,1vw,1rem)] md:text-[clamp(20px,2vw,24px)] md:leading-tight">
                     {benefit.title}
                   </h3>
-                  <p className="text-[11px] font-light leading-[16px] text-[#8c8c8c] whitespace-pre-line md:text-sm md:leading-relaxed">
+                  <p className="text-[11px] font-light leading-[16px] text-[#8c8c8c] whitespace-pre-line md:text-[clamp(13px,1.2vw,14px)] md:leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -118,7 +118,7 @@ export default function BenefitsSection() {
           viewport={viewport}
         >
           <MagneticButton 
-            className="h-[42px] w-[184px] rounded-full border border-black bg-[#252525] text-[14px] font-normal text-white transition-colors hover:bg-black md:h-auto md:w-auto md:px-8 md:py-3 md:text-base"
+            className="h-[42px] w-[184px] rounded-full border border-black bg-[#252525] text-[14px] font-normal text-white transition-colors hover:bg-black md:h-auto md:w-auto md:px-[clamp(1.5rem,2vw,2rem)] md:py-[clamp(0.625rem,1vw,0.75rem)] md:text-[clamp(15px,1.3vw,16px)]"
             strength={0.3}
           >
             Erstgespräch buchen

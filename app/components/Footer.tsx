@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-white w-full py-8 px-4 md:py-12 md:px-8 lg:py-16 lg:px-24">
+    <footer className="bg-white w-full py-8 px-4 md:py-[clamp(3rem,4vw,4rem)] md:px-[clamp(5rem,6vw,6rem)]">
       <div className="max-w-[1440px] mx-auto">
         {/* Main Footer Content */}
-        <div className="flex flex-col gap-8 md:gap-10 mb-8 md:mb-12 lg:mb-16">
+        <div className="flex flex-col gap-8 md:gap-[clamp(2rem,2.5vw,2.5rem)] mb-8 md:mb-[clamp(3rem,4vw,4rem)]">
           {/* Mobile: Logo and Description at top */}
           <div className="flex flex-col gap-4 md:hidden">
             {/* Logo */}
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Desktop: 4 column grid */}
-          <div className="hidden md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-12">
+          <div className="hidden md:grid md:grid-cols-4 md:gap-[clamp(2rem,3vw,3rem)]">
             {/* Logo and Description Column - Desktop */}
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-2">

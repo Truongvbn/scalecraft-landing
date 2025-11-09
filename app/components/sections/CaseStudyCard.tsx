@@ -211,3 +211,4 @@ export default function CaseStudyCard({
     </div>
   );
 }
+

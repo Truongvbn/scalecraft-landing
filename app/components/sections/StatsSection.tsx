@@ -34,17 +34,17 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="relative w-full bg-white px-4 py-12 md:px-8 md:py-16 lg:px-16 lg:py-24">
+    <section className="relative w-full bg-white px-4 py-12 md:px-16 md:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div 
-          className="mb-8 text-center md:mb-10 lg:mb-16"
+          className="mb-8 text-center md:mb-16"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
         >
-          <h2 className="text-[28px] font-normal leading-[1.3] tracking-[-1.2px] text-[#020202] md:text-[36px] md:tracking-[-1.5px] lg:text-[44px] lg:leading-tight lg:tracking-normal">
+          <h2 className="text-[28px] font-normal leading-[1.3] tracking-[-1.2px] text-[#020202] md:text-[44px] md:leading-tight md:tracking-normal">
             Warum wir das können?{" "}
             <span 
               className="bg-gradient-to-r from-[#ec6036] to-[#f1983f] bg-clip-text text-transparent"
@@ -61,7 +61,7 @@ export default function StatsSection() {
 
         {/* Stats Cards */}
         <motion.div 
-          className="space-y-4 md:space-y-6 lg:space-y-8"
+          className="space-y-4 md:space-y-8"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -71,7 +71,7 @@ export default function StatsSection() {
             <motion.div 
               key={index}
               variants={staggerItem}
-              className="relative overflow-hidden rounded-[14px] border border-white bg-[#f4f4f4] shadow-lg backdrop-blur-sm transform-gpu md:rounded-[16px] lg:rounded-[20px]"
+              className="relative overflow-hidden rounded-[14px] border border-white bg-[#f4f4f4] shadow-lg backdrop-blur-sm transform-gpu md:rounded-[20px]"
               style={{
                 backgroundImage: !stat.useIllustration 
                   ? 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)'
@@ -79,9 +79,9 @@ export default function StatsSection() {
                 boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
               }}
             >
-              <div className={`grid grid-cols-1 gap-0 lg:grid-cols-2 ${!stat.imageRight ? 'lg:grid-flow-dense' : ''}`}>
-                {/* Image - Mobile First */}
-                <div className={`relative min-h-[220px] overflow-hidden rounded-t-[14px] md:min-h-[320px] md:rounded-t-[16px] lg:min-h-[448px] lg:rounded-none ${!stat.imageRight ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+              <div className="grid grid-cols-1 gap-0 md:grid-cols-10">
+                {/* Image - Mobile First, 60% width on desktop */}
+                <div className={`relative min-h-[220px] overflow-hidden rounded-t-[14px] md:min-h-[480px] md:rounded-none md:col-span-6 ${stat.imageRight ? 'md:order-2' : 'md:order-1'}`}>
                   {stat.useIllustration ? (
                     <>
                       {/* Background Gradient Image */}
@@ -91,7 +91,7 @@ export default function StatsSection() {
                           alt=""
                           fill
                           className="object-cover"
-                          sizes="(max-width: 768px) 100vw, 50vw"
+                          sizes="(max-width: 768px) 100vw, 60vw"
                           quality={85}
                           loading="lazy"
                         />
@@ -119,7 +119,7 @@ export default function StatsSection() {
                           alt=""
                           fill
                           className="object-cover"
-                          sizes="(max-width: 768px) 100vw, 50vw"
+                          sizes="(max-width: 768px) 100vw, 60vw"
                           quality={85}
                           loading="lazy"
                         />
@@ -132,7 +132,7 @@ export default function StatsSection() {
                             alt={stat.title}
                             fill
                             className="object-contain"
-                            sizes="(max-width: 768px) 100vw, 50vw"
+                            sizes="(max-width: 768px) 100vw, 60vw"
                           quality={85}
                           loading="lazy"
                           />
@@ -163,7 +163,7 @@ export default function StatsSection() {
                         src={stat.image}
                         alt={stat.title}
                         fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        sizes="(max-width: 768px) 100vw, 60vw"
                         className="object-cover"
                         quality={85}
                         loading="lazy"
@@ -172,12 +172,12 @@ export default function StatsSection() {
                   )}
                 </div>
 
-                {/* Content */}
-                <div className={`flex flex-col justify-center px-5 py-6 md:px-8 md:py-10 lg:p-16 ${!stat.imageRight ? 'lg:col-start-2' : ''}`}>
-                  <h3 className="mb-2 text-[18px] font-normal leading-[24px] text-[#252525] md:mb-4 md:text-[22px] md:leading-[28px] lg:mb-6 lg:text-[26px] lg:leading-tight">
+                {/* Content - 40% width on desktop */}
+                <div className={`flex flex-col justify-center px-5 py-6 md:px-8 md:py-12 md:col-span-4 ${stat.imageRight ? 'md:order-1' : 'md:order-2'}`}>
+                  <h3 className="mb-2 text-[18px] font-normal leading-[24px] text-[#252525] md:mb-5 md:text-[24px] md:leading-tight">
                     {stat.title}
                   </h3>
-                  <p className="text-[12px] font-light leading-[18px] text-[#404040] whitespace-pre-line md:text-[13px] md:leading-[20px] lg:text-sm lg:leading-relaxed lg:text-[#595959]">
+                  <p className="text-[12px] font-light leading-[18px] text-[#404040] whitespace-pre-line md:text-sm md:leading-relaxed md:text-[#595959]">
                     {stat.description}
                   </p>
                 </div>

@@ -6,12 +6,12 @@ import { Tabs, Tab } from "@heroui/react";
 import CheckIcon from "@/app/components/ui/CheckIcon";
 import XIcon from "@/app/components/ui/XIcon";
 
-const imgGeminiGeneratedImageOulitpoulitpouli1 = "/assets/images/comparison/comparison-agenturen-1.png";
-const imgGeminiGeneratedImageX6Eihmx6Eihmx6Ei4 = "/assets/images/comparison/comparison-agenturen-2.png";
-const imgGeminiGeneratedImageVm2Mutvm2Mutvm2M1 = "/assets/images/comparison/comparison-agenturen-3.png";
-const imgGeminiGeneratedImage2M1Knj2M1Knj2M1K1 = "/assets/images/comparison/comparison-mitarbeiter-1.png";
-const imgGeminiGeneratedImageL67Ngnl67Ngnl67N2 = "/assets/images/comparison/comparison-mitarbeiter-2.png";
-const imgGeminiGeneratedImageOrf8Qtorf8Qtorf83 = "/assets/images/comparison/comparison-systeme.png";
+const imgPros1 = "/assets/images/comparison/pros1.png";
+const imgPros2 = "/assets/images/comparison/pros2.png";
+const imgPros3 = "/assets/images/comparison/pros3.png";
+const imgCons1 = "/assets/images/comparison/cons1.png";
+const imgCons2 = "/assets/images/comparison/cons2.png";
+const imgCons3 = "/assets/images/comparison/cons3.png";
 
 export default function ScalecraftComparisonSection() {
 
@@ -51,11 +51,11 @@ export default function ScalecraftComparisonSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#f0f0f0] py-12 md:py-16 lg:py-20">
-      <div className="mx-auto max-w-[1440px] px-4 md:px-6 lg:px-8">
+    <section className="relative w-full bg-[#f0f0f0] py-12 md:py-[clamp(4rem,5vw,5rem)]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-[clamp(1.5rem,2vw,2rem)]">
         {/* Heading */}
         <motion.h2 
-          className="mb-8 text-center text-[28px] font-normal leading-[1.3] tracking-[-1.12px] text-[#252525] md:mb-12 md:text-[36px] md:tracking-[-1.5px] lg:mb-16 lg:text-[44px] lg:leading-[1.25] lg:tracking-[-1.92px]"
+          className="mb-8 text-center text-[28px] font-normal leading-[1.3] tracking-[-1.12px] text-[#252525] md:mb-[clamp(3rem,4vw,4rem)] md:text-[clamp(36px,3.5vw,44px)] md:leading-[1.25] md:tracking-[clamp(-1.5px,-0.15vw,-1.92px)]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -70,7 +70,7 @@ export default function ScalecraftComparisonSection() {
 
         {/* HeroUI Tabs */}
         <motion.div 
-          className="mx-auto mb-8 md:mb-10 lg:mb-12"
+          className="mx-auto mb-8 md:mb-[clamp(2rem,3vw,3rem)]"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -91,7 +91,7 @@ export default function ScalecraftComparisonSection() {
           <Tab key="mit" title="Mit Scalecraft">
         <>
         <motion.div 
-          className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2"
+          className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 md:gap-[clamp(1.5rem,2vw,2rem)]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -118,36 +118,24 @@ export default function ScalecraftComparisonSection() {
                }}>
             <div className="flex flex-1 flex-col">
             {/* Image Container */}
-            <div className="relative mx-4 mt-4 h-[195px] overflow-hidden rounded-[15px] md:h-[240px] lg:h-[290px]">
+            <div className="relative mx-4 mt-4 h-[195px] overflow-hidden rounded-[15px] md:h-[clamp(220px,20vw,290px)]">
               <Image
-                src={imgGeminiGeneratedImageOulitpoulitpouli1}
+                src={imgPros1}
                 alt="Agenturen"
-                fill
-                className="object-cover"
-              />
-              <Image
-                src={imgGeminiGeneratedImageX6Eihmx6Eihmx6Ei4}
-                alt=""
-                fill
-                className="object-cover"
-              />
-              <Image
-                src={imgGeminiGeneratedImageVm2Mutvm2Mutvm2M1}
-                alt=""
                 fill
                 className="object-cover"
               />
             </div>
 
             {/* Badge */}
-            <div className="mx-6 mt-4 flex justify-start md:mx-8 md:mt-5 lg:mx-11 lg:mt-6">
+            <div className="mx-6 mt-4 flex justify-start md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mt-[clamp(1.25rem,1.4vw,1.5rem)]">
               <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[7px] py-[6px] md:px-[8px] md:py-[6.5px] lg:px-[8.75px] lg:py-[7.5px]">
                 <span className="text-[14px] font-medium leading-[20px] text-white md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[24.99px]">AGENTUREN</span>
               </div>
             </div>
 
             {/* Features List */}
-            <div className="mx-6 mt-4 flex-1 space-y-1.5 min-h-[200px] md:mx-8 md:mt-5 md:space-y-2 lg:mx-11 lg:mt-6">
+            <div className="mx-6 mt-4 flex-1 space-y-1.5 min-h-[200px] md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mt-[clamp(1.25rem,1.4vw,1.5rem)] md:space-y-[clamp(0.375rem,0.5vw,0.5rem)]">
               {[
                 "Dediziertes Performance-Designteam nach deutscher Qualitätsnorm",
                 "Strukturierter Workflow mit fester Priorisierung",
@@ -155,16 +143,16 @@ export default function ScalecraftComparisonSection() {
                 "Klare Ansprechpartner & Reporting (Effektive Zeit) Nur das wird abgerechnet",
                 "up to date"
               ].map((feature, index) => (
-                <div key={index} className="flex items-start gap-3 md:gap-3.5 lg:gap-4">
+                <div key={index} className="flex items-start gap-3 md:gap-[clamp(0.875rem,1vw,1rem)]">
                   <CheckIcon />
-                  <p className="text-[12px] font-light leading-[18px] text-[#546989] md:text-[14px] md:leading-[20px] lg:text-[16px] lg:leading-[24px]">{feature}</p>
+                  <p className="text-[12px] font-light leading-[18px] text-[#546989] md:text-[clamp(14px,1.3vw,16px)] md:leading-[clamp(20px,2vw,24px)]">{feature}</p>
                 </div>
               ))}
             </div>
             </div>
 
             {/* Result */}
-            <p className="mx-6 mb-6 mt-4 text-[12px] leading-[18px] text-[#546989] md:mx-8 md:mb-8 md:text-[14px] md:leading-[20px] lg:mx-11 lg:mb-11 lg:text-[16px] lg:leading-[24px]">
+            <p className="mx-6 mb-6 mt-4 text-[12px] leading-[18px] text-[#546989] md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mb-[clamp(2rem,2.75vw,2.75rem)] md:text-[clamp(14px,1.3vw,16px)] md:leading-[clamp(20px,2vw,24px)]">
               <span className="font-semibold">Ergebnis:</span> Stabile Qualität, planbarer Output, zufriedene Kunden.
             </p>
           </motion.div>
@@ -182,46 +170,40 @@ export default function ScalecraftComparisonSection() {
                }}>
             <div className="flex flex-1 flex-col">
             {/* Image Container */}
-            <div className="relative mx-4 mt-4 h-[195px] overflow-hidden rounded-[15px] md:h-[240px] lg:h-[290px]">
+            <div className="relative mx-4 mt-4 h-[195px] overflow-hidden rounded-[15px] md:h-[clamp(220px,20vw,290px)]">
               <Image
-                src={imgGeminiGeneratedImage2M1Knj2M1Knj2M1K1}
+                src={imgPros2}
                 alt="Mitarbeiter"
-                fill
-                className="object-cover"
-              />
-              <Image
-                src={imgGeminiGeneratedImageL67Ngnl67Ngnl67N2}
-                alt=""
                 fill
                 className="object-cover"
               />
             </div>
 
             {/* Badge */}
-            <div className="mx-6 mt-4 flex justify-start md:mx-8 md:mt-5 lg:mx-11 lg:mt-6">
+            <div className="mx-6 mt-4 flex justify-start md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mt-[clamp(1.25rem,1.4vw,1.5rem)]">
               <div className="inline-flex items-center rounded-full bg-[#ec6036] px-[7px] py-[6px] md:px-[8.5px] md:py-[6.5px] lg:px-[10px] lg:py-[7px]">
                 <span className="text-[14px] font-medium leading-[20px] text-white md:text-[15px] md:leading-[22px] lg:text-[16px] lg:leading-[25px]">MITARBEITER</span>
               </div>
             </div>
 
             {/* Features List */}
-            <div className="mx-6 mt-4 flex-1 space-y-1.5 min-h-[200px] md:mx-8 md:mt-5 md:space-y-2 lg:mx-11 lg:mt-6">
+            <div className="mx-6 mt-4 flex-1 space-y-1.5 min-h-[200px] md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mt-[clamp(1.25rem,1.4vw,1.5rem)] md:space-y-[clamp(0.375rem,0.5vw,0.5rem)]">
               {[
                 "Externe Entlastung durch skalierbares Designteam",
                 "Performance-orientierte Trainings & Guidelines | UP TO DATE",
                 "Klare Rollenverteilung & Prozessverantwortung",
                 "Mehr Raum fürs interne Team, um zu wachsen"
               ].map((feature, index) => (
-                <div key={index} className="flex items-start gap-3 md:gap-3.5 lg:gap-4">
+                <div key={index} className="flex items-start gap-3 md:gap-[clamp(0.875rem,1vw,1rem)]">
                   <CheckIcon />
-                  <p className="text-[12px] font-light leading-[18px] text-[#546989] md:text-[14px] md:leading-[20px] lg:text-[16px] lg:leading-[24px]">{feature}</p>
+                  <p className="text-[12px] font-light leading-[18px] text-[#546989] md:text-[clamp(14px,1.3vw,16px)] md:leading-[clamp(20px,2vw,24px)]">{feature}</p>
                 </div>
               ))}
             </div>
             </div>
 
             {/* Result */}
-            <p className="mx-6 mb-6 mt-4 text-[12px] leading-[18px] text-[#546989] md:mx-8 md:mb-8 md:text-[14px] md:leading-[20px] lg:mx-11 lg:mb-11 lg:text-[16px] lg:leading-[24px]">
+            <p className="mx-6 mb-6 mt-4 text-[12px] leading-[18px] text-[#546989] md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mb-[clamp(2rem,2.75vw,2.75rem)] md:text-[clamp(14px,1.3vw,16px)] md:leading-[clamp(20px,2vw,24px)]">
               <span className="font-semibold">Ergebnis:</span> Dein Team bleibt fokussiert und arbeitet strategisch – nicht operativ im Chaos.
             </p>
           </motion.div>
@@ -236,7 +218,7 @@ export default function ScalecraftComparisonSection() {
           {/* Image Container */}
           <div className="relative mx-6 mt-5 h-[297px] overflow-hidden rounded-[15px] max-md:mx-4 max-md:h-[195px]">
             <Image
-              src={imgGeminiGeneratedImageOrf8Qtorf8Qtorf83}
+              src={imgPros3}
               alt="Systeme"
               fill
               className="object-cover"
@@ -244,7 +226,7 @@ export default function ScalecraftComparisonSection() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 gap-8 px-11 py-8 lg:grid-cols-2 lg:items-start max-md:px-6 max-md:py-6 max-md:gap-6">
+          <div className="grid grid-cols-1 gap-8 px-11 py-8 md:grid-cols-2 md:items-start md:gap-[clamp(1.5rem,2vw,2rem)] max-md:px-6 max-md:py-6 max-md:gap-6">
             {/* Left Side */}
             <div>
               {/* Badge */}
@@ -271,7 +253,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Right Side - Result */}
-            <div className="flex items-start lg:items-center lg:justify-end">
+            <div className="flex items-start lg:pt-14">
               <p className="text-[16px] leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">
                 <span className="font-semibold">Ergebnis:</span> Dein Designprozess wird messbar, skalierbar und profitabel.
               </p>
@@ -284,7 +266,7 @@ export default function ScalecraftComparisonSection() {
           <Tab key="ohne" title="Ohne Scalecraft">
         <>
         <motion.div 
-          className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2"
+          className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 md:gap-[clamp(1.5rem,2vw,2rem)]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -311,47 +293,35 @@ export default function ScalecraftComparisonSection() {
                }}>
             <div className="flex flex-1 flex-col">
             {/* Image Container */}
-            <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[16px] bg-neutral-700">
+            <div className="relative mx-4 mt-4 h-[195px] overflow-hidden rounded-[15px] md:h-[clamp(220px,20vw,290px)]">
               <Image
-                src={imgGeminiGeneratedImageOulitpoulitpouli1}
+                src={imgCons1}
                 alt="Agenturen"
-                fill
-                className="object-cover"
-              />
-              <Image
-                src={imgGeminiGeneratedImageX6Eihmx6Eihmx6Ei4}
-                alt=""
-                fill
-                className="object-cover"
-              />
-              <Image
-                src={imgGeminiGeneratedImageVm2Mutvm2Mutvm2M1}
-                alt=""
                 fill
                 className="object-cover"
               />
             </div>
 
             {/* Badge */}
-            <div className="mx-11 mt-6 flex justify-start max-md:mx-6 max-md:mt-4">
+            <div className="mx-6 mt-4 flex justify-start md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mt-[clamp(1.25rem,1.4vw,1.5rem)]">
               <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2 max-md:px-[7px] max-md:py-[6px]">
                 <span className="text-[16px] font-medium uppercase text-white max-md:text-[14px] max-md:leading-[20px]">{ohneScalecraftData.agenturen.title}</span>
               </div>
             </div>
 
             {/* Issues List */}
-            <div className="mx-11 mt-6 flex-1 space-y-1 min-h-[200px] max-md:mx-6 max-md:mt-4 max-md:space-y-1.5">
+            <div className="mx-6 mt-4 flex-1 space-y-1.5 min-h-[200px] md:mx-8 md:mt-5 md:space-y-2 lg:mx-11 lg:mt-6">
               {ohneScalecraftData.agenturen.issues.map((issue, index) => (
-                <div key={index} className="flex items-start gap-4 max-md:gap-3">
+                <div key={index} className="flex items-start gap-3 md:gap-[clamp(0.875rem,1vw,1rem)]">
                   <XIcon />
-                  <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">{issue}</p>
+                  <p className="text-[12px] font-light leading-[18px] text-[#546989] md:text-[clamp(14px,1.3vw,16px)] md:leading-[clamp(20px,2vw,24px)]">{issue}</p>
                 </div>
               ))}
             </div>
             </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-auto text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
+            <p className="mx-6 mb-6 mt-4 text-[12px] leading-[18px] text-[#546989] md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mb-[clamp(2rem,2.75vw,2.75rem)] md:text-[clamp(14px,1.3vw,16px)] md:leading-[clamp(20px,2vw,24px)]">
               <span className="font-semibold">Ergebnis:</span> {ohneScalecraftData.agenturen.result}
             </p>
           </motion.div>
@@ -369,41 +339,35 @@ export default function ScalecraftComparisonSection() {
                }}>
             <div className="flex flex-1 flex-col">
             {/* Image Container */}
-            <div className="relative mx-4 mt-4 h-[290px] overflow-hidden rounded-[16px] bg-[#404040]">
+            <div className="relative mx-4 mt-4 h-[195px] overflow-hidden rounded-[15px] md:h-[clamp(220px,20vw,290px)]">
               <Image
-                src={imgGeminiGeneratedImage2M1Knj2M1Knj2M1K1}
+                src={imgCons2}
                 alt="Mitarbeiter"
-                fill
-                className="object-cover"
-              />
-              <Image
-                src={imgGeminiGeneratedImageL67Ngnl67Ngnl67N2}
-                alt=""
                 fill
                 className="object-cover"
               />
             </div>
 
             {/* Badge */}
-            <div className="mx-11 mt-6 flex justify-start max-md:mx-6 max-md:mt-4">
+            <div className="mx-6 mt-4 flex justify-start md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mt-[clamp(1.25rem,1.4vw,1.5rem)]">
               <div className="inline-flex items-center rounded-full bg-gradient-to-r from-[#ec6036] to-[#f1983f] px-4 py-2 max-md:px-[7px] max-md:py-[6px]">
                 <span className="text-[16px] font-medium uppercase text-white max-md:text-[14px] max-md:leading-[20px]">{ohneScalecraftData.mitarbeiter.title}</span>
               </div>
             </div>
 
             {/* Issues List */}
-            <div className="mx-11 mt-6 flex-1 space-y-1 min-h-[200px] max-md:mx-6 max-md:mt-4 max-md:space-y-1.5">
+            <div className="mx-6 mt-4 flex-1 space-y-1.5 min-h-[200px] md:mx-8 md:mt-5 md:space-y-2 lg:mx-11 lg:mt-6">
               {ohneScalecraftData.mitarbeiter.issues.map((issue, index) => (
-                <div key={index} className="flex items-start gap-4 max-md:gap-3">
+                <div key={index} className="flex items-start gap-3 md:gap-3.5 lg:gap-4">
                   <XIcon />
-                  <p className="text-[16px] font-light leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">{issue}</p>
+                  <p className="text-[12px] font-light leading-[18px] text-[#546989] md:text-[14px] md:leading-[20px] lg:text-[16px] lg:leading-[24px]">{issue}</p>
                 </div>
               ))}
             </div>
             </div>
 
             {/* Result */}
-            <p className="mx-11 mb-11 mt-auto text-[16px] leading-[24px] text-[#546989] max-md:mx-6 max-md:mb-6 max-md:text-[14px]">
+            <p className="mx-6 mb-6 mt-4 text-[12px] leading-[18px] text-[#546989] md:mx-[clamp(2rem,2.2vw,2.75rem)] md:mb-[clamp(2rem,2.75vw,2.75rem)] md:text-[clamp(14px,1.3vw,16px)] md:leading-[clamp(20px,2vw,24px)]">
               <span className="font-semibold">Ergebnis:</span> {ohneScalecraftData.mitarbeiter.result}
             </p>
           </motion.div>
@@ -416,9 +380,9 @@ export default function ScalecraftComparisonSection() {
                boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
              }}>
           {/* Image Container */}
-          <div className="relative mx-6 mt-5 h-[297px] overflow-hidden rounded-[16px] bg-[#373738]">
+          <div className="relative mx-6 mt-5 h-[297px] overflow-hidden rounded-[15px] max-md:mx-4 max-md:h-[195px]">
             <Image
-              src={imgGeminiGeneratedImageOrf8Qtorf8Qtorf83}
+              src={imgCons3}
               alt="Systeme"
               fill
               className="object-cover"
@@ -426,7 +390,7 @@ export default function ScalecraftComparisonSection() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 gap-8 px-11 py-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 px-11 py-8 lg:grid-cols-2 max-md:px-6 max-md:py-6 max-md:gap-6">
             {/* Left Side */}
             <div>
               {/* Badge */}
@@ -437,7 +401,7 @@ export default function ScalecraftComparisonSection() {
               </div>
 
               {/* Issues List */}
-              <div className="space-y-1 max-md:space-y-1.5">
+              <div className="space-y-2 max-md:space-y-1.5">
                 {ohneScalecraftData.systeme.issues.map((issue, index) => (
                   <div key={index} className="flex items-start gap-4 max-md:gap-3">
                     <XIcon />
@@ -448,7 +412,7 @@ export default function ScalecraftComparisonSection() {
             </div>
 
             {/* Right Side - Result */}
-            <div className="flex items-end">
+            <div className="flex items-start lg:pt-14">
               <p className="text-[16px] leading-[24px] text-[#546989] max-md:text-[12px] max-md:leading-[18px]">
                 <span className="font-semibold">Ergebnis:</span> {ohneScalecraftData.systeme.result}
               </p>
