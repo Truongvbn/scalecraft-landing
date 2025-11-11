@@ -23,13 +23,10 @@ export default function CaseStudyCard1() {
           {/* Main Image */}
           <div className="relative h-[245px] md:h-[321px] overflow-hidden rounded-[11.267px] md:rounded-[16px] bg-white transition-all duration-500 hover:scale-[1.02]">
             <Image
-              src="/assets/images/case-study/casestudy1.png"
+              src="/assets/images/case-study/case-study-1.png"
               alt="Case Study Dashboard"
               fill
               className="object-cover"
-              priority
-              quality={85}
-              sizes="(max-width: 768px) 100vw, 540px"
             />
           </div>
 
@@ -47,7 +44,7 @@ export default function CaseStudyCard1() {
             <div className="relative h-full flex items-center divide-x divide-gray-100/50">
               {/* Logo 1 - bestseller.design */}
               <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <div className="relative h-[11px] w-full max-w-[16px] md:h-[32px] md:max-w-[59px] transition-all duration-300">
+                <div className="relative h-[16px] w-full max-w-[16px] md:h-[32px] md:max-w-[59px] transition-all duration-300">
                   <Image
                     src="/assets/images/case-study/Group 345.png"
                     alt="bestseller.design"
@@ -59,7 +56,7 @@ export default function CaseStudyCard1() {
               
               {/* Logo 2 - amaLOCK */}
               <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <div className="relative h-[7px] w-full max-w-[54px] md:h-[22px] md:max-w-[86px] transition-all duration-300">
+                <div className="relative h-[16px] w-full max-w-[54px] md:h-[22px] md:max-w-[86px] transition-all duration-300">
                   <Image
                     src="/assets/images/case-study/image 4.png"
                     alt="amaLOCK"
@@ -71,7 +68,7 @@ export default function CaseStudyCard1() {
               
               {/* Logo 3 - ATLAS */}
               <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <div className="relative h-[15px] w-full max-w-[61px] md:h-[20px] md:max-w-[78px] transition-all duration-300">
+                <div className="relative h-[16px] w-full max-w-[61px] md:h-[20px] md:max-w-[78px] transition-all duration-300">
                   <Image
                     src="/assets/images/case-study/image 13.png"
                     alt="ATLAS"
