@@ -24,16 +24,16 @@ export default function Home() {
         <Navbar />
       </div>
       
-      <HeroSection />
-      <StatsHeroSection />
-      <CaseStudySection />
-      <ScalecraftComparisonSection />
-      <StatsSection />
-      <BenefitsSection />
-      <FeatureCardsSection />
-      <VisualSolutionsSection />
-      <FAQSection />
-      <CTASection />
+      <div id="home"><HeroSection /></div>
+      <div id="stats"><StatsHeroSection /></div>
+      <div id="case-study"><CaseStudySection /></div>
+      <div id="comparison"><ScalecraftComparisonSection /></div>
+      <div id="team"><StatsSection /></div>
+      <div id="benefits"><BenefitsSection /></div>
+      <div id="features"><FeatureCardsSection /></div>
+      <div id="solutions"><VisualSolutionsSection /></div>
+      <div id="faq"><FAQSection /></div>
+      <div id="contact"><CTASection /></div>
       <Footer />
     </div>
   );

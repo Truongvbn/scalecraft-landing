@@ -3,6 +3,7 @@ import "./globals.css";
 import ClientProviders from "./providers/ClientProviders";
 import RotationPrompt from "./components/ui/RotationPrompt";
 import StructuredData from "./components/StructuredData";
+import FAQSchema from "./components/FAQSchema";
 import { metadata as siteMetadata } from "./metadata";
 import { viewport as siteViewport } from "./viewport";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <StructuredData />
+        <FAQSchema />
         <RotationPrompt />
         <ClientProviders>
           {children}

@@ -5,10 +5,10 @@ const siteUrl = 'https://scalecraft.com';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Scalecraft | Performance Design Outsourcing für E-Commerce',
+    default: 'Home | ScaleCraft - DHVV',
     template: '%s | Scalecraft',
   },
-  description: 'Scalecraft liefert dir ein eingespieltes Performance-Designteam – optimiert für Amazon / E-Commerce Agenturen und Freelancer. Mehr Umsatz, weniger Aufwand, konstante Qualität.',
+  description: 'Scalecraft liefert dir ein eingespieltes Performance-Designteam – optimiert für Amazon / E-Commerce Agenturen und Freelancer. 2× schneller, 50 % günstiger. Mehr Umsatz, weniger Aufwand, konstante Qualität.',
   keywords: [
     'E-Commerce Design',
     'Amazon Design',
