@@ -20,11 +20,11 @@ const imgImage14 = "/assets/images/hero/image 14.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white pb-4 sm:pb-0 lg:pb-8">
+    <section className="relative w-full overflow-hidden bg-white pb-4 sm:pb-0 lg:pb-4">
       <HeroBackground />
 
       {/* Content Container */}
-      <div className="relative mx-auto px-4 sm:flex sm:max-h-[630px] sm:justify-center sm:overflow-hidden sm:px-0 lg:block lg:min-h-[900px] lg:max-h-none lg:overflow-visible">
+      <div className="relative mx-auto px-4 sm:flex sm:max-h-[630px] sm:justify-center sm:overflow-hidden sm:px-0 lg:block lg:min-h-[750px] lg:max-h-none lg:overflow-visible">
         <div 
           className="relative flex w-full flex-col sm:w-[1440px] sm:scale-[0.7] lg:mx-auto lg:scale-100"
           style={{ 
