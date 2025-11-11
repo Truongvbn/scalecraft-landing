@@ -81,8 +81,8 @@ export default function Navbar() {
         {/* Center: Nav Links */}
         <div className="flex items-center justify-center gap-[30px]">
           <a 
-            href="#team" 
-            onClick={(e) => handleNavClick(e, "#team")}
+            href="#solutions" 
+            onClick={(e) => handleNavClick(e, "#solutions")}
             className="whitespace-nowrap text-center text-[16px] tracking-[-0.32px] text-[#404040] hover:text-[#252525] transition-all duration-200 cursor-pointer hover:scale-105"
           >
             Über uns
