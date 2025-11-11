@@ -28,14 +28,14 @@ export default function Navbar() {
 
   return (
     <div 
-      className={`relative w-full transition-all duration-300 
-        max-md:h-[60px] max-md:bg-white/95 max-md:backdrop-blur-sm 
+      className={`relative transition-all duration-300 
+        max-md:h-[54px] max-md:w-full max-md:max-w-[380px] max-md:px-4
         md:h-[77px] md:w-[1172px] 
-        ${isScrolled ? 'max-md:shadow-md md:shadow-lg' : ''}`}
+        ${isScrolled ? 'md:shadow-lg' : ''}`}
     >
-      {/* Glass Background - Desktop Only (floating card style) */}
+      {/* Glass Background - Both Mobile and Desktop */}
       <div 
-        className={`absolute left-0 top-0 h-full w-full rounded-[20px] border border-white max-md:hidden transition-all duration-300 ${isScrolled ? 'backdrop-blur-[12px]' : 'backdrop-blur-[4.875px]'}`}
+        className={`absolute left-0 top-0 h-full w-full rounded-[20px] border border-white transition-all duration-300 ${isScrolled ? 'backdrop-blur-[12px]' : 'backdrop-blur-[4.875px]'}`}
         style={{
           backgroundImage: 'linear-gradient(172.699deg, rgba(255, 249, 238, 0.1) 0.122%, rgba(255, 232, 239, 0.1) 99.544%), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%)',
           boxShadow: isScrolled 
@@ -44,15 +44,15 @@ export default function Navbar() {
         }}
       />
       
-      {/* Mobile Layout - Simple full width bar */}
-      <div className="absolute left-0 right-0 top-0 flex h-full items-center justify-between px-4 md:hidden">
+      {/* Mobile Layout */}
+      <div className="absolute left-1/2 top-[12px] flex -translate-x-1/2 items-center justify-between w-[calc(100%-32px)] md:hidden">
         {/* Logo */}
-        <div className="relative h-[30px] w-[140px] overflow-hidden flex-shrink-0">
+        <div className="relative h-[33px] w-[158px] overflow-hidden flex-shrink-0">
           <div className="absolute bottom-0 left-0 right-[81.36%] top-0">
             <Image src={imgGroup2} alt="" fill className="object-contain" priority sizes="30px" />
           </div>
           <div className="absolute bottom-[33.06%] left-[23.53%] right-0 top-[26.76%]">
-            <Image src={imgGroup3} alt="" fill className="object-contain" priority sizes="110px" />
+            <Image src={imgGroup3} alt="" fill className="object-contain" priority sizes="120px" />
           </div>
         </div>
 

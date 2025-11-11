@@ -1,8 +1,10 @@
-"use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { HeroUIProvider } from "@heroui/react";
+import ClientProviders from "./providers/ClientProviders";
 import RotationPrompt from "./components/ui/RotationPrompt";
+import StructuredData from "./components/StructuredData";
+import { metadata as siteMetadata } from "./metadata";
+import { viewport as siteViewport } from "./viewport";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +24,9 @@ const geistMono = Geist_Mono({
   adjustFontFallback: true,
 });
 
+// Export metadata and viewport for SEO
+export const metadata = siteMetadata;
+export const viewport = siteViewport;
 
 export default function RootLayout({
   children,
@@ -31,10 +36,6 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        <title>Scalecraft | Performance Design Outsourcing für E-Commerce</title>
-        <meta name="description" content="Scalecraft liefert dir ein eingespieltes Performance-Designteam – optimiert für Amazon / E-Commerce Agenturen und Freelancer." />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
-        <meta name="format-detection" content="telephone=no" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link 
@@ -46,10 +47,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StructuredData />
         <RotationPrompt />
-        <HeroUIProvider>
+        <ClientProviders>
           {children}
-        </HeroUIProvider>
+        </ClientProviders>
       </body>
     </html>
   );

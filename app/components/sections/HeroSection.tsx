@@ -31,8 +31,8 @@ export default function HeroSection() {
             transformOrigin: 'top center'
           }}
         >
-          {/* Add spacing for fixed navbar - responsive */}
-          <div className="mt-[80px] flex justify-start sm:mt-[160px] sm:justify-center lg:mt-[150px]"><HeroContent /></div>
+          {/* Add spacing for navbar - mobile: no extra space (navbar scrolls), tablet/desktop: space for fixed navbar */}
+          <div className="mt-[20px] flex justify-start sm:mt-[160px] sm:justify-center lg:mt-[150px]"><HeroContent /></div>
           <div className="mt-[20px] flex justify-start sm:mt-[31px] sm:justify-center"><RatingBadge /></div>
           <div className="mt-[20px] flex justify-start sm:mt-[34px] sm:justify-center"><Subheading /></div>
           <div className="mt-[28px] flex justify-start sm:mt-[44px] sm:justify-center"><StatsCards /></div>

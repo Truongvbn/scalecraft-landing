@@ -1,0 +1,15 @@
+OG Image Placeholder
+
+To create the og-image.jpg for social media sharing:
+1. Create an image with dimensions 1200x630px
+2. Use Scalecraft branding (logo, colors, tagline)
+3. Save as: public/og-image.jpg
+
+Recommended content:
+- Scalecraft logo
+- Tagline: "Performance Design Outsourcing für E-Commerce"
+- Gradient background (#ec6036 to #f1983f)
+- Professional, clean design
+
+For now, you can copy scalecraft-logo-text.png and resize it to 1200x630.
+

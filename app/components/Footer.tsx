@@ -60,28 +60,30 @@ export default function Footer() {
               
               <div className="flex items-center gap-3">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/dachoa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-fit"
+                  title="CEO LinkedIn - Hoa Nguyen"
                 >
                   <Image
                     src="/linkedin-icon.svg"
-                    alt="LinkedIn"
+                    alt="LinkedIn - CEO Hoa Nguyen"
                     width={34}
                     height={34}
                     className="hover:opacity-80 transition-opacity"
                   />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/scalecraftdh/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-fit"
+                  title="Scalecraft Company LinkedIn"
                 >
                   <Image
                     src="/linkedin-icon.svg"
-                    alt="LinkedIn"
+                    alt="LinkedIn - Scalecraft Company"
                     width={34}
                     height={34}
                     className="hover:opacity-80 transition-opacity"
@@ -249,28 +251,30 @@ export default function Footer() {
           {/* LinkedIn Icons - Mobile only */}
           <div className="flex items-center gap-3 md:hidden">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/dachoa/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-fit"
+              title="CEO LinkedIn - Hoa Nguyen"
             >
               <Image
                 src="/linkedin-icon.svg"
-                alt="LinkedIn"
+                alt="LinkedIn - CEO Hoa Nguyen"
                 width={18}
                 height={18}
                 className="object-contain hover:opacity-80 transition-opacity"
               />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/scalecraftdh/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-fit"
+              title="Scalecraft Company LinkedIn"
             >
               <Image
                 src="/linkedin-icon.svg"
-                alt="LinkedIn"
+                alt="LinkedIn - Scalecraft Company"
                 width={18}
                 height={18}
                 className="object-contain hover:opacity-80 transition-opacity"
