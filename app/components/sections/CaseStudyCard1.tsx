@@ -27,6 +27,9 @@ export default function CaseStudyCard1() {
               alt="Case Study Dashboard"
               fill
               className="object-cover"
+              priority
+              quality={85}
+              sizes="(max-width: 768px) 100vw, 540px"
             />
           </div>
 
