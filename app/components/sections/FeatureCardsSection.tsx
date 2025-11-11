@@ -54,11 +54,11 @@ const FEATURE_CARDS = [
 ];
 
 // Timeline dots positions (in px from top)
-const TIMELINE_DOTS = [85, 411, 715, 1041];
+const TIMELINE_DOTS = [100, 400, 850, 1200];
 
 export default function FeatureCardsSection() {
   return (
-    <section className="relative w-full overflow-hidden px-4 pb-4 pt-16 md:px-8 md:pt-20">
+    <section className="relative w-full overflow-hidden px-4 pb-4 pt-16 sm:px-8 sm:pb-8 sm:pt-20 lg:pb-4">
       {/* Background SVG Pattern */}
       <div className="absolute inset-0 bg-[#202020]">
         {/* Radial Gradients */}
@@ -199,14 +199,14 @@ export default function FeatureCardsSection() {
 
         {/* Feature Cards Grid */}
         <div 
-          className="relative mx-auto px-4 md:px-0 md:w-[905px] lg:w-[1104px]"
+          className="relative mx-auto px-4 sm:flex sm:w-[773px] sm:justify-center sm:px-0 lg:block lg:w-[1104px]"
         >
           <div 
-            className="relative md:w-[1104px] md:scale-[0.82] md:origin-center lg:scale-100"
+            className="relative sm:w-[1104px] sm:scale-[0.7] sm:origin-top lg:scale-100"
           >
           {/* Vertical Timeline Line - at exact grid boundary (520px = col1 end) */}
           <div 
-            className="absolute top-0 hidden h-full w-px bg-gray-600 md:block"
+            className="absolute top-0 hidden h-full w-px bg-gray-600 sm:block"
             style={{ left: '520px' }}
           >
             {/* Timeline Dots */}
@@ -232,7 +232,7 @@ export default function FeatureCardsSection() {
           </div>
 
           <motion.div 
-            className="space-y-8 md:space-y-12"
+            className="space-y-8 md:space-y-14"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -266,10 +266,16 @@ export default function FeatureCardsSection() {
                     }
                   `}>
                     <GlassCard pointRight={!isLeft}>
-                      <div className="mb-4 md:mb-5 h-[56px] w-[56px] md:h-[72px] md:w-[72px]">
-                        <IconComponent />
+                      {/* Schritt Label & Icon - Same Row */}
+                      <div className="mb-4 md:mb-6 flex items-center justify-between">
+                        <span className="text-[20px] md:text-[23px] font-medium bg-gradient-to-r from-[#ec6036] to-[#f1983f] bg-clip-text text-transparent">
+                          Schritt {card.id}
+                        </span>
+                        <div className="h-[48px] w-[48px] md:h-[72px] md:w-[72px]">
+                          <IconComponent />
+                        </div>
                       </div>
-                      <p className="text-[13px] leading-[1.4] text-white md:text-[17px] md:leading-[1.6]">
+                      <p className="text-[12px] leading-[1.5] text-white md:text-[17px] md:leading-[1.7]">
                         {card.text}
                       </p>
                     </GlassCard>
@@ -282,8 +288,8 @@ export default function FeatureCardsSection() {
         </div>
 
         {/* Bottom SCALECRAFT Text */}
-        <div className="mt-12 md:mt-12 text-center">
-          <div className="inline-block">
+        <div className="mt-12 sm:-mt-64 md:-mt-40 lg:mt-12 text-center overflow-hidden">
+          <div className="inline-block scale-75 md:scale-100">
             <Image
               src="/assets/images/features/feature-scalecraft-text.svg"
               alt="SCALECRAFT"

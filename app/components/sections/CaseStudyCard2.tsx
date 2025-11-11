@@ -19,7 +19,7 @@ export default function CaseStudyCard2() {
         />
         
         {/* Content */}
-        <div className="relative z-10 flex h-full flex-col pt-6 px-6 pb-0 md:p-3 transition-all duration-300">
+        <div className="relative z-10 flex h-full flex-col pt-6 px-6 pb-0 md:pt-8 md:px-8 md:pb-8 transition-all duration-300">
           {/* Main Image */}
           <div className="relative h-[245px] md:h-[321px] overflow-hidden rounded-[11.267px] md:rounded-[16px] bg-white transition-all duration-500 hover:scale-[1.02]">
             <Image

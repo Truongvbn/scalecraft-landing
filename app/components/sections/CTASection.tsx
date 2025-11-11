@@ -69,101 +69,109 @@ export default function CTASection() {
           </MagneticButton>
         </motion.div>
 
-        {/* Client Avatars */}
+        {/* Client Avatars and Badge */}
         <motion.div 
-          className="flex items-center justify-center gap-0"
+          className="flex items-center justify-center gap-3 md:gap-4"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
         >
-          {/* Avatar 1 */}
-          <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
-            <Image
-              src="/assets/images/cta/cta-avatar-1.png"
-              alt="Client"
-              fill
-              className="object-cover"
-              sizes="32px"
-              quality={85}
-              loading="lazy"
-            />
-          </div>
+          {/* Avatars Group with Badge */}
+          <div className="flex items-center">
+            {/* Avatar 1 */}
+            <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
+              <Image
+                src="/assets/images/cta/cta-avatar-1.png"
+                alt="Client"
+                fill
+                className="object-cover"
+                sizes="32px"
+                quality={85}
+                loading="lazy"
+              />
+            </div>
 
-          {/* Avatar 2 */}
-          <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.855px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)] md:border-[1.189px]">
-            <Image
-              src="/assets/images/cta/cta-avatar-2.png"
-              alt="Client"
-              fill
-              className="object-cover"
-              sizes="32px"
-              quality={85}
-              loading="lazy"
-            />
-          </div>
+            {/* Avatar 2 */}
+            <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.855px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)] md:border-[1.189px]">
+              <Image
+                src="/assets/images/cta/cta-avatar-2.png"
+                alt="Client"
+                fill
+                className="object-cover"
+                sizes="32px"
+                quality={85}
+                loading="lazy"
+              />
+            </div>
 
-          {/* Avatar 3 */}
-          <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
-            <Image
-              src="/assets/images/cta/cta-avatar-3.png"
-              alt="Client"
-              fill
-              className="object-cover"
-              sizes="32px"
-              quality={85}
-              loading="lazy"
-            />
-          </div>
+            {/* Avatar 3 */}
+            <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
+              <Image
+                src="/assets/images/cta/cta-avatar-3.png"
+                alt="Client"
+                fill
+                className="object-cover"
+                sizes="32px"
+                quality={85}
+                loading="lazy"
+              />
+            </div>
 
-          {/* Avatar 4 */}
-          <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
-            <Image
-              src="/assets/images/cta/cta-avatar-4.png"
-              alt="Client"
-              fill
-              className="object-cover"
-              sizes="32px"
-              quality={85}
-              loading="lazy"
-            />
-          </div>
+            {/* Avatar 4 */}
+            <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
+              <Image
+                src="/assets/images/cta/cta-avatar-4.png"
+                alt="Client"
+                fill
+                className="object-cover"
+                sizes="32px"
+                quality={85}
+                loading="lazy"
+              />
+            </div>
 
-          {/* Avatar 5 */}
-          <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
-            <Image
-              src="/assets/images/cta/cta-avatar-5.png"
-              alt="Client"
-              fill
-              className="object-cover"
-              sizes="32px"
-              quality={85}
-              loading="lazy"
-            />
-          </div>
+            {/* Avatar 5 */}
+            <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
+              <Image
+                src="/assets/images/cta/cta-avatar-5.png"
+                alt="Client"
+                fill
+                className="object-cover"
+                sizes="32px"
+                quality={85}
+                loading="lazy"
+              />
+            </div>
 
-          {/* Avatar 6 */}
-          <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
-            <Image
-              src="/assets/images/cta/cta-avatar-6.png"
-              alt="Client"
-              fill
-              className="object-cover"
-              sizes="32px"
-              quality={85}
-              loading="lazy"
-            />
-          </div>
+            {/* Avatar 6 */}
+            <div className="relative -mr-2 h-8 w-8 overflow-hidden rounded-full border-[0.428px] border-white/90 md:-mr-3 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
+              <Image
+                src="/assets/images/cta/cta-avatar-6.png"
+                alt="Client"
+                fill
+                className="object-cover"
+                sizes="32px"
+                quality={85}
+                loading="lazy"
+              />
+            </div>
 
-          {/* 200+ Badge */}
-          <div className="relative h-8 w-8 md:h-[clamp(2.5rem,2.9vw,2.75rem)] md:w-[clamp(2.5rem,2.9vw,2.75rem)]">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f1983f] via-[#ec6036] to-[#ec6036]"></div>
-            <div className="absolute inset-[2px] flex items-center justify-center rounded-full bg-white">
-              <span className="bg-gradient-to-r from-[#ec6036] to-[#f1983f] bg-clip-text text-[7.5px] font-semibold leading-[1.2] text-transparent md:text-[clamp(9px,0.9vw,10.703px)]">
-                200+
-              </span>
+            {/* 30+ Badge - overlapping with avatar 6 */}
+            <div className="relative h-10 w-10 flex-shrink-0 md:h-[clamp(2.75rem,3.2vw,3rem)] md:w-[clamp(2.75rem,3.2vw,3rem)]">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f1983f] via-[#ec6036] to-[#ec6036]"></div>
+              <div className="absolute inset-[2px] flex items-center justify-center rounded-full bg-white">
+                <span className="bg-gradient-to-r from-[#ec6036] to-[#f1983f] bg-clip-text text-[10px] font-semibold leading-[1.2] text-transparent md:text-[clamp(11px,1vw,12px)]">
+                  30+
+                </span>
+              </div>
             </div>
           </div>
+
+          {/* Text */}
+          <span className="text-[14px] font-medium text-[#252525] md:text-[clamp(16px,1.4vw,18px)]">
+            Zufriedene Kunden
+          </span>
         </motion.div>
       </div>
     </section>

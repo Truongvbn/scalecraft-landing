@@ -17,10 +17,10 @@ const caseStudyComponents = [
 
 export default function CaseStudySection() {
   return (
-    <section className="relative w-full py-8 px-0 md:py-20 bg-[#f0f0f0] transition-all duration-300">
+    <section id="case-study" className="relative w-full pt-0 pb-6 px-0 md:pb-20 bg-[#f0f0f0] transition-all duration-300">
       {/* Glassmorphism Container */}
       <div className="relative w-full h-full overflow-hidden rounded-[8px] md:rounded-[24px] transition-all duration-500" style={{
-        minHeight: '680px',
+        minHeight: '580px',
         boxShadow: '0px 1px 8.1px 0px rgba(0, 0, 0, 0.1)',
       }}>
           {/* Backdrop Blur Base */}
@@ -79,10 +79,10 @@ export default function CaseStudySection() {
           />
 
           {/* Content Container */}
-          <div className="relative z-10 flex min-h-[680px] lg:min-h-[900px] xl:min-h-[1000px] flex-col px-4 pt-8 pb-6 lg:px-16 lg:pt-24 lg:pb-16 xl:px-12 xl:pt-20 xl:pb-12 transition-all duration-300">
+          <div className="relative z-10 flex min-h-[580px] lg:min-h-[900px] xl:min-h-[1000px] flex-col px-3 pt-6 pb-4 lg:px-16 lg:pt-24 lg:pb-16 xl:px-12 xl:pt-20 xl:pb-12 transition-all duration-300">
             {/* Heading */}
-            <div className="text-center animate-in fade-in slide-in-from-top-4 duration-700 pt-4 lg:pt-0">
-              <h2 className="text-[30px] leading-[1.25] tracking-[-1.92px] text-[#252525] lg:text-[38px] lg:leading-[48px] xl:text-[44px] xl:leading-[55px] transition-all duration-300">
+            <div className="text-center animate-in fade-in slide-in-from-top-4 duration-700 pt-2 lg:pt-0">
+              <h2 className="text-[24px] leading-[1.3] tracking-[-1px] text-[#252525] lg:text-[38px] lg:leading-[48px] xl:text-[44px] xl:leading-[55px] transition-all duration-300">
                 Erfolg durch Strategie,{" "}
                 <span 
                   className="bg-clip-text bg-gradient-to-r from-[#ec6036] from-[14%] to-[#f1983f] to-[100%] transition-all duration-300"
@@ -94,7 +94,7 @@ export default function CaseStudySection() {
             </div>
 
             {/* Case Study Swiper */}
-            <div className="mt-6 flex flex-1 items-center justify-center lg:mt-20 xl:mt-16 transition-all duration-300">
+            <div className="mt-4 flex flex-1 items-center justify-center md:mt-[64px] transition-all duration-300">
               <div className="relative w-full animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
                 <Swiper
                   modules={[Navigation, Pagination]}
@@ -113,7 +113,7 @@ export default function CaseStudySection() {
                   className="case-study-swiper"
                 >
                   {caseStudyComponents.map((CardComponent, index) => (
-                    <SwiperSlide key={index} className="!w-[380px] md:!w-[min(1080px,90vw)] transition-all duration-300">
+                    <SwiperSlide key={index} className="!w-[340px] md:!w-[min(1080px,90vw)] transition-all duration-300">
                       <CardComponent />
                     </SwiperSlide>
                   ))}

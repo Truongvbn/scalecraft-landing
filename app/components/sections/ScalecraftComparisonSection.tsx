@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Tabs, Tab } from "@heroui/react";
@@ -14,6 +15,7 @@ const imgCons2 = "/assets/images/comparison/cons2.png";
 const imgCons3 = "/assets/images/comparison/cons3.png";
 
 export default function ScalecraftComparisonSection() {
+  const [selected, setSelected] = useState("mit");
 
   // Ohne Scalecraft Data
   const ohneScalecraftData = {
@@ -51,11 +53,11 @@ export default function ScalecraftComparisonSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#f0f0f0] py-12 md:py-[clamp(4rem,5vw,5rem)]">
-      <div className="mx-auto max-w-[1440px] px-4 md:px-[clamp(1.5rem,2vw,2rem)]">
+    <section className="relative w-full bg-[#f0f0f0] py-8 md:py-[clamp(4rem,5vw,5rem)]">
+      <div className="mx-auto max-w-[1440px] px-3 md:px-[clamp(1.5rem,2vw,2rem)]">
         {/* Heading */}
         <motion.h2 
-          className="mb-8 text-center text-[28px] font-normal leading-[1.3] tracking-[-1.12px] text-[#252525] md:mb-[clamp(3rem,4vw,4rem)] md:text-[clamp(36px,3.5vw,44px)] md:leading-[1.25] md:tracking-[clamp(-1.5px,-0.15vw,-1.92px)]"
+          className="mb-6 text-center text-[24px] font-normal leading-[1.3] tracking-[-1px] text-[#252525] md:mb-[clamp(3rem,4vw,4rem)] md:text-[clamp(36px,3.5vw,44px)] md:leading-[1.25] md:tracking-[clamp(-1.5px,-0.15vw,-1.92px)]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -77,14 +79,16 @@ export default function ScalecraftComparisonSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <Tabs 
-            defaultSelectedKey="mit"
+            selectedKey={selected}
+            onSelectionChange={(key) => setSelected(key as string)}
             disableAnimation={false}
+            disableCursorAnimation={false}
             classNames={{
               base: "w-full",
-              tabList: "relative flex h-[46px] w-full max-w-[340px] items-center justify-center gap-[6px] rounded-xl border border-white p-[5px] backdrop-blur-[4.88px] md:h-[52px] md:max-w-[420px] md:gap-[7px] md:p-[6px] lg:h-16 lg:max-w-[525px] mx-auto",
-              cursor: "bg-[#404040] rounded-[10px] transition-all duration-300 ease-in-out",
-              tab: "h-[36px] md:h-[40px] lg:h-[52px] flex-1 rounded-[10px] px-3 py-1.5 text-[14px] leading-[20px] tracking-tight md:px-4 md:py-2 md:text-[16px] md:leading-6 lg:px-6 lg:py-2.5 lg:text-[20px] lg:leading-7 data-[selected=true]:text-white text-[#1d1d1d] transition-all duration-300 ease-in-out hover:bg-white/10 font-normal",
-              tabContent: "group-data-[selected=true]:text-white z-10 relative transition-all duration-300",
+              tabList: "relative flex h-[46px] w-full max-w-full items-center justify-center gap-[4px] rounded-xl border border-white/20 bg-white/10 backdrop-blur-[4.88px] p-[4px] md:h-[52px] md:max-w-[420px] md:gap-[7px] md:p-[6px] lg:h-16 lg:max-w-[525px] mx-auto",
+              cursor: "bg-[#404040] shadow-lg rounded-[10px]",
+              tab: "h-[36px] md:h-[40px] lg:h-[52px] flex-1 rounded-[10px] px-2 py-1.5 text-[12px] leading-[18px] tracking-tight md:px-4 md:py-2 md:text-[16px] md:leading-6 lg:px-6 lg:py-2.5 lg:text-[20px] lg:leading-7 data-[selected=true]:text-white text-[#4a4a4a] transition-colors duration-200 hover:text-[#1d1d1d] font-normal whitespace-nowrap overflow-hidden",
+              tabContent: "group-data-[selected=true]:text-white z-10 relative font-medium truncate",
               panel: "pt-4 md:pt-6 lg:pt-8"
             }}
           >
@@ -210,8 +214,13 @@ export default function ScalecraftComparisonSection() {
         </motion.div>
 
           {/* Card 3: Systeme (Full Width) - Mit Scalecraft */}
-          <div className="relative mt-8 overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
-             style={{
+          <motion.div 
+            className="relative mt-8 overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            style={{
                backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
                boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
              }}>
@@ -259,7 +268,7 @@ export default function ScalecraftComparisonSection() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
         </>
           </Tab>
           
@@ -374,8 +383,13 @@ export default function ScalecraftComparisonSection() {
         </motion.div>
 
         {/* Card 3: Systeme (Full Width) - Ohne */}
-        <div className="relative mt-8 overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
-             style={{
+        <motion.div 
+          className="relative mt-8 overflow-hidden rounded-[20px] border-[1.5px] border-white backdrop-blur-[4.875px]"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          style={{
                backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
                boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4)'
              }}>
@@ -418,7 +432,7 @@ export default function ScalecraftComparisonSection() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
         </>
           </Tab>
         </Tabs>

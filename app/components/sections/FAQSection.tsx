@@ -53,11 +53,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-white py-12 px-4 md:py-[clamp(3rem,6vw,6rem)] md:px-[clamp(3rem,6vw,6rem)]">
+    <section className="w-full bg-white py-8 px-3 md:py-[clamp(3rem,6vw,6rem)] md:px-[clamp(3rem,6vw,6rem)]">
       <div className="mx-auto max-w-[382px] md:max-w-[1172px]">
         {/* Heading */}
         <motion.h2 
-          className="mb-12 text-center text-[28px] font-normal leading-[40px] text-[#252525] md:mb-[clamp(4rem,6vw,6rem)] md:text-[clamp(32px,3vw,40px)] md:leading-[clamp(48px,4vw,56px)]"
+          className="mb-8 text-center text-[24px] font-normal leading-[32px] text-[#252525] md:mb-[clamp(4rem,6vw,6rem)] md:text-[clamp(32px,3vw,40px)] md:leading-[clamp(48px,4vw,56px)]"
           variants={fadeInUp}
           initial="hidden"
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,9 +96,9 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="flex w-full items-center justify-between py-8 text-left transition-colors hover:bg-gray-50 md:py-[clamp(2.5rem,4vw,3.125rem)]"
+                className="flex w-full items-center justify-between py-5 text-left transition-colors hover:bg-gray-50 md:py-[clamp(2.5rem,4vw,3.125rem)]"
               >
-                <h3 className="text-[12px] font-normal leading-[14px] text-[#252525] pr-6 md:pr-8 md:text-[clamp(18px,2vw,24px)] md:leading-[clamp(22px,2.4vw,28.68px)]">
+                <h3 className="text-[13px] font-normal leading-[16px] text-[#252525] pr-4 md:pr-8 md:text-[clamp(18px,2vw,24px)] md:leading-[clamp(22px,2.4vw,28.68px)]">
                   {faq.question}
                 </h3>
                 

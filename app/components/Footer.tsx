@@ -58,20 +58,36 @@ export default function Footer() {
                 Seit 2020 bieten wir innovative Lösungen für mittelständische Unternehmen an.
               </p>
               
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-fit"
-              >
-                <Image
-                  src="/linkedin-icon.svg"
-                  alt="LinkedIn"
-                  width={34}
-                  height={34}
-                  className="hover:opacity-80 transition-opacity"
-                />
-              </a>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit"
+                >
+                  <Image
+                    src="/linkedin-icon.svg"
+                    alt="LinkedIn"
+                    width={34}
+                    height={34}
+                    className="hover:opacity-80 transition-opacity"
+                  />
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit"
+                >
+                  <Image
+                    src="/linkedin-icon.svg"
+                    alt="LinkedIn"
+                    width={34}
+                    height={34}
+                    className="hover:opacity-80 transition-opacity"
+                  />
+                </a>
+              </div>
             </div>
 
             {/* Unternehmen Column */}
@@ -230,21 +246,37 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* LinkedIn Icon - Mobile only */}
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit md:hidden"
-          >
-            <Image
-              src="/linkedin-icon.svg"
-              alt="LinkedIn"
-              width={18}
-              height={18}
-              className="object-contain hover:opacity-80 transition-opacity"
-            />
-          </a>
+          {/* LinkedIn Icons - Mobile only */}
+          <div className="flex items-center gap-3 md:hidden">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit"
+            >
+              <Image
+                src="/linkedin-icon.svg"
+                alt="LinkedIn"
+                width={18}
+                height={18}
+                className="object-contain hover:opacity-80 transition-opacity"
+              />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit"
+            >
+              <Image
+                src="/linkedin-icon.svg"
+                alt="LinkedIn"
+                width={18}
+                height={18}
+                className="object-contain hover:opacity-80 transition-opacity"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Divider Line */}

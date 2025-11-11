@@ -14,16 +14,11 @@ const imgIcon2 = "/assets/images/stats-hero/stats-hero-icon2.svg";
 
 export default function StatsHeroSection() {
   return (
-    <section className="relative w-full bg-[#f0f0f0] -mt-16 md:-mt-20 lg:-mt-24 pt-48 pb-20 max-md:pt-20 max-md:pb-12">
-      {/* Curved Connector - Desktop only */}
-      <div className="w-full h-32 absolute -top-16 left-0 overflow-hidden max-md:hidden">
-        <div className="w-[150%] h-64 left-1/2 -translate-x-1/2 top-0 absolute bg-[#f0f0f0] rounded-t-[50%]" />
-      </div>
-      
-      <div className="mx-auto max-w-[1440px] px-[135px] max-md:px-4">
+    <section className="relative w-full overflow-hidden bg-[#f0f0f0] pt-4 pb-[122px] max-md:pt-4 max-md:pb-12">
+      <div className="mx-auto max-w-[1440px] px-3 md:px-12 lg:px-[135px]">
         {/* Heading */}
-        <div className="mb-12 text-center">
-          <h2 className="text-[44px] font-normal leading-[1.25] tracking-[-1.92px] text-[#020202] max-md:text-[30px] max-md:tracking-[-1.515px]">
+        <div className="mb-8 text-center md:mb-10 lg:mb-12">
+          <h2 className="text-[30px] font-normal leading-[1.25] tracking-[-1.2px] text-[#020202] md:text-[32px] md:tracking-[-1.3px] lg:text-[44px] lg:tracking-[-1.92px]">
             Warum wir das können?
             <br />
             <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
@@ -33,7 +28,7 @@ export default function StatsHeroSection() {
         </div>
 
         {/* Stats Card */}
-        <div className="relative h-[236px] w-full overflow-hidden rounded-[20px] border-2 border-white max-md:h-auto max-md:min-h-[320px] max-md:w-[382px] max-md:mx-auto max-md:rounded-[12.511px] max-md:border-[1.251px]"
+        <div className="relative h-[236px] w-full overflow-hidden rounded-[20px] border-2 border-white max-md:h-auto max-md:min-h-[320px] max-md:w-full max-md:max-w-[382px] max-md:mx-auto max-md:rounded-[12.511px] max-md:border-[1.251px]"
           style={{
             backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%)'
           }}
@@ -59,16 +54,16 @@ export default function StatsHeroSection() {
           />
 
           {/* Stats Grid */}
-          <div className="relative z-10 flex h-full items-center justify-center gap-[50px] px-8 max-md:grid max-md:grid-cols-2 max-md:gap-x-[38px] max-md:gap-y-[30px] max-md:px-4 max-md:py-6">
+          <div className="relative z-10 flex h-full items-center justify-center gap-[50px] px-8 max-md:grid max-md:grid-cols-2 max-md:gap-x-[38px] max-md:gap-y-[30px] max-md:px-4 max-md:py-6 md:gap-[35px] lg:gap-[50px]">
             {/* Stat 1 */}
-            <div className="flex flex-col items-center gap-2 text-center max-md:gap-[16.265px] transition-transform duration-300 hover:scale-105 cursor-default">
-              <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px] transition-transform duration-300 hover:rotate-12">
+            <div className="flex flex-col items-center gap-[8px] text-center max-md:gap-[16.265px] md:gap-[6px] lg:gap-[8px] transition-transform duration-300 hover:scale-105 cursor-default">
+              <div className="h-12 w-12 max-md:h-[27.414px] max-md:w-[31.278px] md:h-[38px] md:w-[38px] lg:h-12 lg:w-12 transition-transform duration-300 hover:rotate-12">
                 <Image src={imgIcon1} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
               </div>
-              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px]">
+              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px] md:text-[32px] lg:text-[40px]">
                 +100
               </p>
-              <p className="text-[20px] leading-[20px] text-[#404040] max-md:text-[12px] max-md:leading-[12.638px]">
+              <p className="text-[20px] font-normal leading-[20.202px] text-[#404040] whitespace-nowrap max-md:text-[12px] max-md:leading-[12.638px] max-md:whitespace-normal md:text-[15px] md:leading-[18px] lg:text-[20px] lg:leading-[20.202px]">
                 Projekte{" "}
                 <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
                   abgeschlossen
@@ -77,14 +72,14 @@ export default function StatsHeroSection() {
             </div>
 
             {/* Stat 2 */}
-            <div className="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:scale-105 cursor-default">
-              <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px] transition-transform duration-300 hover:rotate-12">
-                <Image src={imgIcon2} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
+            <div className="flex flex-col items-center gap-[8px] text-center max-md:gap-[16.265px] md:gap-[6px] lg:gap-[8px] transition-transform duration-300 hover:scale-105 cursor-default">
+              <div className="h-12 w-12 max-md:h-[27.414px] max-md:w-[31.278px] md:h-[38px] md:w-[38px] lg:h-12 lg:w-12 transition-transform duration-300 hover:rotate-12">
+                <Image src={imgIcon4} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
               </div>
-              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px]">
+              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px] md:text-[32px] lg:text-[40px]">
                 +50
               </p>
-              <p className="text-[20px] leading-[20px] text-[#404040] max-md:text-[12px] max-md:leading-[12.638px]">
+              <p className="text-[20px] font-normal leading-[20.202px] text-[#404040] whitespace-nowrap max-md:text-[12px] max-md:leading-[12.638px] max-md:whitespace-normal md:text-[15px] md:leading-[18px] lg:text-[20px] lg:leading-[20.202px]">
                 <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
                   zufriedene Kunden
                 </span>
@@ -92,14 +87,14 @@ export default function StatsHeroSection() {
             </div>
 
             {/* Stat 3 */}
-            <div className="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:scale-105 cursor-default">
-              <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px] transition-transform duration-300 hover:rotate-12">
+            <div className="flex flex-col items-center gap-[8px] text-center max-md:gap-[16.265px] md:gap-[6px] lg:gap-[8px] transition-transform duration-300 hover:scale-105 cursor-default">
+              <div className="h-12 w-12 max-md:h-[27.414px] max-md:w-[31.278px] md:h-[38px] md:w-[38px] lg:h-12 lg:w-12 transition-transform duration-300 hover:rotate-12">
                 <Image src={imgIcon3} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
               </div>
-              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px]">
+              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px] md:text-[32px] lg:text-[40px]">
                 +20 Mio. €
               </p>
-              <p className="text-[20px] leading-[24px] max-md:text-[12px] max-md:leading-[15.013px]">
+              <p className="text-[20px] font-normal leading-[24px] max-md:text-[12px] max-md:leading-[15.013px] md:text-[15px] md:leading-[18px] lg:text-[20px] lg:leading-[24px]">
                 <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
                   Generierter Umsatz{" "}
                 </span>
@@ -108,14 +103,14 @@ export default function StatsHeroSection() {
             </div>
 
             {/* Stat 4 */}
-            <div className="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:scale-105 cursor-default">
-              <div className="mb-2 h-12 w-12 max-md:mb-0 max-md:h-[27.414px] max-md:w-[31.278px] transition-transform duration-300 hover:rotate-12">
-                <Image src={imgIcon4} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
+            <div className="flex flex-col items-center gap-[8px] text-center max-md:gap-[16.265px] md:gap-[6px] lg:gap-[8px] transition-transform duration-300 hover:scale-105 cursor-default">
+              <div className="h-12 w-12 max-md:h-[27.414px] max-md:w-[31.278px] md:h-[38px] md:w-[38px] lg:h-12 lg:w-12 transition-transform duration-300 hover:rotate-12">
+                <Image src={imgIcon2} alt="" width={48} height={48} className="h-full w-full object-contain" unoptimized />
               </div>
-              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px]">
+              <p className="text-[40px] font-medium leading-[1.3] text-black max-md:text-[24px] md:text-[32px] lg:text-[40px]">
                 +500
               </p>
-              <p className="text-[20px] leading-[20px] text-[#404040] max-md:text-[12px] max-md:leading-[12.638px]">
+              <p className="text-[20px] font-normal leading-[20.202px] text-[#404040] max-md:text-[12px] max-md:leading-[12.638px] md:text-[15px] md:leading-[18px] lg:text-[20px] lg:leading-[20.202px]">
                 <span className="bg-gradient-to-r from-[#ec6036] from-14% to-[#f1983f] to-100% bg-clip-text text-transparent">
                   Entwickelte Creatives
                 </span>

@@ -40,6 +40,8 @@ body {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* Space for fixed navbar (77px height + 26px top padding + margin) */
 }
 
 /* Case Study Swiper Custom Styles */
