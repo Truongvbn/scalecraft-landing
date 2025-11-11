@@ -14,7 +14,7 @@ const imgIcon2 = "/assets/images/stats-hero/stats-hero-icon2.svg";
 
 export default function StatsHeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#f0f0f0] pt-4 pb-12 max-md:pt-4 max-md:pb-12">
+    <section className="relative w-full overflow-hidden bg-[#f0f0f0] pt-4 pb-[122px] max-md:pt-4 max-md:pb-12">
       <div className="mx-auto max-w-[1440px] px-3 md:px-12 lg:px-[135px]">
         {/* Heading */}
         <div className="mb-8 text-center md:mb-10 lg:mb-12">
