@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-white font-sans">
       {/* Navbar - Mobile: static (scrolls away), Tablet/Desktop: fixed floating */}
-      <div className="absolute md:fixed left-0 right-0 top-0 z-50 flex justify-center pt-[20px] md:pt-[26px]">
+      <div className="absolute md:fixed left-0 right-0 top-0 z-50 flex w-full justify-center pt-[20px] md:pt-[26px]">
         <Navbar />
       </div>
       

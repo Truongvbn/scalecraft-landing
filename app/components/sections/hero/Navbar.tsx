@@ -28,14 +28,14 @@ export default function Navbar() {
 
   return (
     <div 
-      className={`relative transition-all duration-300 
-        max-md:h-[54px] max-md:w-full max-md:max-w-[380px] max-md:px-4
+      className={`relative w-full transition-all duration-300 
+        max-md:h-[54px] max-md:max-w-full
         md:h-[77px] md:w-[1172px] 
         ${isScrolled ? 'md:shadow-lg' : ''}`}
     >
-      {/* Glass Background - Both Mobile and Desktop */}
+      {/* Glass Background - Desktop Only */}
       <div 
-        className={`absolute left-0 top-0 h-full w-full rounded-[20px] border border-white transition-all duration-300 ${isScrolled ? 'backdrop-blur-[12px]' : 'backdrop-blur-[4.875px]'}`}
+        className={`absolute left-0 top-0 h-full w-full rounded-[20px] border border-white max-md:hidden transition-all duration-300 ${isScrolled ? 'backdrop-blur-[12px]' : 'backdrop-blur-[4.875px]'}`}
         style={{
           backgroundImage: 'linear-gradient(172.699deg, rgba(255, 249, 238, 0.1) 0.122%, rgba(255, 232, 239, 0.1) 99.544%), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%)',
           boxShadow: isScrolled 

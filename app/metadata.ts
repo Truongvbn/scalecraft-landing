@@ -61,11 +61,7 @@ export const metadata: Metadata = {
     description: 'Performance Design Outsourcing für E-Commerce Agenturen & DTC Brands',
     images: ['/og-image.jpg'],
   },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/scalecraft-logo.png',
-  },
+  // Icons auto-detected from app/icon.svg
   verification: {
     // Add your verification codes when available
     // google: 'your-google-site-verification',
