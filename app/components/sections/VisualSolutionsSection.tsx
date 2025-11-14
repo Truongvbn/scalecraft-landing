@@ -27,15 +27,15 @@ const imgImg1764 = "/assets/images/visual-solutions/avatar8.jpg";
 
 export default function VisualSolutionsSection() {
   return (
-    <section id="team" className="relative mx-auto mb-12 mt-0 w-full max-w-7xl overflow-hidden rounded-[14px] px-4 py-12 shadow-lg backdrop-blur-sm sm:mb-14 sm:rounded-[20px] sm:px-[clamp(1.5rem,1.5vw,1.5rem)] sm:py-[clamp(3rem,4vw,6rem)] lg:mb-16 lg:rounded-[60px] lg:px-16 lg:py-24"
+    <section id="team" className="relative mb-12 mt-0 w-full overflow-hidden px-4 py-12 sm:mb-14 sm:px-6 sm:py-[clamp(3rem,4vw,6rem)] lg:mb-16 lg:px-8 lg:py-24"
       style={{
         backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
         boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4), 0px 1px 8.1px 0px rgba(0,0,0,0.1)'
       }}
     >
       {/* SVG Background */}
-      <div className="absolute inset-0 overflow-hidden rounded-[16px] lg:rounded-[60px]">
-        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 1404 1168" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <div className="absolute inset-0 overflow-hidden">
+        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 1404 1168" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <defs>
             <filter id="filter1_f" x="527.663" y="-26.1162" width="955.875" height="870.298" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
               <feFlood floodOpacity="0" result="BackgroundImageFix"/>
@@ -88,7 +88,7 @@ export default function VisualSolutionsSection() {
         </svg>
       </div>
 
-      <div className="relative grid grid-cols-1 gap-12 sm:gap-16 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 sm:gap-16 lg:grid-cols-2">
         {/* Left Content */}
         <motion.div 
           className="space-y-6 sm:space-y-8"
@@ -271,7 +271,7 @@ export default function VisualSolutionsSection() {
       </div>
 
       {/* Timeline Section */}
-      <div className="mt-12 sm:mt-16 lg:mt-24">
+      <div className="relative mx-auto mt-12 max-w-7xl sm:mt-16 lg:mt-24">
         {/* Mobile: Horizontal scroll */}
         <div className="flex gap-4 overflow-x-auto pb-4 lg:hidden">
           <TimelineCard year="10/2021" title="Start als Freelancer" fontSize="18px" />

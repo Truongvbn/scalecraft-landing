@@ -33,9 +33,9 @@ export default function Footer() {
           </div>
 
           {/* Desktop: 3 column grid */}
-          <div className="hidden sm:grid sm:grid-cols-3 sm:gap-[clamp(1.5rem,3vw,3rem)]">
+          <div className="hidden sm:grid grid-cols-3 gap-12 lg:gap-16">
             {/* Logo and Description Column - Desktop */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <Image
                   src="/assets/images/hero/hero-nav-logo-1.svg"
@@ -53,7 +53,7 @@ export default function Footer() {
                 />
               </div>
               
-              <p className="text-black text-sm leading-5 font-normal italic sm:text-base sm:leading-6">
+              <p className="text-black text-xs leading-4 font-normal italic md:text-base md:leading-6">
                 Crafted with ❤️ since 2020 – empowering agencies and brands to scale smarter
               </p>
               
@@ -92,9 +92,9 @@ export default function Footer() {
             </div>
 
             {/* Unternehmen Column */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               <h3 
-                className="text-xl font-medium mb-2"
+                className="text-sm font-medium md:text-xl"
                 style={{ 
                   backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
                   WebkitBackgroundClip: 'text',
@@ -104,23 +104,23 @@ export default function Footer() {
               >
                 Unternehmen
               </h3>
-              <nav className="flex flex-col gap-3">
-                <a href="/impressum" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+              <nav className="flex flex-col gap-2">
+                <a href="/impressum" className="text-black text-xs font-light hover:opacity-70 transition-opacity md:text-lg">
                   Impressum
                 </a>
-                <a href="/datenschutz" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                <a href="/datenschutz" className="text-black text-xs font-light hover:opacity-70 transition-opacity md:text-lg">
                   Datenschutz
                 </a>
-                <a href="/agb" className="text-black text-lg font-light hover:opacity-70 transition-opacity">
+                <a href="/agb" className="text-black text-xs font-light hover:opacity-70 transition-opacity md:text-lg">
                   AGB
                 </a>
               </nav>
             </div>
 
             {/* Kontakt Column */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               <h3 
-                className="text-xl font-medium mb-2"
+                className="text-sm font-medium md:text-xl"
                 style={{ 
                   backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
                   WebkitBackgroundClip: 'text',
@@ -136,7 +136,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-block w-fit"
               >
-                <button className="px-5 py-2.5 rounded-full text-white text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap"
+                <button className="px-4 py-2 rounded-full text-white text-xs font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap md:px-5 md:py-2.5 md:text-sm"
                   style={{ 
                     backgroundImage: 'linear-gradient(90deg, #ec6036 14%, #f1983f 100%)',
                   }}
