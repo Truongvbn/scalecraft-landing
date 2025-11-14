@@ -27,7 +27,7 @@ const imgImg1764 = "/assets/images/visual-solutions/avatar8.jpg";
 
 export default function VisualSolutionsSection() {
   return (
-    <section id="team" className="relative mx-auto mb-12 mt-0 w-full max-w-7xl overflow-hidden rounded-[14px] px-4 py-12 shadow-lg backdrop-blur-sm md:mb-14 md:rounded-[20px] md:px-6 md:py-16 lg:mb-16 lg:rounded-[60px] lg:px-16 lg:py-24"
+    <section id="team" className="relative mx-auto mb-12 mt-0 w-full max-w-7xl overflow-hidden rounded-[14px] px-4 py-12 shadow-lg backdrop-blur-sm sm:mb-14 sm:rounded-[20px] sm:px-[clamp(1.5rem,1.5vw,1.5rem)] sm:py-[clamp(3rem,4vw,6rem)] lg:mb-16 lg:rounded-[60px] lg:px-16 lg:py-24"
       style={{
         backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)',
         boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255,255,255,0.4), 0px 1px 8.1px 0px rgba(0,0,0,0.1)'
@@ -88,10 +88,10 @@ export default function VisualSolutionsSection() {
         </svg>
       </div>
 
-      <div className="relative grid grid-cols-1 gap-12 md:gap-16 lg:grid-cols-2">
+      <div className="relative grid grid-cols-1 gap-12 sm:gap-16 lg:grid-cols-2">
         {/* Left Content */}
         <motion.div 
-          className="space-y-6 md:space-y-8"
+          className="space-y-6 sm:space-y-8"
           variants={slideInLeft}
           initial="hidden"
           whileInView="visible"
@@ -99,7 +99,7 @@ export default function VisualSolutionsSection() {
         >
           {/* Main Heading */}
           <motion.div variants={fadeInUp}>
-            <h2 className="text-[28px] font-normal leading-[1.3] tracking-[-0.3px] text-[#252525] md:text-[34px] md:tracking-[-0.35px] lg:text-[40px] lg:leading-[1.25] lg:tracking-[-0.4px]">
+            <h2 className="text-[28px] font-normal leading-[1.3] tracking-[-0.3px] text-[#252525] sm:text-[34px] sm:tracking-[-0.35px] lg:text-[40px] lg:leading-[1.25] lg:tracking-[-0.4px]">
               Wir gestalten visuelle Lösungen,
               <span 
                 className="bg-clip-text"
@@ -115,56 +115,56 @@ export default function VisualSolutionsSection() {
           </motion.div>
 
           {/* Description */}
-          <p className="text-[13px] font-light leading-[1.5] tracking-[0.4px] text-[#404040] md:text-[16px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[1.47] lg:tracking-[0.54px]">
+          <p className="text-[13px] font-light leading-[1.5] tracking-[0.4px] text-[#404040] sm:text-[16px] sm:tracking-[0.48px] lg:text-[18px] lg:leading-[1.47] lg:tracking-[0.54px]">
             Ob Produktlaunch, Marketingkampagnen oder Rebranding deines Bestsellers – unser Kreativteam entwickelt performante Amazon-Visuals und Shop-Assets, die messbar konvertieren. Schnell, zuverlässig und mit einem klaren System.
           </p>
 
           {/* Was uns auszeichnet */}
-          <div className="space-y-4 md:space-y-6">
-            <h3 className="text-[13px] font-bold leading-[1.5] tracking-[0.4px] text-[#404040] md:text-[17px] md:tracking-[0.5px] lg:text-[20px] lg:leading-[1.47] lg:tracking-[0.6px]">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-[13px] font-bold leading-[1.5] tracking-[0.4px] text-[#404040] sm:text-[17px] sm:tracking-[0.5px] lg:text-[20px] lg:leading-[1.47] lg:tracking-[0.6px]">
               Was uns auszeichnet
             </h3>
 
             {/* Feature 1 */}
-            <div className="flex items-start gap-[4.671px] md:gap-[5.809px]">
-              <div className="mt-1 h-[15.88px] w-[15.88px] md:h-[19.751px] md:w-[19.751px] shrink-0">
+            <div className="flex items-start gap-[4.671px] sm:gap-[5.809px]">
+              <div className="mt-1 h-[15.88px] w-[15.88px] sm:h-[19.751px] sm:w-[19.751px] shrink-0">
                 <CheckmarkIcon />
               </div>
-              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] md:text-[16px] md:leading-[22px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
+              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] sm:text-[16px] sm:leading-[22px] sm:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
                 Hochqualifizierte Designer mit tiefem E-Commerce-Verständnis
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="flex items-start gap-[4.671px] md:gap-[5.809px]">
-              <div className="mt-1 h-[15.88px] w-[15.88px] md:h-[19.751px] md:w-[19.751px] shrink-0">
+            <div className="flex items-start gap-[4.671px] sm:gap-[5.809px]">
+              <div className="mt-1 h-[15.88px] w-[15.88px] sm:h-[19.751px] sm:w-[19.751px] shrink-0">
                 <CheckmarkIcon />
               </div>
-              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] md:text-[16px] md:leading-[22px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
+              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] sm:text-[16px] sm:leading-[22px] sm:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
                 Strategie- & Conversion-orientierte Gestaltung
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="flex items-start gap-[4.671px] md:gap-[5.809px]">
-              <div className="mt-1 h-[15.88px] w-[15.88px] md:h-[19.751px] md:w-[19.751px] shrink-0">
+            <div className="flex items-start gap-[4.671px] sm:gap-[5.809px]">
+              <div className="mt-1 h-[15.88px] w-[15.88px] sm:h-[19.751px] sm:w-[19.751px] shrink-0">
                 <CheckmarkIcon />
               </div>
-              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] md:text-[16px] md:leading-[22px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
+              <p className="text-[13px] font-light leading-[20px] tracking-[0.4px] text-[#404040] sm:text-[16px] sm:leading-[22px] sm:tracking-[0.48px] lg:text-[18px] lg:leading-[24px] lg:tracking-[0.54px]">
                 Eingespielte Abläufe, die Qualität und Geschwindigkeit garantieren
               </p>
             </div>
           </div>
 
           {/* CTA */}
-          <p className="text-[13px] font-bold leading-[1.5] tracking-[0.4px] text-[#404040] md:text-[16px] md:tracking-[0.48px] lg:text-[18px] lg:leading-[1.47] lg:tracking-[0.54px]">
-            → MEHR AGENTURPRODUKT mit den KUNDEN übertragbare Zufriedenheit
+          <p className="text-[13px] font-bold leading-[1.5] tracking-[0.4px] text-[#404040] sm:text-[16px] sm:tracking-[0.48px] lg:text-[18px] lg:leading-[1.47] lg:tracking-[0.54px]">
+            Stärkeres Agenturprodukt. Zufriedenheit, die sich auf deine Kunden überträgt.
           </p>
         </motion.div>
 
         {/* Right - Bento Grid */}
-        <div className="relative mx-auto flex h-[320px] w-full items-center justify-center overflow-visible md:h-[420px] md:max-w-[520px] lg:mx-0 lg:h-[501px] lg:max-w-none lg:justify-start">
-          <div className="relative h-[501px] w-[600px] origin-center scale-[0.58] -translate-x-8 md:scale-[0.77] md:translate-x-0 lg:scale-100">
+        <div className="relative mx-auto flex h-[320px] w-full items-center justify-center overflow-visible sm:h-[420px] sm:max-w-[520px] lg:mx-0 lg:h-[501px] lg:max-w-none lg:justify-start">
+          <div className="relative h-[501px] w-[600px] origin-center scale-[0.58] -translate-x-8 sm:scale-[0.77] sm:translate-x-0 lg:scale-100">
           {/* Main large image - từ Figma: w-72 h-48 left-[45.67px] top-[88.52px] */}
           <div className="absolute left-[65px] top-[126px] h-[284px] w-[392px] overflow-hidden rounded-[20.608px] border-[1.288px] border-white">
             <Image src={imgPhc082541} alt="" fill className="object-cover" style={{ objectPosition: '-6.04% 0' }} sizes="(max-width: 1024px) 288px, 392px" loading="lazy" quality={85} />
@@ -246,7 +246,7 @@ export default function VisualSolutionsSection() {
               boxShadow: '0px 0.65px 5.25px 0px rgba(0,0,0,0.10), inset 0px 1.05px 4.21px 0px rgba(255,255,255,0.40)'
             }}
           >
-            <p className="text-center text-[14px] font-normal leading-tight tracking-tight text-[#252525]">
+            <p className="text-center text-[17px] font-normal leading-[1.35] tracking-tight text-[#252525] sm:text-[14px] sm:leading-tight">
               Scalecraft liefert Resultate, auf die du dich verlassen kannst.
             </p>
           </div>
@@ -271,39 +271,87 @@ export default function VisualSolutionsSection() {
       </div>
 
       {/* Timeline Section */}
-      <div className="mt-12 md:mt-16 lg:mt-24">
+      <div className="mt-12 sm:mt-16 lg:mt-24">
         {/* Mobile: Horizontal scroll */}
         <div className="flex gap-4 overflow-x-auto pb-4 lg:hidden">
-          <TimelineCard year="10/2021" title="Freelancer" fontSize="22px" />
-          <TimelineCard year="2022" title="22 - Ersten Agenturkunden, Workload - 4 MA " fontSize="20px" />
+          <TimelineCard year="10/2021" title="Start als Freelancer" fontSize="18px" />
+          <TimelineCard 
+            year="2022" 
+            title={
+              <>
+                Erste Agenturkunden –<br />Aufbau eines kleinen<br />Teams (4 MA)
+              </>
+            } 
+            fontSize="16px" 
+          />
           <TimelineCard 
             year="2023" 
             title={
               <>
-                Weitere Agenturen,<br />- 10 MA
+                Zusammenarbeit mit<br />weiteren Agenturen –<br />Team wächst auf 10 MA
               </>
             } 
-            fontSize="20px" 
+            fontSize="16px" 
           />
-          <TimelineCard year="2024" title="35  MA" fontSize="20px" />
-          <TimelineCard year="2025" title="Optimierung" fontSize="20px" />
+          <TimelineCard 
+            year="2024" 
+            title={
+              <>
+                Skalierung &<br />Prozessaufbau –<br />35 MA im Team
+              </>
+            } 
+            fontSize="16px" 
+          />
+          <TimelineCard 
+            year="2025" 
+            title={
+              <>
+                Fokus auf Optimierung,<br />Automatisierung &<br />Qualitätssicherung
+              </>
+            } 
+            fontSize="16px" 
+          />
         </div>
         
         {/* Desktop: Centered flex */}
         <div className="hidden lg:flex items-end justify-center gap-4">
-          <TimelineCard year="10/2021" title="Freelancer" fontSize="22px" />
-          <TimelineCard year="2022" title="22 - Ersten Agenturkunden, Workload - 4 MA " fontSize="20px" />
+          <TimelineCard year="10/2021" title="Start als Freelancer" fontSize="18px" />
+          <TimelineCard 
+            year="2022" 
+            title={
+              <>
+                Erste Agenturkunden –<br />Aufbau eines kleinen<br />Teams (4 MA)
+              </>
+            } 
+            fontSize="16px" 
+          />
           <TimelineCard 
             year="2023" 
             title={
               <>
-                Weitere Agenturen,<br />- 10 MA
+                Zusammenarbeit mit<br />weiteren Agenturen –<br />Team wächst auf 10 MA
               </>
             } 
-            fontSize="20px" 
+            fontSize="16px" 
           />
-          <TimelineCard year="2024" title="35  MA" fontSize="20px" />
-          <TimelineCard year="2025" title="Optimierung" fontSize="20px" />
+          <TimelineCard 
+            year="2024" 
+            title={
+              <>
+                Skalierung &<br />Prozessaufbau –<br />35 MA im Team
+              </>
+            } 
+            fontSize="16px" 
+          />
+          <TimelineCard 
+            year="2025" 
+            title={
+              <>
+                Fokus auf Optimierung,<br />Automatisierung &<br />Qualitätssicherung
+              </>
+            } 
+            fontSize="16px" 
+          />
         </div>
       </div>
     </section>

@@ -98,9 +98,10 @@ export default function CaseStudyCard3() {
           {/* Expand Button - Mobile only */}
           <button 
             onClick={() => setIsExpanded(!isExpanded)}
-            className="md:hidden flex items-center justify-center w-[18px] h-[6px] mx-auto mb-4 transition-all duration-300"
+            className={`md:hidden flex flex-col items-center justify-center gap-1 mx-auto mb-4 transition-all duration-300 ${!isExpanded ? 'animate-bounce' : ''}`}
             aria-label={isExpanded ? "Collapse details" : "Expand details"}
           >
+            <span className="text-[10px] font-medium text-[#252525]">Case ansehen</span>
             <svg 
               width="18" 
               height="6" 

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import CaseStudyCard1 from "./CaseStudyCard1";
@@ -17,7 +16,7 @@ const caseStudyComponents = [
 
 export default function CaseStudySection() {
   return (
-    <section id="case-study" className="relative w-full pt-0 pb-6 px-0 md:pb-20 bg-[#f0f0f0] transition-all duration-300">
+    <section id="case-study" className="relative w-full pt-0 pb-6 px-0 md:pb-[clamp(1.5rem,5vw,5rem)] bg-[#f0f0f0] transition-all duration-300">
       {/* Glassmorphism Container */}
       <div className="relative w-full h-full overflow-hidden rounded-[8px] md:rounded-[24px] transition-all duration-500" style={{
         minHeight: '580px',
@@ -119,22 +118,22 @@ export default function CaseStudySection() {
                   ))}
                 </Swiper>
 
-                {/* Custom Navigation Buttons - Hidden on mobile */}
+                {/* Custom Navigation Buttons - Hidden on mobile, visible on desktop */}
                 <button 
-                  className="swiper-button-prev-custom absolute left-2 md:left-[5vw] top-1/2 z-20 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-white/10 to-white/10 shadow-[0px_1px_8.1px_0px_rgba(0,0,0,0.10)] shadow-[inset_0px_1.625px_6.5px_0px_rgba(255,255,255,0.40)] outline outline-1 outline-offset-[-1px] outline-white backdrop-blur-[4.88px] hidden md:flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:shadow-xl active:scale-95"
-                  aria-label="Previous slide"
+                  className="swiper-button-prev-custom absolute left-2 md:left-[5vw] top-1/2 z-20 -translate-y-1/2 hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-white/20 to-white/20 shadow-[0px_2px_10px_0px_rgba(0,0,0,0.15)] shadow-[inset_0px_1.625px_6.5px_0px_rgba(255,255,255,0.40)] outline outline-1 outline-offset-[-1px] outline-white backdrop-blur-[4.88px] transition-all duration-300 hover:scale-110 hover:bg-white/30 hover:shadow-xl active:scale-95"
+                  aria-label="Previous case study"
                 >
                   <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform duration-300 group-hover:-translate-x-1">
-                    <path d="M12 2L2 12L12 22" stroke="#404040" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 2L2 12L12 22" stroke="#404040" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
 
                 <button 
-                  className="swiper-button-next-custom absolute right-2 md:right-[5vw] top-1/2 z-20 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-white/10 to-white/10 shadow-[0px_1px_8.1px_0px_rgba(0,0,0,0.10)] shadow-[inset_0px_1.625px_6.5px_0px_rgba(255,255,255,0.40)] outline outline-1 outline-offset-[-1px] outline-white backdrop-blur-[4.88px] hidden md:flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:shadow-xl active:scale-95"
-                  aria-label="Next slide"
+                  className="swiper-button-next-custom absolute right-2 md:right-[5vw] top-1/2 z-20 -translate-y-1/2 hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-white/20 to-white/20 shadow-[0px_2px_10px_0px_rgba(0,0,0,0.15)] shadow-[inset_0px_1.625px_6.5px_0px_rgba(255,255,255,0.40)] outline outline-1 outline-offset-[-1px] outline-white backdrop-blur-[4.88px] transition-all duration-300 hover:scale-110 hover:bg-white/30 hover:shadow-xl active:scale-95"
+                  aria-label="Next case study"
                 >
                   <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform duration-300 group-hover:translate-x-1">
-                    <path d="M2 2L12 12L2 22" stroke="#404040" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2 2L12 12L2 22" stroke="#404040" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
               </div>

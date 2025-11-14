@@ -5,34 +5,34 @@ const imgIcon = "/assets/images/hero/hero-icon.svg";
 export default function StatsCards() {
   return (
     <div 
-      className="flex items-center gap-6 flex-row max-md:items-start max-md:gap-[24px] max-md:flex-col"
+      className="flex flex-col items-start gap-[24px] sm:flex-row sm:items-center sm:gap-6"
     >
-      <div className="flex items-center gap-[11px] max-md:gap-[8px]">
-        <div className="relative h-[30px] w-[30px] flex-shrink-0 max-md:h-[20px] max-md:w-[20px]">
+      <div className="flex items-center gap-[8px] sm:gap-[11px]">
+        <div className="relative h-[20px] w-[20px] flex-shrink-0 sm:h-[30px] sm:w-[30px]">
           <Image src={imgIcon} alt="" fill className="object-contain" sizes="30px" loading="lazy" />
         </div>
-        <div className="font-normal leading-[24px] text-[#404040] whitespace-nowrap max-md:leading-[20px]">
-          <span className="text-[20px] font-semibold max-md:text-[14px] max-md:font-bold">x2</span>
-          <span className="text-[18px] font-normal max-md:text-[14px]"> schneller (Laut Umfrage)</span>
+        <div className="font-normal leading-[20px] text-[#404040] whitespace-nowrap sm:leading-[24px]">
+          <span className="text-[14px] font-bold sm:text-[20px] sm:font-semibold">x2</span>
+          <span className="text-[14px] font-normal sm:text-[18px]"> schneller (Laut Umfrage)</span>
         </div>
       </div>
 
-      <div className="flex items-center gap-[11px] max-md:gap-[8px]">
-        <div className="relative h-[30px] w-[30px] flex-shrink-0 max-md:h-[20px] max-md:w-[20px]">
+      <div className="flex items-center gap-[8px] sm:gap-[11px]">
+        <div className="relative h-[20px] w-[20px] flex-shrink-0 sm:h-[30px] sm:w-[30px]">
           <Image src={imgIcon} alt="" fill className="object-contain" sizes="30px" loading="lazy" />
         </div>
-        <div className="font-normal leading-[24px] text-[#404040] whitespace-nowrap max-md:leading-[20px]">
-          <span className="text-[20px] font-semibold max-md:text-[14px] max-md:font-bold">x2</span>
-          <span className="text-[18px] font-normal max-md:text-[14px]"> effizienter</span>
+        <div className="font-normal leading-[20px] text-[#404040] whitespace-nowrap sm:leading-[24px]">
+          <span className="text-[14px] font-bold sm:text-[20px] sm:font-semibold">x2</span>
+          <span className="text-[14px] font-normal sm:text-[18px]"> effizienter</span>
         </div>
       </div>
 
-      <div className="flex items-center gap-[11px] max-md:gap-[8px]">
-        <div className="relative h-[30px] w-[30px] flex-shrink-0 max-md:h-[20px] max-md:w-[20px]">
+      <div className="flex items-center gap-[8px] sm:gap-[11px]">
+        <div className="relative h-[20px] w-[20px] flex-shrink-0 sm:h-[30px] sm:w-[30px]">
           <Image src={imgIcon} alt="" fill className="object-contain" sizes="30px" loading="lazy" />
         </div>
-        <div className="font-normal leading-[24px] text-[#404040] whitespace-nowrap max-md:leading-[20px]">
-          <span className="text-[18px] max-md:text-[14px]">Umsatzsteigerung & Kostenreduktion</span>
+        <div className="font-normal leading-[20px] text-[#404040] whitespace-nowrap sm:leading-[24px]">
+          <span className="text-[14px] sm:text-[18px]">Umsatzsteigerung & Kostenreduktion</span>
         </div>
       </div>
     </div>

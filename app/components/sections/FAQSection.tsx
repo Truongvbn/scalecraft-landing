@@ -53,11 +53,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-white py-8 px-3 md:py-[clamp(3rem,6vw,6rem)] md:px-[clamp(3rem,6vw,6rem)]">
-      <div className="mx-auto max-w-[382px] md:max-w-[1172px]">
+    <section className="w-full bg-white py-8 px-3 sm:py-[clamp(2rem,6vw,6rem)] sm:px-[clamp(2rem,6vw,6rem)]">
+      <div className="mx-auto max-w-[382px] sm:max-w-[1172px]">
         {/* Heading */}
         <motion.h2 
-          className="mb-8 text-center text-[24px] font-normal leading-[32px] text-[#252525] md:mb-[clamp(4rem,6vw,6rem)] md:text-[clamp(32px,3vw,40px)] md:leading-[clamp(48px,4vw,56px)]"
+          className="mb-8 text-center text-[24px] font-normal leading-[32px] text-[#252525] sm:mb-[clamp(4rem,6vw,6rem)] sm:text-[clamp(32px,3vw,40px)] sm:leading-[clamp(48px,4vw,56px)]"
           variants={fadeInUp}
           initial="hidden"
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,9 +96,9 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="flex w-full items-center justify-between py-5 text-left transition-colors hover:bg-gray-50 md:py-[clamp(2.5rem,4vw,3.125rem)]"
+                className="flex w-full items-center justify-between py-5 text-left transition-colors hover:bg-gray-50 sm:py-[clamp(2.5rem,4vw,3.125rem)]"
               >
-                <h3 className="text-[13px] font-normal leading-[16px] text-[#252525] pr-4 md:pr-8 md:text-[clamp(18px,2vw,24px)] md:leading-[clamp(22px,2.4vw,28.68px)]">
+                <h3 className="text-[13px] font-normal leading-[16px] text-[#252525] pr-4 sm:pr-8 sm:text-[clamp(18px,2vw,24px)] sm:leading-[clamp(22px,2.4vw,28.68px)]">
                   {faq.question}
                 </h3>
                 
@@ -109,7 +109,7 @@ export default function FAQSection() {
                       alt="Collapse"
                       width={11.308}
                       height={11.308}
-                      className="transition-transform md:w-[22.5] md:h-[22.5]"
+                      className="transition-transform sm:w-[22.5] sm:h-[22.5]"
                       quality={85}
                     />
                   ) : (
@@ -118,7 +118,7 @@ export default function FAQSection() {
                       alt="Expand"
                       width={11.308}
                       height={11.308}
-                      className="transition-transform md:w-[22.5] md:h-[22.5]"
+                      className="transition-transform sm:w-[22.5] sm:h-[22.5]"
                       quality={85}
                     />
                   )}
@@ -127,8 +127,8 @@ export default function FAQSection() {
 
               {/* Answer - Expandable */}
               {openIndex === index && faq.answer && (
-                <div className="pb-6 pr-12 animate-in slide-in-from-top-2 duration-200 md:pb-8 md:pr-16">
-                  <p className="text-[13px] leading-[19px] text-gray-700 md:text-[clamp(15px,1.5vw,18px)] md:leading-[clamp(22px,2vw,26px)]">
+                <div className="pb-6 pr-12 animate-in slide-in-from-top-2 duration-200 sm:pb-8 sm:pr-16">
+                  <p className="text-[13px] leading-[19px] text-gray-700 sm:text-[clamp(15px,1.5vw,18px)] sm:leading-[clamp(22px,2vw,26px)]">
                     {faq.answer}
                   </p>
                 </div>

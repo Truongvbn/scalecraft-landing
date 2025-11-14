@@ -53,8 +53,8 @@ export default function ScalecraftComparisonSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#f0f0f0] py-8 md:py-[clamp(4rem,5vw,5rem)]">
-      <div className="mx-auto max-w-[1440px] px-3 md:px-[clamp(1.5rem,2vw,2rem)]">
+    <section className="relative w-full bg-[#f0f0f0] py-8 md:py-[clamp(3rem,5vw,5rem)]">
+      <div className="mx-auto max-w-[1440px] px-3 md:px-[clamp(1rem,2vw,2rem)]">
         {/* Heading */}
         <motion.h2 
           className="mb-6 text-center text-[24px] font-normal leading-[1.3] tracking-[-1px] text-[#252525] md:mb-[clamp(3rem,4vw,4rem)] md:text-[clamp(36px,3.5vw,44px)] md:leading-[1.25] md:tracking-[clamp(-1.5px,-0.15vw,-1.92px)]"
@@ -440,11 +440,18 @@ export default function ScalecraftComparisonSection() {
 
         {/* CTA Button */}
         <div className="mt-12 flex justify-center md:mt-14 lg:mt-16">
-          <button className="relative h-10 w-[180px] overflow-hidden rounded-[300px] bg-neutral-800 outline outline-1 outline-offset-[-1px] outline-black transition-all duration-300 hover:bg-[#404040] hover:scale-105 md:h-11 md:w-[200px] lg:h-12 lg:w-52">
-            <div className="absolute left-[14px] top-1/2 w-[calc(100%-28px)] -translate-y-1/2 text-center text-[14px] font-normal text-white md:text-[15px] lg:text-base">
-              Projekt starten →
-            </div>
-          </button>
+          <a 
+            href="https://calendly.com/dhventuresvietnam/30min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <button className="relative h-10 w-[180px] overflow-hidden rounded-[300px] bg-neutral-800 outline outline-1 outline-offset-[-1px] outline-black transition-all duration-300 hover:bg-[#404040] hover:scale-105 md:h-11 md:w-[200px] lg:h-12 lg:w-52">
+              <div className="absolute left-[14px] top-1/2 w-[calc(100%-28px)] -translate-y-1/2 text-center text-[14px] font-normal text-white md:text-[15px] lg:text-base">
+                Projekt starten →
+              </div>
+            </button>
+          </a>
         </div>
       </div>
     </section>

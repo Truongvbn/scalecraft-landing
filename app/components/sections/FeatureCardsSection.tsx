@@ -131,7 +131,7 @@ export default function FeatureCardsSection() {
                 />
               </div>
               
-              <p className="text-[9px] leading-[1.4] text-white md:text-[13px] md:leading-[1.5]">
+              <p className="text-[11px] leading-[1.5] text-white sm:text-[13px] sm:leading-[1.5]">
                 Wir zeigen dir, wie du mit der BAT-Methode (Business Development – Account Management – Team Lead) deine Creative-Prozesse systematisch beschleunigst und gleichzeitig Kosten senkst, Qualität erhöhst und Kontrolle behältst.
               </p>
 
@@ -174,7 +174,7 @@ export default function FeatureCardsSection() {
               />
             </div>
             
-            <p className="text-base leading-relaxed text-white md:text-lg">
+            <p className="text-base leading-relaxed text-white sm:text-lg">
               Wir zeigen dir, wie du mit der BAT-Methode (Business Development – Account Management – Team Lead) deine Creative-Prozesse systematisch beschleunigst und gleichzeitig Kosten senkst, Qualität erhöhst und Kontrolle behältst.
             </p>
 
@@ -199,14 +199,14 @@ export default function FeatureCardsSection() {
 
         {/* Feature Cards Grid */}
         <div 
-          className="relative mx-auto px-4 sm:flex sm:w-[773px] sm:justify-center sm:px-0 lg:block lg:w-[1104px]"
+          className="relative mx-auto px-4 sm:flex sm:w-[773px] sm:justify-center sm:overflow-visible sm:px-0 md:w-[883px] lg:block lg:w-[1104px]"
         >
           <div 
-            className="relative sm:w-[1104px] sm:scale-[0.7] sm:origin-top lg:scale-100"
+            className="relative sm:w-[1104px] sm:scale-[0.7] sm:origin-top md:scale-[0.8] lg:scale-100"
           >
           {/* Vertical Timeline Line - at exact grid boundary (520px = col1 end) */}
           <div 
-            className="absolute top-0 hidden h-full w-px bg-gray-600 sm:block"
+            className="absolute top-0 hidden h-full w-px bg-gray-600 lg:block"
             style={{ left: '520px' }}
           >
             {/* Timeline Dots */}
@@ -232,7 +232,7 @@ export default function FeatureCardsSection() {
           </div>
 
           <motion.div 
-            className="space-y-8 md:space-y-14"
+            className="space-y-10 sm:space-y-14"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -252,30 +252,30 @@ export default function FeatureCardsSection() {
               return (
                 <motion.div 
                   key={card.id}
-                  className="flex justify-center items-center md:grid md:grid-cols-[520px_584px]"
+                  className="flex justify-center items-center sm:grid sm:grid-cols-[520px_584px]"
                   variants={{
                     hidden: { opacity: 0, x: isLeft ? -50 : 50 },
                     visible: { opacity: 1, x: 0 }
                   }}
                 >
                   <div className={`
-                    w-full max-w-[382px] md:max-w-none
+                    w-full max-w-[382px] sm:max-w-none
                     ${isLeft 
-                      ? 'md:justify-self-end md:col-start-1 md:mr-[23px]' 
-                      : 'md:col-start-2 md:justify-self-start md:ml-[23px]'
+                      ? 'sm:justify-self-end sm:col-start-1 sm:mr-[23px]' 
+                      : 'sm:col-start-2 sm:justify-self-start sm:ml-[23px]'
                     }
                   `}>
                     <GlassCard pointRight={!isLeft}>
                       {/* Schritt Label & Icon - Same Row */}
-                      <div className="mb-4 md:mb-6 flex items-center justify-between">
-                        <span className="text-[20px] md:text-[23px] font-medium bg-gradient-to-r from-[#ec6036] to-[#f1983f] bg-clip-text text-transparent">
+                      <div className="mb-4 sm:mb-6 flex items-center justify-between">
+                        <span className="text-[20px] sm:text-[23px] font-medium bg-gradient-to-r from-[#ec6036] to-[#f1983f] bg-clip-text text-transparent">
                           Schritt {card.id}
                         </span>
-                        <div className="h-[48px] w-[48px] md:h-[72px] md:w-[72px]">
+                        <div className="h-[48px] w-[48px] sm:h-[72px] sm:w-[72px]">
                           <IconComponent />
                         </div>
                       </div>
-                      <p className="text-[12px] leading-[1.5] text-white md:text-[17px] md:leading-[1.7]">
+                      <p className="text-[13px] leading-[1.6] text-white sm:text-[17px] sm:leading-[1.7]">
                         {card.text}
                       </p>
                     </GlassCard>
@@ -288,7 +288,7 @@ export default function FeatureCardsSection() {
         </div>
 
         {/* Bottom SCALECRAFT Text */}
-        <div className="mt-12 sm:-mt-64 md:-mt-40 lg:mt-12 text-center overflow-hidden">
+        <div className="mt-12 sm:-mt-32 md:-mt-20 lg:mt-12 text-center overflow-hidden">
           <div className="inline-block scale-75 md:scale-100">
             <Image
               src="/assets/images/features/feature-scalecraft-text.svg"

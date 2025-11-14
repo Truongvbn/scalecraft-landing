@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientProviders from "./providers/ClientProviders";
-import RotationPrompt from "./components/ui/RotationPrompt";
 import StructuredData from "./components/StructuredData";
 import FAQSchema from "./components/FAQSchema";
 import { metadata as siteMetadata } from "./metadata";
@@ -50,7 +49,6 @@ export default function RootLayout({
       >
         <StructuredData />
         <FAQSchema />
-        <RotationPrompt />
         <ClientProviders>
           {children}
         </ClientProviders>

@@ -107,11 +107,18 @@ export default function Navbar() {
 
         {/* Right: Contact Button */}
         <div className="flex justify-end">
-          <div className="relative h-[44px] w-[136px] overflow-hidden rounded-[45px] border-2 border-[#a3e532] bg-[#e8fead] cursor-pointer hover:bg-[#d8ee9d] transition-colors">
-            <p className="absolute left-0 right-0 top-[calc(50%-9.5px)] whitespace-pre-wrap text-center text-[16px] font-medium text-[#404040]">
-              Kontakt
-            </p>
-          </div>
+          <a 
+            href="https://calendly.com/dhventuresvietnam/30min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <div className="relative h-[44px] w-[136px] overflow-hidden rounded-[45px] border-2 border-[#a3e532] bg-[#e8fead] cursor-pointer hover:bg-[#d8ee9d] transition-colors">
+              <p className="absolute left-0 right-0 top-[calc(50%-9.5px)] whitespace-pre-wrap text-center text-[16px] font-medium text-[#404040]">
+                Kontakt
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </div>

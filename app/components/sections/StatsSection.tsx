@@ -34,7 +34,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="relative w-full bg-white px-3 py-8 md:px-16 md:py-24">
+    <section className="relative w-full bg-white px-3 py-8 md:px-[clamp(2rem,4vw,4rem)] md:py-[clamp(3rem,6vw,6rem)]">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div 

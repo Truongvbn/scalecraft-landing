@@ -30,11 +30,11 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section id="benefits" className="relative w-full bg-white px-3 py-12 md:px-[clamp(2rem,4vw,4rem)] md:py-[clamp(5rem,6vw,6rem)]">
+    <section id="benefits" className="relative w-full bg-white px-3 py-12 md:px-[clamp(1.5rem,4vw,4rem)] md:py-[clamp(3rem,6vw,6rem)]">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div 
-          className="mb-8 flex flex-col items-center justify-between gap-4 text-center md:mb-[clamp(3rem,4vw,4rem)] md:flex-row md:items-start md:gap-[clamp(1.5rem,2vw,2rem)] md:text-left"
+          className="mb-8 flex flex-col items-center justify-between gap-4 text-center md:mb-[clamp(2rem,4vw,4rem)] md:flex-row md:items-start md:gap-[clamp(1rem,2vw,2rem)] md:text-left"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -61,7 +61,7 @@ export default function BenefitsSection() {
 
         {/* Benefits Grid */}
         <motion.div 
-          className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-[clamp(1.5rem,2vw,2rem)] md:mb-[clamp(3rem,4vw,4rem)]"
+          className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-[clamp(1rem,2vw,2rem)] md:mb-[clamp(2rem,4vw,4rem)]"
           variants={gridContainer}
           initial="hidden"
           whileInView="visible"
@@ -117,12 +117,19 @@ export default function BenefitsSection() {
           whileInView="visible"
           viewport={viewport}
         >
-          <MagneticButton 
-            className="h-[42px] w-[184px] rounded-full border border-black bg-[#252525] text-[14px] font-normal text-white transition-colors hover:bg-black md:h-auto md:w-auto md:px-[clamp(1.5rem,2vw,2rem)] md:py-[clamp(0.625rem,1vw,0.75rem)] md:text-[clamp(15px,1.3vw,16px)]"
-            strength={0.3}
+          <a 
+            href="https://calendly.com/dhventuresvietnam/30min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block"
           >
-            Erstgespräch buchen
-          </MagneticButton>
+            <MagneticButton 
+              className="h-[42px] w-[184px] rounded-full border border-black bg-[#252525] text-[14px] font-normal text-white transition-colors hover:bg-black md:h-auto md:w-auto md:px-[clamp(1.5rem,2vw,2rem)] md:py-[clamp(0.625rem,1vw,0.75rem)] md:text-[clamp(15px,1.3vw,16px)]"
+              strength={0.3}
+            >
+              Erstgespräch buchen
+            </MagneticButton>
+          </a>
         </motion.div>
       </div>
     </section>

@@ -25,8 +25,8 @@ export default function LogoMarquee() {
             <div className="relative h-[60px] w-[120px]">
               <Image src={imgImage6} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
             </div>
-            <div className="relative h-[60px] w-[120px]">
-              <Image src={imgImage7} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
+            <div className="relative h-[80px] w-[200px]">
+              <Image src={imgImage7} alt="Partner logo" fill className="object-contain" sizes="200px" loading="lazy" />
             </div>
             <div className="relative h-[60px] w-[120px]">
               <Image src={imgImage11} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
@@ -49,8 +49,8 @@ export default function LogoMarquee() {
             <div className="relative h-[60px] w-[120px]">
               <Image src={imgImage6} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
             </div>
-            <div className="relative h-[60px] w-[120px]">
-              <Image src={imgImage7} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
+            <div className="relative h-[80px] w-[200px]">
+              <Image src={imgImage7} alt="Partner logo" fill className="object-contain" sizes="200px" loading="lazy" />
             </div>
             <div className="relative h-[60px] w-[120px]">
               <Image src={imgImage11} alt="Partner logo" fill className="object-contain" sizes="120px" loading="lazy" />
