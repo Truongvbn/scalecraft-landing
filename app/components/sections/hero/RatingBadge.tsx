@@ -5,6 +5,7 @@ const imgImage27 = "/assets/images/hero/hero-image27.png";
 const imgImage24 = "/assets/images/hero/hero-image24.png";
 const imgImage28 = "/assets/images/hero/hero-image28.png";
 const imgImage291 = "/assets/images/hero/hero-image291.png";
+const imgImage9 = "/assets/images/hero/image 10.png";
 const imgGroup13681 = "/assets/images/hero/hero-group13681.svg";
 
 export default function RatingBadge() {
@@ -30,8 +31,11 @@ export default function RatingBadge() {
         <div className="relative -mr-[8px] h-[34px] w-[34px] overflow-hidden rounded-full border border-white max-sm:-mr-[6px] max-sm:h-[24px] max-sm:w-[24px]">
           <Image src={imgImage28} alt="" fill className="rounded-full object-cover" sizes="34px" loading="lazy" />
         </div>
-        <div className="relative h-[34px] w-[34px] overflow-hidden rounded-full border border-white max-sm:h-[24px] max-sm:w-[24px]">
+        <div className="relative -mr-[8px] h-[34px] w-[34px] overflow-hidden rounded-full border border-white max-sm:-mr-[6px] max-sm:h-[24px] max-sm:w-[24px]">
           <Image src={imgImage291} alt="" fill className="rounded-full object-cover" sizes="34px" loading="lazy" />
+        </div>
+        <div className="relative h-[34px] w-[34px] overflow-hidden rounded-full border border-white max-sm:h-[24px] max-sm:w-[24px]">
+          <Image src={imgImage9} alt="" fill className="rounded-full object-cover" sizes="34px" loading="lazy" />
         </div>
       </div>
 

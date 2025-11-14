@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
 
           {/* Desktop: 3 column grid */}
-          <div className="hidden sm:grid grid-cols-3 gap-12 lg:gap-16">
+          <div className="hidden sm:grid grid-cols-3 gap-6 lg:gap-12">
             {/* Logo and Description Column - Desktop */}
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
@@ -130,6 +130,14 @@ export default function Footer() {
               >
                 Kontakt
               </h3>
+              <div className="flex flex-col gap-2">
+                <p className="text-black text-xs font-light md:text-sm">
+                  Scalecraft
+                </p>
+                <p className="text-black text-xs font-light md:text-sm">
+                  DH Ventures GmbH
+                </p>
+              </div>
               <a
                 href="https://calendly.com/dhventuresvietnam/30min"
                 target="_blank"
