@@ -42,24 +42,12 @@ export default function CaseStudyCard2() {
             
             {/* Content - Horizontal Layout */}
             <div className="relative h-full flex items-center divide-x divide-gray-100/50">
-              {/* Image 1 - image 5.png */}
+              {/* Image - image 11.png */}
               <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <div className="relative h-[24px] w-full max-w-[80px] md:h-[32px] md:max-w-[120px] transition-all duration-300">
-                  <Image
-                    src="/assets/images/hero/image 5.png"
-                    alt="SEO Pictures Logo 1"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              
-              {/* Image 2 - image 11.png */}
-              <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <div className="relative h-[24px] w-full max-w-[80px] md:h-[32px] md:max-w-[120px] transition-all duration-300">
+                <div className="relative h-[32px] w-full max-w-[120px] md:h-[48px] md:max-w-[180px] transition-all duration-300">
                   <Image
                     src="/assets/images/hero/image 11.png"
-                    alt="SEO Pictures Logo 2"
+                    alt="SEO Pictures Logo"
                     fill
                     className="object-contain"
                   />
