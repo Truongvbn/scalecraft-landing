@@ -13,35 +13,35 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     question: "Wie läuft die Zusammenarbeit mit Scalecraft ab?",
-    answer: "Die Zusammenarbeit beginnt mit einem kostenlosen Erstgespräch, in dem wir deine Anforderungen besprechen und einen maßgeschneiderten Plan erstellen."
+    answer: "Nach einem kurzen Erstgespräch erhältst du Zugang zu unserem strukturierten Workflow. Du gibst dein Briefing ab – wir übernehmen den Rest: Planung, Design und Übergabe."
   },
   {
     question: "Wie schnell kann ein Projekt starten?",
-    answer: "In der Regel können wir innerhalb von 48 Stunden nach Vertragsabschluss mit deinem Projekt starten."
+    answer: "In der Regel innerhalb von 3–5 Werktagen nach Kickoff.\n\nWir arbeiten mit klaren Timelines und liefern zuverlässig – auch bei kurzfristigen Deadlines."
   },
   {
     question: "Was unterscheidet Scalecraft von klassischen Agenturen oder Freelancern?",
-    answer: "Wir bieten die Flexibilität von Freelancern mit der Zuverlässigkeit und Qualität einer Agentur, kombiniert mit strukturierten Prozessen und einem festen Ansprechpartner."
+    answer: "Wir kombinieren die Effizienz eines dedizierten Designteams mit der Flexibilität externer Ressourcen.\n\nKein Ticketsystem, keine Kommunikationslücken – dein persönlicher Ansprechpartner koordiniert alles. Arbeiten wie DEIN OFFSHORE TEAM"
   },
   {
     question: "Wie funktioniert die BAT-Methode?",
-    answer: "Die BAT-Methode (Brief, Approve, Track) ist unser strukturierter Prozess für effiziente Projektumsetzung mit klaren Briefings, schnellen Freigaben und transparentem Tracking."
+    answer: "Unsere BAT-Methode (Business Development – Account Management – Team Lead) sorgt für Struktur, klare Verantwortlichkeiten und Priorisierung.\n\nSo bleibt dein Designprozess messbar, transparent und skalierbar."
   },
   {
     question: "Für wen ist Scalecraft geeignet?",
-    answer: "Scalecraft ist ideal für Agenturen, Freelancer und Creators, die ihre Designprozesse professionalisieren und skalieren möchten."
+    answer: "Für E-Commerce-AMAZON - Agenturen, Freelancer und Marketing-Teams, die mehr Design-Output brauchen, ohne interne Ressourcen aufzubauen."
   },
   {
     question: "Welche Leistungen kann ich outsourcen?",
-    answer: "Du kannst alle Design- und Creative-Leistungen outsourcen, von Social Media Content über Webdesign bis hin zu Branding und Motion Graphics."
+    answer: "Von Amazon-Visuals über Ad Creatives, Landingpage-Designs, 3D-Renderings bis hin zu Branding-Systemen – unser Team deckt die gesamte Design-Pipeline ab."
   },
   {
     question: "Wie flexibel sind die Kapazitäten?",
-    answer: "Unsere Kapazitäten sind sehr flexibel und können je nach Projektbedarf schnell angepasst werden."
+    answer: "Du kannst monatlich zwischen verschiedenen Stundenpaketen wählen – von 80 bis 640 Stunden.\n\nOhne langfristige Bindung, jederzeit skalierbar."
   },
   {
     question: "Wie gewährleistet ihr gleichbleibende Qualität?",
-    answer: "Durch standardisierte Prozesse, erfahrene Teams und kontinuierliches Quality Management stellen wir konstant hohe Qualität sicher."
+    answer: "Durch feste Ansprechpartner, interne Qualitätssicherung und klar dokumentierte Workflows. Jedes Creative durchläuft eine Review-Schleife, bevor es final übergeben wird."
   }
 ];
 
@@ -128,7 +128,7 @@ export default function FAQSection() {
               {/* Answer - Expandable */}
               {openIndex === index && faq.answer && (
                 <div className="pb-6 pr-12 animate-in slide-in-from-top-2 duration-200 md:pb-8 md:pr-16">
-                  <p className="text-[13px] leading-[19px] text-gray-700 md:text-[clamp(15px,1.5vw,18px)] md:leading-[clamp(22px,2vw,26px)]">
+                  <p className="text-[13px] leading-[19px] text-gray-700 md:text-[clamp(15px,1.5vw,18px)] md:leading-[clamp(22px,2vw,26px)] whitespace-pre-line">
                     {faq.answer}
                   </p>
                 </div>

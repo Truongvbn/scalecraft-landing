@@ -57,12 +57,12 @@ export default function Footer() {
                 Crafted with ❤️ since 2020 – empowering agencies and brands to scale smarter
               </p>
               
-              <div className="flex items-center gap-3">
+              <div className="flex items-start gap-4">
                 <a
                   href="https://www.linkedin.com/company/scalecraftdh/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-fit"
+                  className="flex flex-col items-center gap-1.5 group"
                   title="Scalecraft Company LinkedIn"
                 >
                   <Image
@@ -70,14 +70,15 @@ export default function Footer() {
                     alt="Scalecraft Company LinkedIn"
                     width={34}
                     height={34}
-                    className="hover:opacity-80 transition-opacity"
+                    className="group-hover:opacity-80 transition-opacity"
                   />
+                  <span className="text-[10px] text-gray-600 group-hover:text-gray-900 transition-colors">Company</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/dachoa/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-fit"
+                  className="flex flex-col items-center gap-1.5 group"
                   title="Hoa Nguyen - CEO LinkedIn"
                 >
                   <Image
@@ -85,8 +86,9 @@ export default function Footer() {
                     alt="Hoa Nguyen - CEO LinkedIn"
                     width={34}
                     height={34}
-                    className="hover:opacity-80 transition-opacity"
+                    className="group-hover:opacity-80 transition-opacity"
                   />
+                  <span className="text-[10px] text-gray-600 group-hover:text-gray-900 transition-colors">CEO</span>
                 </a>
               </div>
             </div>
@@ -214,12 +216,12 @@ export default function Footer() {
           </div>
 
           {/* LinkedIn Icons - Mobile only */}
-          <div className="flex items-center gap-3 sm:hidden">
+          <div className="flex items-start gap-4 sm:hidden">
             <a
               href="https://www.linkedin.com/company/scalecraftdh/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-fit"
+              className="flex flex-col items-center gap-1 group"
               title="Scalecraft Company LinkedIn"
             >
               <Image
@@ -227,14 +229,15 @@ export default function Footer() {
                 alt="Scalecraft Company LinkedIn"
                 width={18}
                 height={18}
-                className="object-contain hover:opacity-80 transition-opacity"
+                className="object-contain group-hover:opacity-80 transition-opacity"
               />
+              <span className="text-[8px] text-gray-600 group-hover:text-gray-900 transition-colors">Company</span>
             </a>
             <a
               href="https://www.linkedin.com/in/dachoa/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-fit"
+              className="flex flex-col items-center gap-1 group"
               title="Hoa Nguyen - CEO LinkedIn"
             >
               <Image
@@ -242,8 +245,9 @@ export default function Footer() {
                 alt="Hoa Nguyen - CEO LinkedIn"
                 width={18}
                 height={18}
-                className="object-contain hover:opacity-80 transition-opacity"
+                className="object-contain group-hover:opacity-80 transition-opacity"
               />
+              <span className="text-[8px] text-gray-600 group-hover:text-gray-900 transition-colors">CEO</span>
             </a>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function FAQSchema() {
         "name": "Wie läuft die Zusammenarbeit mit Scalecraft ab?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Die Zusammenarbeit beginnt mit einem kostenlosen Erstgespräch, in dem wir deine Anforderungen besprechen und einen maßgeschneiderten Plan erstellen."
+          "text": "Nach einem kurzen Erstgespräch erhältst du Zugang zu unserem strukturierten Workflow. Du gibst dein Briefing ab – wir übernehmen den Rest: Planung, Design und Übergabe."
         }
       },
       {
@@ -16,7 +16,7 @@ export default function FAQSchema() {
         "name": "Wie schnell kann ein Projekt starten?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In der Regel können wir innerhalb von 48 Stunden nach Vertragsabschluss mit deinem Projekt starten."
+          "text": "In der Regel innerhalb von 3–5 Werktagen nach Kickoff. Wir arbeiten mit klaren Timelines und liefern zuverlässig – auch bei kurzfristigen Deadlines."
         }
       },
       {
@@ -24,7 +24,7 @@ export default function FAQSchema() {
         "name": "Was unterscheidet Scalecraft von klassischen Agenturen oder Freelancern?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wir bieten die Flexibilität von Freelancern mit der Zuverlässigkeit und Qualität einer Agentur, kombiniert mit strukturierten Prozessen und einem festen Ansprechpartner."
+          "text": "Wir kombinieren die Effizienz eines dedizierten Designteams mit der Flexibilität externer Ressourcen. Kein Ticketsystem, keine Kommunikationslücken – dein persönlicher Ansprechpartner koordiniert alles. Arbeiten wie DEIN OFFSHORE TEAM"
         }
       },
       {
@@ -32,7 +32,7 @@ export default function FAQSchema() {
         "name": "Wie funktioniert die BAT-Methode?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Die BAT-Methode (Brief, Approve, Track) ist unser strukturierter Prozess für effiziente Projektumsetzung mit klaren Briefings, schnellen Freigaben und transparentem Tracking."
+          "text": "Unsere BAT-Methode (Business Development – Account Management – Team Lead) sorgt für Struktur, klare Verantwortlichkeiten und Priorisierung. So bleibt dein Designprozess messbar, transparent und skalierbar."
         }
       },
       {
@@ -40,7 +40,7 @@ export default function FAQSchema() {
         "name": "Für wen ist Scalecraft geeignet?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Scalecraft ist ideal für Agenturen, Freelancer und Creators, die ihre Designprozesse professionalisieren und skalieren möchten."
+          "text": "Für E-Commerce-AMAZON - Agenturen, Freelancer und Marketing-Teams, die mehr Design-Output brauchen, ohne interne Ressourcen aufzubauen."
         }
       },
       {
@@ -48,7 +48,23 @@ export default function FAQSchema() {
         "name": "Welche Leistungen kann ich outsourcen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Du kannst alle Design- und Creative-Leistungen outsourcen, von Social Media Content über Webdesign bis hin zu Branding und Motion Graphics."
+          "text": "Von Amazon-Visuals über Ad Creatives, Landingpage-Designs, 3D-Renderings bis hin zu Branding-Systemen – unser Team deckt die gesamte Design-Pipeline ab."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie flexibel sind die Kapazitäten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Du kannst monatlich zwischen verschiedenen Stundenpaketen wählen – von 80 bis 640 Stunden. Ohne langfristige Bindung, jederzeit skalierbar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie gewährleistet ihr gleichbleibende Qualität?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Durch feste Ansprechpartner, interne Qualitätssicherung und klar dokumentierte Workflows. Jedes Creative durchläuft eine Review-Schleife, bevor es final übergeben wird."
         }
       }
     ]
