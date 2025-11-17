@@ -21,13 +21,56 @@ export default function CaseStudyCard2() {
         {/* Content */}
         <div className="relative z-10 flex h-full flex-col pt-6 px-6 pb-0 md:pt-8 md:px-8 md:pb-8 transition-all duration-300">
           {/* Main Image */}
-          <div className="relative h-[245px] md:h-[321px] overflow-hidden rounded-[11.267px] md:rounded-[16px] bg-white transition-all duration-500 hover:scale-[1.02] mb-4 md:mb-6">
+          <div className="relative h-[245px] md:h-[321px] overflow-hidden rounded-[11.267px] md:rounded-[16px] bg-white transition-all duration-500 hover:scale-[1.02]">
             <Image
               src="/assets/images/case-study/casestudy2.png"
               alt="Case Study Dashboard"
               fill
               className="object-cover"
             />
+          </div>
+
+          {/* Logo Box - SEO PICTURES with 2 images */}
+          <div className="relative -mt-7 md:-mt-10 z-20 mx-auto h-[58px] md:h-[84px] w-[85%] md:w-[min(463px,85%)] overflow-hidden rounded-[11.267px] md:rounded-[8px] mb-4 md:mb-6 transition-all duration-300">
+            {/* Glassmorphism Background */}
+            <div 
+              className="absolute inset-0 bg-white/60 border border-white backdrop-blur-[4.875px]"
+              style={{
+                boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255, 255, 255, 0.4)'
+              }}
+            />
+            
+            {/* Content - Horizontal Layout */}
+            <div className="relative h-full flex items-center divide-x divide-gray-100/50">
+              {/* Image 1 - image 5.png */}
+              <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
+                <div className="relative h-[24px] w-full max-w-[80px] md:h-[32px] md:max-w-[120px] transition-all duration-300">
+                  <Image
+                    src="/assets/images/hero/image 5.png"
+                    alt="SEO Pictures Logo 1"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              
+              {/* Image 2 - image 11.png */}
+              <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
+                <div className="relative h-[24px] w-full max-w-[80px] md:h-[32px] md:max-w-[120px] transition-all duration-300">
+                  <Image
+                    src="/assets/images/hero/image 11.png"
+                    alt="SEO Pictures Logo 2"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              
+              {/* Text - SEO PICTURES */}
+              <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
+                <span className="text-[10px] md:text-[13px] font-bold text-black transition-all duration-200 whitespace-nowrap leading-[13.24px]">SEO PICTURES</span>
+              </div>
+            </div>
           </div>
 
           {/* Tag */}
