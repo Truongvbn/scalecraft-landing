@@ -21,68 +21,13 @@ export default function CaseStudyCard3() {
         {/* Content */}
         <div className="relative z-10 flex h-full flex-col pt-6 px-6 pb-0 md:pt-8 md:px-8 md:pb-8 transition-all duration-300">
           {/* Main Image */}
-          <div className="relative h-[245px] md:h-[321px] overflow-hidden rounded-[11.267px] md:rounded-[16px] bg-white transition-all duration-500 hover:scale-[1.02]">
+          <div className="relative h-[245px] md:h-[321px] overflow-hidden rounded-[11.267px] md:rounded-[16px] bg-white transition-all duration-500 hover:scale-[1.02] mb-4 md:mb-6">
             <Image
               src="/assets/images/case-study/casestudy3.png"
               alt="Case Study Dashboard"
               fill
               className="object-cover"
             />
-          </div>
-
-          {/* Logo Box - Overlapping image */}
-          <div className="relative -mt-7 md:-mt-10 z-20 mx-auto h-[58px] md:h-[84px] w-[85%] md:w-[min(463px,85%)] overflow-hidden rounded-[11.267px] md:rounded-[8px] mb-4 md:mb-6 transition-all duration-300">
-            {/* Glassmorphism Background */}
-            <div 
-              className="absolute inset-0 bg-white/60 border border-white backdrop-blur-[4.875px]"
-              style={{
-                boxShadow: 'inset 0px 1.625px 6.5px 0px rgba(255, 255, 255, 0.4)'
-              }}
-            />
-            
-            {/* Content - Horizontal Layout */}
-            <div className="relative h-full flex items-center divide-x divide-gray-100/50">
-              {/* Logo 1 - bestseller.design */}
-              <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <div className="relative h-[11px] w-full max-w-[16px] md:h-[32px] md:max-w-[59px] transition-all duration-300">
-                  <Image
-                    src="/assets/images/case-study/Group 345.png"
-                    alt="bestseller.design"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              
-              {/* Logo 2 - amaLOCK */}
-              <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <div className="relative h-[7px] w-full max-w-[54px] md:h-[22px] md:max-w-[86px] transition-all duration-300">
-                  <Image
-                    src="/assets/images/case-study/image 4.png"
-                    alt="amaLOCK"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              
-              {/* Logo 3 - ATLAS */}
-              <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <div className="relative h-[15px] w-full max-w-[61px] md:h-[20px] md:max-w-[78px] transition-all duration-300">
-                  <Image
-                    src="/assets/images/case-study/image 13.png"
-                    alt="ATLAS"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              
-              {/* Text - FREELANCER */}
-              <div className="flex-1 flex items-center justify-center px-1.5 md:px-3 transition-all duration-200 hover:bg-white/20">
-                <span className="text-[9.93px] md:text-[12px] font-bold text-black transition-all duration-200 whitespace-nowrap leading-[13.24px]">FREELANCER</span>
-              </div>
-            </div>
           </div>
 
           {/* Tag */}
